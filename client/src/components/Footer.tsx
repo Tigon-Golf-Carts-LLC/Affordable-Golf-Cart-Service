@@ -1,21 +1,24 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { serviceCategories } from "@shared/services";
+import { usStates } from "@shared/states";
 
 const PHONE_NUMBER = "1-844-844-6638";
 const PHONE_HREF = "tel:+18448446638";
 
 export function Footer() {
+  const featuredStates = usStates.slice(0, 8);
+
   return (
     <footer className="bg-card border-t mt-auto">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="mb-4">
               <img src="/logo.png" alt="Affordable Golf Cart Service" className="h-16 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Your trusted partner for professional golf cart service, repair, and maintenance. We offer over 100 services to keep your cart running smoothly.
+              Your trusted partner for professional golf cart service, repair, and maintenance. Serving all 50 states with over 100 services.
             </p>
             <a
               href={PHONE_HREF}
@@ -46,6 +49,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/states" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-states">
+                  Service by State
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-contact">
                   Contact Us
                 </Link>
@@ -71,6 +79,32 @@ export function Footer() {
           </div>
 
           <div>
+            <h3 className="font-semibold text-foreground mb-4">Service Areas</h3>
+            <ul className="space-y-2">
+              {featuredStates.map((state) => (
+                <li key={state.slug}>
+                  <Link
+                    href={`/states/${state.slug}`}
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    data-testid={`footer-link-state-${state.slug}`}
+                  >
+                    {state.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/states"
+                  className="text-sm text-primary hover:text-primary/80 transition-colors font-medium"
+                  data-testid="footer-link-all-states"
+                >
+                  View All 50 States
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="font-semibold text-foreground mb-4">Contact Info</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
@@ -86,7 +120,7 @@ export function Footer() {
                 <Mail className="h-4 w-4 text-primary mt-1 shrink-0" />
                 <div>
                   <span className="text-sm text-muted-foreground">Email</span>
-                  <a href="mailto:info@affordablegolfcartservice.com" className="block text-sm font-medium text-foreground hover:text-primary">
+                  <a href="mailto:info@affordablegolfcartservice.com" className="block text-sm font-medium text-foreground hover:text-primary break-all">
                     info@affordablegolfcartservice.com
                   </a>
                 </div>
@@ -102,7 +136,7 @@ export function Footer() {
                 <MapPin className="h-4 w-4 text-primary mt-1 shrink-0" />
                 <div>
                   <span className="text-sm text-muted-foreground">Service Area</span>
-                  <span className="block text-sm font-medium text-foreground">Serving Your Local Area</span>
+                  <span className="block text-sm font-medium text-foreground">Nationwide Coverage</span>
                 </div>
               </li>
             </ul>

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Phone, Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, ChevronRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { services, serviceCategories, getServicesByCategory } from "@shared/services";
+import { usStates } from "@shared/states";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -20,6 +21,7 @@ const PHONE_HREF = "tel:+18448446638";
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileStatesOpen, setMobileStatesOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [location] = useLocation();
 
@@ -27,10 +29,19 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
+    { href: "/states", label: "States" },
     { href: "/contact", label: "Contact" },
   ];
 
-  const isActive = (href: string) => location === href;
+  const isActive = (href: string) => location === href || location.startsWith(href + "/");
+
+  const stateColumns = [
+    usStates.slice(0, 10),
+    usStates.slice(10, 20),
+    usStates.slice(20, 30),
+    usStates.slice(30, 40),
+    usStates.slice(40, 50),
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
@@ -100,6 +111,57 @@ export function Header() {
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
+              ) : link.label === "States" ? (
+                <NavigationMenu key={link.href}>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger
+                        className={`px-3 py-2 text-sm font-medium transition-colors ${
+                          isActive(link.href)
+                            ? "text-primary"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                        data-testid="nav-states-dropdown"
+                      >
+                        States
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <div className="w-[600px] p-4">
+                          <div className="flex items-center gap-2 mb-3">
+                            <MapPin className="h-4 w-4 text-primary" />
+                            <span className="font-semibold text-sm text-foreground">Service Areas by State</span>
+                          </div>
+                          <div className="grid grid-cols-5 gap-2">
+                            {stateColumns.map((column, colIndex) => (
+                              <div key={colIndex} className="space-y-1">
+                                {column.map((state) => (
+                                  <NavigationMenuLink key={state.slug} asChild>
+                                    <Link
+                                      href={`/states/${state.slug}`}
+                                      className="block text-xs text-muted-foreground hover:text-foreground hover:bg-accent rounded px-2 py-1 transition-colors"
+                                      data-testid={`nav-state-${state.slug}`}
+                                    >
+                                      {state.name}
+                                    </Link>
+                                  </NavigationMenuLink>
+                                ))}
+                              </div>
+                            ))}
+                          </div>
+                          <div className="mt-4 pt-4 border-t">
+                            <Link
+                              href="/states"
+                              className="text-sm font-medium text-primary hover:underline"
+                              data-testid="nav-view-all-states"
+                            >
+                              View All 50 States
+                            </Link>
+                          </div>
+                        </div>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
               ) : (
                 <Link
                   key={link.href}
@@ -147,7 +209,7 @@ export function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t bg-background">
+        <div className="lg:hidden border-t bg-background max-h-[80vh] overflow-y-auto">
           <nav className="container mx-auto px-4 py-4 space-y-2">
             {navLinks.map((link) =>
               link.label === "Services" ? (
@@ -216,6 +278,53 @@ export function Header() {
                         }}
                       >
                         View All Services
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              ) : link.label === "States" ? (
+                <div key={link.href}>
+                  <button
+                    onClick={() => setMobileStatesOpen(!mobileStatesOpen)}
+                    className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-md ${
+                      isActive(link.href)
+                        ? "text-primary bg-primary/10"
+                        : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    }`}
+                    data-testid="mobile-nav-states-toggle"
+                  >
+                    States
+                    <ChevronDown
+                      className={`h-4 w-4 transition-transform ${
+                        mobileStatesOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                  {mobileStatesOpen && (
+                    <div className="ml-4 mt-2 space-y-1 max-h-60 overflow-y-auto">
+                      {usStates.map((state) => (
+                        <Link
+                          key={state.slug}
+                          href={`/states/${state.slug}`}
+                          className="block px-3 py-1.5 text-xs text-muted-foreground hover:text-foreground rounded hover:bg-accent"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setMobileStatesOpen(false);
+                          }}
+                          data-testid={`mobile-nav-state-${state.slug}`}
+                        >
+                          {state.name}
+                        </Link>
+                      ))}
+                      <Link
+                        href="/states"
+                        className="block px-3 py-2 text-sm font-medium text-primary hover:underline"
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setMobileStatesOpen(false);
+                        }}
+                      >
+                        View All States
                       </Link>
                     </div>
                   )}
