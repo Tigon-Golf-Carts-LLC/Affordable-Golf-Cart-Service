@@ -7,8 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { serviceLocations, findNearestLocations, searchLocationsByText, getFullAddress, getDirectionsUrl, type ServiceLocation } from "@shared/locations";
 
-const PHONE_NUMBER = "1-844-844-6638";
-const PHONE_HREF = "tel:+18448446638";
+const PHONE_NUMBER = "1-844-844-4070";
+const PHONE_HREF = "tel:+18448444070";
 
 interface LocationSearchProps {
   variant?: "hero" | "compact";

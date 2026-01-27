@@ -5,8 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
-const PHONE_NUMBER = "1-844-844-6638";
-const PHONE_HREF = "tel:+18448446638";
+const PHONE_NUMBER = "1-844-844-4070";
+const PHONE_HREF = "tel:+18448444070";
 
 export default function Contact() {
   return (

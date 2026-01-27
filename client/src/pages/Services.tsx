@@ -8,8 +8,8 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { services, serviceCategories, getServicesByCategory, getServiceById } from "@shared/services";
 import { useState, useMemo } from "react";
 
-const PHONE_NUMBER = "1-844-844-6638";
-const PHONE_HREF = "tel:+18448446638";
+const PHONE_NUMBER = "1-844-844-4070";
+const PHONE_HREF = "tel:+18448444070";
 
 function ServiceDetail({ serviceId }: { serviceId: string }) {
   const service = getServiceById(serviceId);

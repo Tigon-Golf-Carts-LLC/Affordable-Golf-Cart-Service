@@ -9,8 +9,8 @@ import { services, serviceCategories } from "@shared/services";
 import { usStates, getStateBySlug, getGoogleMapsEmbedUrl } from "@shared/states";
 import { useEffect } from "react";
 
-const PHONE_NUMBER = "1-844-844-6638";
-const PHONE_HREF = "tel:+18448446638";
+const PHONE_NUMBER = "1-844-844-4070";
+const PHONE_HREF = "tel:+18448444070";
 
 function StateDetail({ stateSlug }: { stateSlug: string }) {
   const state = getStateBySlug(stateSlug);
@@ -20,7 +20,7 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
       document.title = `Affordable Golf Cart Services in ${state.name} | Golf Cart Repair & Maintenance`;
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute('content', `Professional golf cart service, repair, and maintenance in ${state.name}. Over 100 services including tune-ups, battery replacement, brake service, and custom upgrades. Call 1-844-844-6638 today for ${state.name} golf cart service!`);
+        metaDescription.setAttribute('content', `Professional golf cart service, repair, and maintenance in ${state.name}. Over 100 services including tune-ups, battery replacement, brake service, and custom upgrades. Call 1-844-844-4070 today for ${state.name} golf cart service!`);
       }
     }
   }, [state]);
@@ -252,7 +252,7 @@ function StatesLanding() {
     document.title = "Golf Cart Services by State | Affordable Golf Cart Service";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Find affordable golf cart service, repair, and maintenance in your state. We serve all 50 US states with professional golf cart services. Call 1-844-844-6638 today!');
+      metaDescription.setAttribute('content', 'Find affordable golf cart service, repair, and maintenance in your state. We serve all 50 US states with professional golf cart services. Call 1-844-844-4070 today!');
     }
   }, []);
 

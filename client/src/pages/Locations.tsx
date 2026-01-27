@@ -8,8 +8,8 @@ import { LocationSearch } from "@/components/LocationSearch";
 import { serviceLocations, getLocationBySlug, getFullAddress, getDirectionsUrl, type ServiceLocation } from "@shared/locations";
 import { serviceCategories } from "@shared/services";
 
-const PHONE_NUMBER = "1-844-844-6638";
-const PHONE_HREF = "tel:+18448446638";
+const PHONE_NUMBER = "1-844-844-4070";
+const PHONE_HREF = "tel:+18448444070";
 
 function LocationDetail({ locationSlug }: { locationSlug: string }) {
   const location = getLocationBySlug(locationSlug);
@@ -259,7 +259,7 @@ function LocationsLanding() {
     document.title = "Service Locations | Affordable Golf Cart Service";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Find an Affordable Golf Cart Service location near you. We have 14 service centers across the United States. Call 1-844-844-6638 today!');
+      metaDescription.setAttribute('content', 'Find an Affordable Golf Cart Service location near you. We have 14 service centers across the United States. Call 1-844-844-4070 today!');
     }
   }, []);
 

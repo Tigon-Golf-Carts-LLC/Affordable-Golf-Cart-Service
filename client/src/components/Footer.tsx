@@ -4,8 +4,8 @@ import { serviceCategories } from "@shared/services";
 import { usStates } from "@shared/states";
 import { serviceLocations } from "@shared/locations";
 
-const PHONE_NUMBER = "1-844-844-6638";
-const PHONE_HREF = "tel:+18448446638";
+const PHONE_NUMBER = "1-844-844-4070";
+const PHONE_HREF = "tel:+18448444070";
 
 export function Footer() {
   // Featured states where we have service locations

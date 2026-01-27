@@ -9,8 +9,8 @@ import { services, serviceCategories, getServicesByCategory } from "@shared/serv
 import { serviceLocations } from "@shared/locations";
 import { useState } from "react";
 
-const PHONE_NUMBER = "1-844-844-6638";
-const PHONE_HREF = "tel:+18448446638";
+const PHONE_NUMBER = "1-844-844-4070";
+const PHONE_HREF = "tel:+18448444070";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);

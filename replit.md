@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a service-based business website for a golf cart repair and maintenance company. The application showcases over 100 professional services including tune-ups, battery replacement, brake service, and custom upgrades. The primary goal is to drive phone calls to the business (1-844-844-6638) by presenting services with pricing information in an accessible, SEO-friendly format.
+This is a service-based business website for a golf cart repair and maintenance company. The application showcases over 100 professional services including tune-ups, battery replacement, brake service, and custom upgrades. The primary goal is to drive phone calls to the business (1-844-844-4070) by presenting services with pricing information in an accessible, SEO-friendly format.
 
 The application follows a full-stack TypeScript architecture with a React frontend and Express backend, designed to be a fast, static-content-focused marketing site with potential for future dynamic features.
 
