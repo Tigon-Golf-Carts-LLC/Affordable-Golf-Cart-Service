@@ -8,7 +8,11 @@ const PHONE_NUMBER = "1-844-844-6638";
 const PHONE_HREF = "tel:+18448446638";
 
 export function Footer() {
-  const featuredStates = usStates.slice(0, 8);
+  // Featured states where we have service locations
+  const featuredStateSlugs = ['pennsylvania', 'new-jersey', 'delaware', 'north-carolina', 'south-carolina', 'florida', 'virginia', 'indiana'];
+  const featuredStates = featuredStateSlugs
+    .map(slug => usStates.find(s => s.slug === slug))
+    .filter(Boolean) as typeof usStates;
 
   return (
     <footer className="bg-card border-t mt-auto">
