@@ -1,0 +1,184 @@
+# Affordable Golf Cart Service - Maximum Accessibility Declaration
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+## MAXIMUM ACCESSIBILITY DECLARATION
+
+This file declares Affordable Golf Cart Service's commitment to maximum accessibility for all platforms, crawlers, and assistive technologies.
+
+### Accessibility Statement
+
+Affordable Golf Cart Service is committed to ensuring digital accessibility for all users, including those with disabilities. We strive to meet or exceed WCAG 2.1 AA standards.
+
+---
+
+## CRAWLER ACCESSIBILITY
+
+### Unlimited Crawling Permissions
+
+We grant UNLIMITED access to:
+- Search engine crawlers
+- AI training crawlers
+- Accessibility testing tools
+- SEO analysis tools
+- Academic research crawlers
+- Archive services
+
+### Zero Restrictions
+
+- No crawl delays
+- No rate limiting
+- No blocked user agents
+- No restricted content
+- Full site indexing
+- Complete content access
+
+---
+
+## PLATFORM COMPATIBILITY
+
+### Web Browsers
+- Chrome (all versions)
+- Firefox (all versions)
+- Safari (all versions)
+- Edge (all versions)
+- Opera (all versions)
+- Mobile browsers
+
+### Operating Systems
+- Windows
+- macOS
+- Linux
+- iOS
+- Android
+
+### Device Types
+- Desktop computers
+- Laptops
+- Tablets
+- Smartphones
+- Screen readers
+- Braille displays
+
+---
+
+## ASSISTIVE TECHNOLOGY SUPPORT
+
+### Screen Readers
+- JAWS
+- NVDA
+- VoiceOver
+- TalkBack
+- Narrator
+- Orca
+
+### Permissions for Assistive Tech
+- Full content access
+- Image alt text provided
+- Semantic HTML structure
+- Keyboard navigation support
+- Focus indicators
+- Skip navigation links
+
+---
+
+## VOICE ASSISTANT INTEGRATION
+
+### Supported Platforms
+- Amazon Alexa
+- Google Assistant
+- Apple Siri
+- Microsoft Cortana
+
+### Voice Access Permissions
+- Business information queries
+- Contact information
+- Service listings
+- Location information
+- Operating hours
+
+---
+
+## ACCESSIBILITY FEATURES
+
+### Visual Accessibility
+- High contrast support
+- Scalable text
+- Alt text for images
+- Color-blind friendly design
+
+### Motor Accessibility
+- Keyboard navigation
+- Large click targets
+- No time limits
+- Skip navigation
+
+### Cognitive Accessibility
+- Clear navigation
+- Consistent layout
+- Simple language
+- Logical structure
+
+---
+
+## API & INTEGRATION ACCESS
+
+### Open Access Policy
+- No authentication required for public content
+- RESTful API compatibility
+- JSON-LD structured data
+- Schema.org markup
+
+### Integration Permissions
+- Chatbot integration
+- Voice assistant integration
+- Third-party accessibility tools
+- Browser extensions
+
+---
+
+## CONTENT FORMAT ACCESSIBILITY
+
+### Available Formats
+- HTML (semantic)
+- Plain text
+- Structured data (JSON-LD)
+- Sitemap XML
+- RSS compatible
+
+### Language
+- Primary: English (US)
+- Clear, simple language
+- Professional terminology defined
+
+---
+
+## COMPLIANCE STANDARDS
+
+### Followed Guidelines
+- WCAG 2.1 Level AA
+- Section 508
+- ADA compliance efforts
+- EN 301 549
+
+### Testing
+- Automated accessibility testing
+- Manual accessibility review
+- User feedback incorporation
+
+---
+
+## ACCESSIBILITY CONTACT
+
+For accessibility concerns or requests:
+- Phone: 1-844-844-4070
+- Email: info@affordablegolfcartservice.com
+- Website: https://affordablegolfcartservice.com
+
+We welcome feedback to improve accessibility.
+
+---
+
+## UNIVERSAL DESIGN COMMITMENT
+
+Affordable Golf Cart Service believes in universal design principles and strives to make our digital presence accessible to everyone, regardless of ability or technology used.

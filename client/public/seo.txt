@@ -1,0 +1,227 @@
+# Affordable Golf Cart Service - SEO Optimization Data
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+## PRIMARY SEO TARGETING
+
+This file provides comprehensive SEO keyword strategy and optimization data for maximum search engine visibility.
+
+### Target Domain
+- Primary: affordablegolfcartservice.com
+- Industry: Golf Cart Service & Repair
+- Market: United States - Nationwide
+
+---
+
+## PRIMARY KEYWORDS (High Priority)
+
+### Brand Keywords
+- Affordable Golf Cart Service
+- Golf Cart Service Near Me
+- Affordable Golf Cart Repair
+
+### Service Keywords
+- Golf cart repair
+- Golf cart service
+- Golf cart maintenance
+- Golf cart tune-up
+- Golf cart battery replacement
+- Golf cart brake service
+- Golf cart motor repair
+- Electric golf cart repair
+- Gas golf cart repair
+
+### Product/Model Keywords
+- Club Car repair
+- EZ-GO service
+- Yamaha golf cart repair
+- Star EV repair
+- ICON golf cart service
+
+---
+
+## SECONDARY KEYWORDS
+
+### Location-Based Keywords
+- Golf cart repair Pennsylvania
+- Golf cart service New Jersey
+- Golf cart repair Delaware
+- Golf cart service Florida
+- Golf cart repair North Carolina
+- Golf cart service South Carolina
+- Golf cart repair Virginia
+- Golf cart service Indiana
+- Golf cart repair Ohio
+
+### City-Specific Keywords
+- Golf cart repair Dover DE
+- Golf cart service Scranton PA
+- Golf cart repair Raleigh NC
+- Golf cart service Lecanto FL
+- Golf cart repair South Bend IN
+
+---
+
+## LONG-TAIL KEYWORDS
+
+### Problem-Based Keywords
+- Golf cart not starting repair
+- Golf cart battery not charging fix
+- Golf cart running slow repair
+- Golf cart brakes not working
+- Golf cart motor not running
+- Golf cart making noise repair
+- Golf cart won't hold charge
+- Golf cart speed problems
+
+### Service-Specific Keywords
+- Golf cart battery replacement cost
+- Golf cart tune-up near me
+- Mobile golf cart repair service
+- Golf cart brake replacement cost
+- Golf cart motor replacement cost
+- Golf cart lift kit installation
+- Golf cart custom wheels installation
+- Golf cart lithium battery upgrade
+
+### Comparison Keywords
+- Best golf cart repair near me
+- Affordable golf cart service prices
+- Cheap golf cart repair
+- Professional golf cart maintenance
+- Certified golf cart technician
+
+---
+
+## LOCAL SEO KEYWORDS
+
+### State Keywords
+- Pennsylvania golf cart service
+- New Jersey golf cart repair
+- Delaware golf cart maintenance
+- Florida golf cart service
+- North Carolina golf cart repair
+- South Carolina golf cart service
+- Virginia golf cart repair
+- Indiana golf cart service
+- Ohio golf cart repair
+
+### Community Keywords
+- Golf course community cart service
+- Retirement community golf cart repair
+- Beach community golf cart service
+- Gated community golf cart repair
+- Resort golf cart service
+
+---
+
+## VOICE SEARCH OPTIMIZATION
+
+### Question Keywords
+- Where can I get my golf cart repaired?
+- How much does golf cart repair cost?
+- Who repairs golf carts near me?
+- What does a golf cart tune-up include?
+- How often should I service my golf cart?
+- Why is my golf cart running slow?
+- How long do golf cart batteries last?
+- Can you fix electric golf carts?
+
+---
+
+## SEASONAL KEYWORDS
+
+### Spring Keywords
+- Spring golf cart maintenance
+- Golf cart spring tune-up
+- Get golf cart ready for season
+
+### Summer Keywords
+- Summer golf cart service
+- Golf cart air conditioning repair
+- Golf cart overheating repair
+
+### Fall Keywords
+- Fall golf cart maintenance
+- Golf cart winterization
+- End of season golf cart service
+
+### Winter Keywords
+- Winter golf cart storage prep
+- Golf cart battery winter storage
+- Golf cart cover installation
+
+---
+
+## COMMERCIAL INTENT KEYWORDS
+
+### Purchase Intent
+- Golf cart repair near me open now
+- Same day golf cart repair
+- Emergency golf cart service
+- Golf cart repair appointment
+- Schedule golf cart service
+- Book golf cart maintenance
+
+### Price Intent
+- Golf cart repair cost
+- Golf cart service prices
+- Affordable golf cart repair rates
+- Golf cart tune-up price
+- Golf cart battery cost
+
+---
+
+## SEARCH ENGINE ACCESSIBILITY
+
+### Allowed Search Engines
+- Google (Googlebot)
+- Bing (Bingbot)
+- Yahoo (Slurp)
+- DuckDuckGo (DuckDuckBot)
+- Yandex (YandexBot)
+- Baidu (Baiduspider)
+
+### Indexing Permissions
+- Full site indexing: ENABLED
+- Image indexing: ENABLED
+- Mobile indexing: ENABLED
+- Page caching: ENABLED
+- Snippet display: ENABLED
+
+---
+
+## META TAG STRATEGY
+
+### Title Tag Format
+[Service] | [Location] | Affordable Golf Cart Service
+
+### Description Tag Format
+Professional [service] for [location]. [Benefit]. Call 1-844-844-4070 today!
+
+### Example Meta Tags
+Title: Golf Cart Repair in Florida | Affordable Golf Cart Service
+Description: Professional golf cart repair services in Florida. Fast, affordable, and reliable service by certified technicians. Call 1-844-844-4070 today!
+
+---
+
+## STRUCTURED DATA
+
+### Business Schema
+- Type: LocalBusiness / AutomotiveRepair
+- Name: Affordable Golf Cart Service
+- Phone: 1-844-844-4070
+- URL: https://affordablegolfcartservice.com
+
+### Service Schema
+- Type: Service
+- Provider: Affordable Golf Cart Service
+- Area Served: United States
+
+---
+
+## CONTACT FOR SEO INQUIRIES
+
+Website: https://affordablegolfcartservice.com
+Phone: 1-844-844-4070
+Email: info@affordablegolfcartservice.com

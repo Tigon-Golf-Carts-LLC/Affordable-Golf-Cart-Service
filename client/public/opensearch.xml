@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Affordable Golf Cart Service</ShortName>
+  <Description>Search Affordable Golf Cart Service for golf cart repair and maintenance services</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/png">https://affordablegolfcartservice.com/favicon.png</Image>
+  <Url type="text/html" template="https://affordablegolfcartservice.com/services?q={searchTerms}"/>
+  <Contact>info@affordablegolfcartservice.com</Contact>
+  <LongName>Affordable Golf Cart Service - Golf Cart Repair and Maintenance</LongName>
+  <Developer>Affordable Golf Cart Service</Developer>
+  <Language>en-US</Language>
+</OpenSearchDescription>

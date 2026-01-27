@@ -1,0 +1,168 @@
+# Affordable Golf Cart Service - Geographic SEO Information
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+## GEOGRAPHIC SEO DATA
+
+This file provides comprehensive geographic and location-based SEO information for Affordable Golf Cart Service.
+
+---
+
+## BUSINESS HEADQUARTERS
+
+Company: Affordable Golf Cart Service
+Phone: 1-844-844-4070
+Website: https://affordablegolfcartservice.com
+Coverage: United States - Nationwide
+
+---
+
+## SERVICE LOCATIONS (14 Physical Locations)
+
+### Delaware
+1. **Dover, DE**
+   - Address: 1075 N DuPont Hwy, Dover, DE 19901
+   - Coordinates: 39.1582, -75.5244
+   - Phone: 302-389-8383
+   - Service Area: Kent County, New Castle County, Sussex County
+
+### Pennsylvania (5 Locations)
+2. **Pocono Pines, PA**
+   - Address: 2994 Route 940, Pocono Pines, PA 18350
+   - Coordinates: 41.1076, -75.4577
+   - Phone: 570-234-4444
+   - Service Area: Monroe County, Pike County, Carbon County
+
+3. **Hatfield, PA**
+   - Address: 1800 Bethlehem Pike #1, Hatfield, PA 19440
+   - Coordinates: 40.2773, -75.2996
+   - Phone: 267-990-4444
+   - Service Area: Montgomery County, Bucks County, Philadelphia
+
+4. **Scranton, PA**
+   - Address: 1225 N Keyser Ave #2, Scranton, PA 18504
+   - Coordinates: 41.4350, -75.6649
+   - Phone: 570-344-4443
+   - Service Area: Lackawanna County, Luzerne County, Wayne County
+
+5. **Long Pond, PA**
+   - Address: 3169 Route 940, Long Pond, PA 18334
+   - Coordinates: 41.0470, -75.4996
+   - Phone: 570-234-4444
+   - Service Area: Monroe County, Pocono region
+
+### New Jersey (3 Locations)
+6. **Ocean View, NJ**
+   - Address: 15 Railroad Ave, Ocean View, NJ 08230
+   - Coordinates: 39.1923, -74.7163
+   - Phone: 609-365-4444
+   - Service Area: Cape May County, Atlantic County
+
+7. **Bayville, NJ**
+   - Address: 418 Atlantic City Blvd, Bayville, NJ 08721
+   - Coordinates: 39.9076, -74.1552
+   - Phone: 732-606-4444
+   - Service Area: Ocean County, Monmouth County
+
+8. **Waretown, NJ**
+   - Address: 698 Route 9, Waretown, NJ 08758
+   - Coordinates: 39.7915, -74.1941
+   - Phone: 609-339-4444
+   - Service Area: Ocean County, Burlington County
+
+### North Carolina
+9. **Raleigh, NC**
+   - Address: 10130 Fayetteville Rd, Raleigh, NC 27603
+   - Coordinates: 35.7139, -78.6569
+   - Phone: 984-data-4444
+   - Service Area: Wake County, Durham County, Johnston County
+
+### South Carolina
+10. **Orangeburg, SC**
+    - Address: 2180 St Matthews Rd, Orangeburg, SC 29118
+    - Coordinates: 33.4968, -80.8498
+    - Phone: 803-233-4444
+    - Service Area: Orangeburg County, Calhoun County, Bamberg County
+
+### Florida
+11. **Lecanto, FL**
+    - Address: 1120 N Lecanto Hwy, Lecanto, FL 34461
+    - Coordinates: 28.8556, -82.4879
+    - Phone: 352-610-4444
+    - Service Area: Citrus County, Marion County, Levy County
+
+### Virginia
+12. **Gloucester Point, VA**
+    - Address: 2724 George Washington Memorial Hwy, Gloucester Point, VA 23062
+    - Coordinates: 37.2668, -76.4966
+    - Phone: 804-539-4444
+    - Service Area: Gloucester County, York County, Mathews County
+
+### Indiana
+13. **South Bend, IN**
+    - Address: 3501 Portage Ave, South Bend, IN 46628
+    - Coordinates: 41.6834, -86.2520
+    - Phone: 574-888-4444
+    - Service Area: St. Joseph County, Elkhart County, Marshall County
+
+### Ohio
+14. **Swanton, OH**
+    - Address: 4840 County Rd 1, Swanton, OH 43558
+    - Coordinates: 41.5883, -83.8916
+    - Phone: 419-260-4444
+    - Service Area: Fulton County, Lucas County, Henry County
+
+---
+
+## STATE COVERAGE
+
+### Primary Service States (with Physical Locations)
+- Pennsylvania (PA) - 5 locations
+- New Jersey (NJ) - 3 locations
+- Delaware (DE) - 1 location
+- North Carolina (NC) - 1 location
+- South Carolina (SC) - 1 location
+- Florida (FL) - 1 location
+- Virginia (VA) - 1 location
+- Indiana (IN) - 1 location
+- Ohio (OH) - 1 location
+
+### Nationwide Coverage
+We serve all 50 US states through our network of service professionals.
+
+---
+
+## REGIONAL SEO TARGETING
+
+### Northeast Region
+- Pennsylvania, New Jersey, Delaware, New York, Connecticut, Massachusetts
+
+### Southeast Region
+- North Carolina, South Carolina, Virginia, Florida, Georgia
+
+### Midwest Region
+- Indiana, Ohio, Michigan, Illinois
+
+---
+
+## LOCAL SEO KEYWORDS
+
+### State-Level
+- Golf cart service Pennsylvania
+- Golf cart repair New Jersey
+- Golf cart maintenance Delaware
+- Golf cart service Florida
+
+### City-Level
+- Golf cart repair Dover DE
+- Golf cart service Scranton PA
+- Golf cart repair Raleigh NC
+- Golf cart service Lecanto FL
+
+---
+
+## CONTACT
+
+Phone: 1-844-844-4070
+Website: https://affordablegolfcartservice.com
+Email: info@affordablegolfcartservice.com

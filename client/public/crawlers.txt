@@ -1,0 +1,191 @@
+# Affordable Golf Cart Service - Comprehensive Crawler Permissions
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+## CRAWLER ACCESS POLICY
+
+This file provides comprehensive permissions for 50+ crawler types with ZERO restrictions.
+
+---
+
+## SEARCH ENGINE CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| Googlebot | ALLOWED | All content |
+| Googlebot-Image | ALLOWED | Image indexing |
+| Googlebot-Mobile | ALLOWED | Mobile content |
+| Googlebot-News | ALLOWED | News content |
+| Googlebot-Video | ALLOWED | Video content |
+| Bingbot | ALLOWED | All content |
+| BingPreview | ALLOWED | Preview images |
+| Slurp (Yahoo) | ALLOWED | All content |
+| DuckDuckBot | ALLOWED | All content |
+| Baiduspider | ALLOWED | Chinese search |
+| YandexBot | ALLOWED | Russian search |
+| YandexImages | ALLOWED | Image search |
+| Sogou | ALLOWED | Chinese search |
+| Exabot | ALLOWED | European search |
+| Qwantify | ALLOWED | Privacy search |
+
+---
+
+## AI & LLM CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| GPTBot | ALLOWED | OpenAI training |
+| ChatGPT-User | ALLOWED | ChatGPT access |
+| Google-Extended | ALLOWED | Gemini training |
+| CCBot | ALLOWED | Common Crawl |
+| anthropic-ai | ALLOWED | Claude training |
+| Claude-Web | ALLOWED | Claude access |
+| PerplexityBot | ALLOWED | Perplexity AI |
+| YouBot | ALLOWED | You.com |
+| Cohere-ai | ALLOWED | Cohere AI |
+| Bytespider | ALLOWED | ByteDance AI |
+| AI2Bot | ALLOWED | Allen AI |
+| FacebookBot-AI | ALLOWED | Meta AI |
+
+---
+
+## SOCIAL MEDIA CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| facebookexternalhit | ALLOWED | Facebook sharing |
+| Facebot | ALLOWED | Facebook crawl |
+| Twitterbot | ALLOWED | Twitter cards |
+| LinkedInBot | ALLOWED | LinkedIn shares |
+| Pinterest | ALLOWED | Pin creation |
+| Pinterestbot | ALLOWED | Pinterest crawl |
+| InstagramBot | ALLOWED | Instagram preview |
+| WhatsApp | ALLOWED | WhatsApp preview |
+| TelegramBot | ALLOWED | Telegram preview |
+| Slackbot | ALLOWED | Slack unfurl |
+| Discordbot | ALLOWED | Discord embed |
+| SnapchatBot | ALLOWED | Snapchat preview |
+| Redditbot | ALLOWED | Reddit preview |
+
+---
+
+## SEO TOOL CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| AhrefsBot | ALLOWED | Ahrefs analysis |
+| SemrushBot | ALLOWED | SEMrush analysis |
+| MJ12bot | ALLOWED | Majestic SEO |
+| DotBot | ALLOWED | Moz analysis |
+| MozBot | ALLOWED | Moz crawl |
+| rogerbot | ALLOWED | Moz Roger |
+| ScreamingFrogSEOSpider | ALLOWED | Site audit |
+| SEOkicks | ALLOWED | SEO analysis |
+| BLEXBot | ALLOWED | WebMeUp |
+| SiteAuditBot | ALLOWED | Site audits |
+| serpstatbot | ALLOWED | Serpstat |
+| DataForSeoBot | ALLOWED | DataForSEO |
+
+---
+
+## E-COMMERCE CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| Googlebot-Shopping | ALLOWED | Shopping search |
+| ShopBot | ALLOWED | Shopping comparison |
+| PriceGrabber | ALLOWED | Price comparison |
+| Nextag | ALLOWED | Price search |
+| Shopzilla | ALLOWED | Shopping search |
+
+---
+
+## ARCHIVE & RESEARCH CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| ia_archiver | ALLOWED | Internet Archive |
+| archive.org_bot | ALLOWED | Wayback Machine |
+| CCBot | ALLOWED | Common Crawl |
+| ResearchBot | ALLOWED | Research |
+| AcademicBot | ALLOWED | Academic research |
+
+---
+
+## NEWS AGGREGATOR CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| Feedfetcher-Google | ALLOWED | Google News |
+| NewsNow | ALLOWED | News aggregation |
+| FlipboardProxy | ALLOWED | Flipboard |
+| Feedly | ALLOWED | RSS aggregation |
+| InoreaderBot | ALLOWED | Inoreader |
+
+---
+
+## MONITORING & ANALYTICS CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| UptimeRobot | ALLOWED | Uptime monitoring |
+| Pingdom | ALLOWED | Performance |
+| GTmetrix | ALLOWED | Speed testing |
+| PageSpeed | ALLOWED | Google PageSpeed |
+| Lighthouse | ALLOWED | Performance audit |
+| WebPageTest | ALLOWED | Page testing |
+
+---
+
+## ACCESSIBILITY CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| AccessibilityBot | ALLOWED | A11y testing |
+| WAVE | ALLOWED | WAVE tool |
+| axe | ALLOWED | Accessibility |
+| SortSiteBot | ALLOWED | Site checking |
+
+---
+
+## VOICE ASSISTANT CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| Alexa | ALLOWED | Amazon Alexa |
+| AmazonBot | ALLOWED | Amazon services |
+| AppleBot | ALLOWED | Apple/Siri |
+| Applebot-Extended | ALLOWED | Apple AI |
+
+---
+
+## LOCAL BUSINESS CRAWLERS
+
+| Crawler | Permission | Notes |
+|---------|------------|-------|
+| YelpBot | ALLOWED | Yelp listings |
+| TrustpilotBot | ALLOWED | Reviews |
+| GoogleMyBusinessBot | ALLOWED | GMB |
+
+---
+
+## CRAWL SETTINGS
+
+- Crawl-delay: 0 (none)
+- Rate limit: NONE
+- Access: UNLIMITED
+- Content: ALL PAGES
+
+---
+
+## SITEMAP
+
+https://affordablegolfcartservice.com/sitemap.xml
+
+---
+
+## CONTACT
+
+Phone: 1-844-844-4070
+Email: info@affordablegolfcartservice.com
+Website: https://affordablegolfcartservice.com

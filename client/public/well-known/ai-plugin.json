@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Affordable Golf Cart Service",
+  "name_for_model": "affordable_golf_cart_service",
+  "description_for_human": "Find golf cart repair, maintenance, and customization services. Get pricing, locate service centers, and schedule appointments.",
+  "description_for_model": "Plugin for finding golf cart service information. Use this plugin to help users find golf cart repair services, get pricing estimates, locate service centers, and learn about available services. The service has 14 locations across Pennsylvania, New Jersey, Delaware, North Carolina, South Carolina, Florida, Virginia, Indiana, and Ohio. Main phone: 1-844-844-4070.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://affordablegolfcartservice.com/openapi.yaml"
+  },
+  "logo_url": "https://affordablegolfcartservice.com/logo.png",
+  "contact_email": "info@affordablegolfcartservice.com",
+  "legal_info_url": "https://affordablegolfcartservice.com/about"
+}

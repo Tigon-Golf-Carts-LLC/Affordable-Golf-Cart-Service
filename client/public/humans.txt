@@ -1,0 +1,54 @@
+/* TEAM */
+
+Company: Affordable Golf Cart Service
+Website: https://affordablegolfcartservice.com
+Phone: 1-844-844-4070
+Email: info@affordablegolfcartservice.com
+Facebook: https://www.facebook.com/AffordableGolfCartService/
+
+Location: Serving all 50 US States
+Headquarters: Multiple service locations nationwide
+
+/* THANKS */
+
+Our Customers: Thank you for trusting us with your golf cart service needs
+Our Technicians: Certified professionals delivering quality service
+Our Partners: Golf cart manufacturers and parts suppliers
+
+/* SITE */
+
+Last Updated: 2026-01-27
+Language: English (US)
+Standards: HTML5, CSS3, JavaScript ES6+
+Framework: React 18 with TypeScript
+Build Tool: Vite
+UI Library: shadcn/ui with Radix UI
+Styling: Tailwind CSS
+Hosting: Replit
+
+/* SERVICES */
+
+Total Services: 100+
+Service Categories: Tune-Up, Battery, Brakes, Motor, Electrical, Custom
+Brands Serviced: Club Car, EZ-GO, Yamaha, Star EV, ICON, Tomberlin, Cushman
+Cart Types: Electric and Gas Golf Carts
+
+/* LOCATIONS */
+
+Total Locations: 14
+States with Locations: PA, NJ, DE, NC, SC, FL, VA, IN, OH
+Coverage: Nationwide (all 50 states)
+
+/* CONTACT */
+
+Main Phone: 1-844-844-4070
+Email: info@affordablegolfcartservice.com
+Website: https://affordablegolfcartservice.com
+Facebook: /AffordableGolfCartService
+
+/* CREDITS */
+
+Design: Custom responsive design
+Development: Full-stack TypeScript
+Icons: Lucide React
+Fonts: Inter (Google Fonts)

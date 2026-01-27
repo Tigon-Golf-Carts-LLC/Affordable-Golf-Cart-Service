@@ -1,0 +1,112 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://affordablegolfcartservice.com/#business",
+      "name": "Affordable Golf Cart Service",
+      "description": "Professional golf cart service, repair, and maintenance company with 14 locations nationwide. Over 100 services including tune-ups, battery replacement, brake service, and custom upgrades.",
+      "url": "https://affordablegolfcartservice.com",
+      "telephone": "+1-844-844-4070",
+      "email": "info@affordablegolfcartservice.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://affordablegolfcartservice.com/logo.png"
+      },
+      "image": "https://affordablegolfcartservice.com/og-image.png",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Credit Card, Debit Card",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.8283,
+          "longitude": -98.5795
+        },
+        "geoRadius": "3000 mi"
+      },
+      "sameAs": [
+        "https://www.facebook.com/AffordableGolfCartService/"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Golf Cart Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Golf Cart Tune-Up",
+              "description": "Complete golf cart tune-up including inspection and adjustments"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "89-149",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Battery Replacement",
+              "description": "Golf cart battery replacement for all makes and models"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "149-1499",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brake Service",
+              "description": "Complete brake inspection, repair, and replacement"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": "49-499",
+              "priceCurrency": "USD"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://affordablegolfcartservice.com/#website",
+      "url": "https://affordablegolfcartservice.com",
+      "name": "Affordable Golf Cart Service",
+      "description": "Professional golf cart service, repair, and maintenance",
+      "publisher": {
+        "@id": "https://affordablegolfcartservice.com/#business"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://affordablegolfcartservice.com/services?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://affordablegolfcartservice.com/#organization",
+      "name": "Affordable Golf Cart Service",
+      "url": "https://affordablegolfcartservice.com",
+      "logo": "https://affordablegolfcartservice.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-844-844-4070",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      }
+    }
+  ]
+}

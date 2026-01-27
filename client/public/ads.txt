@@ -1,0 +1,18 @@
+# Affordable Golf Cart Service - Authorized Digital Sellers
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+# This file declares authorized digital advertising sellers for affordablegolfcartservice.com
+
+# Format: <domain>, <publisher_id>, <relationship>, <certification_authority_id>
+
+# Google AdSense/Ad Manager (placeholder - update with actual IDs when applicable)
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Note: This is a service-based business website.
+# Advertising partnerships may be added as needed.
+
+# Contact for advertising inquiries:
+# Email: info@affordablegolfcartservice.com
+# Phone: 1-844-844-4070
+# Website: https://affordablegolfcartservice.com

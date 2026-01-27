@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Affordable Golf Cart Service</title>
+    <link>https://affordablegolfcartservice.com</link>
+    <description>Professional golf cart service, repair, and maintenance. Over 100 services including tune-ups, battery replacement, brake service, and custom upgrades.</description>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 27 Jan 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://affordablegolfcartservice.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://affordablegolfcartservice.com/logo.png</url>
+      <title>Affordable Golf Cart Service</title>
+      <link>https://affordablegolfcartservice.com</link>
+    </image>
+    
+    <item>
+      <title>Golf Cart Tune-Up Services</title>
+      <link>https://affordablegolfcartservice.com/services/golf-cart-tune-up</link>
+      <description>Complete golf cart tune-up service including inspection, adjustments, and preventive maintenance. Starting at $89.</description>
+      <pubDate>Mon, 27 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://affordablegolfcartservice.com/services/golf-cart-tune-up</guid>
+    </item>
+    
+    <item>
+      <title>Battery Replacement Services</title>
+      <link>https://affordablegolfcartservice.com/services/battery-replacement</link>
+      <description>Professional golf cart battery replacement for all makes and models. Lead-acid and lithium options available.</description>
+      <pubDate>Mon, 27 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://affordablegolfcartservice.com/services/battery-replacement</guid>
+    </item>
+    
+    <item>
+      <title>Brake Service and Repair</title>
+      <link>https://affordablegolfcartservice.com/services/brake-service</link>
+      <description>Complete brake inspection, repair, and replacement services for golf carts. Safety-focused service.</description>
+      <pubDate>Mon, 27 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://affordablegolfcartservice.com/services/brake-service</guid>
+    </item>
+    
+    <item>
+      <title>14 Service Locations Nationwide</title>
+      <link>https://affordablegolfcartservice.com/locations</link>
+      <description>Find an Affordable Golf Cart Service location near you. We have 14 service centers across Pennsylvania, New Jersey, Delaware, and more.</description>
+      <pubDate>Mon, 27 Jan 2026 00:00:00 GMT</pubDate>
+      <guid>https://affordablegolfcartservice.com/locations</guid>
+    </item>
+    
+  </channel>
+</rss>

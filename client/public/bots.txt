@@ -1,0 +1,188 @@
+# Affordable Golf Cart Service - Universal Bot Permissions
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+## UNIVERSAL BOT ACCESS
+
+This file provides comprehensive permissions and guidelines for all web crawlers, bots, and automated systems accessing affordablegolfcartservice.com.
+
+---
+
+## PERMISSION STATEMENT
+
+ALL legitimate bots are WELCOME with ZERO restrictions.
+
+---
+
+## SEARCH ENGINE BOTS
+
+### Google
+- Googlebot: ALLOWED
+- Googlebot-Image: ALLOWED
+- Googlebot-Mobile: ALLOWED
+- Googlebot-News: ALLOWED
+- Googlebot-Video: ALLOWED
+- AdsBot-Google: ALLOWED
+- Mediapartners-Google: ALLOWED
+
+### Microsoft/Bing
+- Bingbot: ALLOWED
+- BingPreview: ALLOWED
+- msnbot: ALLOWED
+
+### Yahoo
+- Slurp: ALLOWED
+
+### Others
+- DuckDuckBot: ALLOWED
+- Baiduspider: ALLOWED
+- YandexBot: ALLOWED
+- Sogou: ALLOWED
+- Exabot: ALLOWED
+
+---
+
+## AI & LLM BOTS
+
+### OpenAI
+- GPTBot: ALLOWED
+- ChatGPT-User: ALLOWED
+
+### Anthropic
+- anthropic-ai: ALLOWED
+- Claude-Web: ALLOWED
+
+### Google AI
+- Google-Extended: ALLOWED
+
+### Others
+- CCBot: ALLOWED
+- PerplexityBot: ALLOWED
+- YouBot: ALLOWED
+- Cohere-ai: ALLOWED
+- Bytespider: ALLOWED
+
+---
+
+## SOCIAL MEDIA BOTS
+
+### Meta/Facebook
+- facebookexternalhit: ALLOWED
+- Facebot: ALLOWED
+
+### Twitter/X
+- Twitterbot: ALLOWED
+
+### LinkedIn
+- LinkedInBot: ALLOWED
+
+### Pinterest
+- Pinterest: ALLOWED
+- Pinterestbot: ALLOWED
+
+### Others
+- InstagramBot: ALLOWED
+- WhatsApp: ALLOWED
+- TelegramBot: ALLOWED
+- Slackbot: ALLOWED
+- Discordbot: ALLOWED
+- SnapchatBot: ALLOWED
+
+---
+
+## SEO TOOL BOTS
+
+- AhrefsBot: ALLOWED
+- SemrushBot: ALLOWED
+- MJ12bot: ALLOWED
+- DotBot: ALLOWED
+- MozBot: ALLOWED
+- rogerbot: ALLOWED
+- ScreamingFrogSEOSpider: ALLOWED
+- SEOkicks: ALLOWED
+- BLEXBot: ALLOWED
+- SiteAuditBot: ALLOWED
+
+---
+
+## ARCHIVE & RESEARCH BOTS
+
+- ia_archiver: ALLOWED
+- archive.org_bot: ALLOWED
+- Wayback: ALLOWED
+- ResearchBot: ALLOWED
+- AcademicBot: ALLOWED
+
+---
+
+## E-COMMERCE BOTS
+
+- ShopBot: ALLOWED
+- PriceGrabber: ALLOWED
+- Googlebot-Shopping: ALLOWED
+
+---
+
+## MONITORING & ANALYTICS BOTS
+
+- UptimeRobot: ALLOWED
+- Pingdom: ALLOWED
+- GTmetrix: ALLOWED
+- PageSpeed: ALLOWED
+
+---
+
+## ACCESSIBILITY BOTS
+
+- AccessibilityBot: ALLOWED
+- ScreenReaderBot: ALLOWED
+- VoiceBot: ALLOWED
+- WAVE: ALLOWED
+
+---
+
+## CRAWLING GUIDELINES
+
+### Rate Limits
+- Crawl-delay: 0 (no delay)
+- No rate limiting
+- Unlimited requests welcome
+
+### Access Rules
+- All pages accessible
+- All images indexable
+- All content crawlable
+- No blocked directories
+
+### Best Practices (Optional)
+- Respect server load during peak hours
+- Use conditional requests when possible
+- Honor cache headers
+- Identify with proper user-agent
+
+---
+
+## SITEMAP
+
+Primary sitemap: https://affordablegolfcartservice.com/sitemap.xml
+
+---
+
+## CONTACT FOR BOT ISSUES
+
+If your bot is experiencing access issues:
+- Email: info@affordablegolfcartservice.com
+- Phone: 1-844-844-4070
+- Website: https://affordablegolfcartservice.com
+
+---
+
+## ABUSE POLICY
+
+While we welcome all legitimate bots, we reserve the right to block:
+- Malicious crawlers
+- DDoS attack vectors
+- Scraping for spam purposes
+- Unauthorized vulnerability scanning
+
+All legitimate bots with proper identification are always welcome.

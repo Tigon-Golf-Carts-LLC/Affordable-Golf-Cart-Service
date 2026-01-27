@@ -1,0 +1,32 @@
+# Affordable Golf Cart Service - Security Policy
+# Version: 1.0
+# Last Updated: 2026-01-27
+
+Contact: mailto:info@affordablegolfcartservice.com
+Contact: tel:+1-844-844-4070
+Expires: 2027-01-27T00:00:00.000Z
+Preferred-Languages: en
+
+# Security Contact Information
+# If you discover a security vulnerability, please contact us responsibly.
+
+# Email: info@affordablegolfcartservice.com
+# Phone: 1-844-844-4070
+# Website: https://affordablegolfcartservice.com
+
+# Policy
+# We take security seriously and appreciate responsible disclosure.
+# Please allow reasonable time for us to address any reported issues.
+
+# Scope
+# This security policy applies to:
+# - https://affordablegolfcartservice.com
+# - All subdomains and related services
+
+# Out of Scope
+# - Third-party services and integrations
+# - Social media accounts
+# - Physical security
+
+# Acknowledgments
+# We appreciate security researchers who help keep our site safe.
