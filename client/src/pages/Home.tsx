@@ -1,10 +1,12 @@
 import { Link } from "wouter";
-import { Phone, Shield, Clock, Award, Wrench, ArrowRight, ChevronRight } from "lucide-react";
+import { Phone, Shield, Clock, Award, Wrench, ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ServiceCard } from "@/components/ServiceCard";
+import { LocationSearch } from "@/components/LocationSearch";
 import { services, serviceCategories, getServicesByCategory } from "@shared/services";
+import { serviceLocations } from "@shared/locations";
 import { useState } from "react";
 
 const PHONE_NUMBER = "1-844-844-6638";
@@ -23,32 +25,38 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4" data-testid="badge-hero">
-              Trusted Golf Cart Service Provider
+              <MapPin className="h-3 w-3 mr-1" />
+              {serviceLocations.length} Locations Nationwide
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Affordable Golf Cart
               <span className="text-primary block">Service & Repair</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Professional golf cart maintenance, repair, and customization with over 100 services. Expert technicians ready to keep your cart running at peak performance.
+              Professional golf cart maintenance, repair, and customization with over 100 services. Find the closest service center near you!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild data-testid="button-hero-call">
-                <a href={PHONE_HREF} className="gap-2">
-                  <Phone className="h-5 w-5" />
-                  Call Now: {PHONE_NUMBER}
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild data-testid="button-hero-services">
-                <Link href="/services">
-                  View All Services
-                  <ArrowRight className="h-5 w-5 ml-2" />
-                </Link>
-              </Button>
-            </div>
+          </div>
+          
+          <div className="max-w-3xl mx-auto mb-8">
+            <LocationSearch variant="hero" />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild data-testid="button-hero-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" asChild data-testid="button-hero-services">
+              <Link href="/services">
+                View All Services
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_-20%,hsl(var(--primary)/0.1)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_-20%,hsl(var(--primary)/0.1)_0%,transparent_50%)] pointer-events-none" />
       </section>
 
       <section className="py-12 bg-card border-y">

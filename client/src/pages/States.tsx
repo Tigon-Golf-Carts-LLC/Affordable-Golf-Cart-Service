@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ServiceCard } from "@/components/ServiceCard";
+import { LocationSearch } from "@/components/LocationSearch";
 import { services, serviceCategories } from "@shared/services";
 import { usStates, getStateBySlug, getGoogleMapsEmbedUrl } from "@shared/states";
 import { useEffect } from "react";
@@ -62,26 +63,31 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
               Affordable Golf Cart Services
               <span className="text-primary block">in {state.name}</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Professional golf cart maintenance, repair, and customization services in {state.name}. Our expert technicians are ready to keep your cart running at peak performance throughout the {state.name} area.
+            <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Professional golf cart maintenance, repair, and customization services in {state.name}. Find a service location near you!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild data-testid={`button-hero-call-${state.slug}`}>
-                <a href={PHONE_HREF} className="gap-2">
-                  <Phone className="h-5 w-5" />
-                  Call Now: {PHONE_NUMBER}
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link href="/services">
-                  View All Services
-                  <ArrowRight className="h-5 w-5 ml-2" />
-                </Link>
-              </Button>
-            </div>
+          </div>
+          
+          <div className="max-w-3xl mx-auto mb-8">
+            <LocationSearch variant="hero" />
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild data-testid={`button-hero-call-${state.slug}`}>
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/services">
+                View All Services
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_-20%,hsl(var(--primary)/0.1)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_-20%,hsl(var(--primary)/0.1)_0%,transparent_50%)] pointer-events-none" />
       </section>
 
       <section className="py-12 bg-card border-y">

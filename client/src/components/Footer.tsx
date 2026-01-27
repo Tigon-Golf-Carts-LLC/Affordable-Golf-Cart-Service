@@ -2,6 +2,7 @@ import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { serviceCategories } from "@shared/services";
 import { usStates } from "@shared/states";
+import { serviceLocations } from "@shared/locations";
 
 const PHONE_NUMBER = "1-844-844-6638";
 const PHONE_HREF = "tel:+18448446638";
@@ -46,6 +47,11 @@ export function Footer() {
               <li>
                 <Link href="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-services">
                   Our Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-locations">
+                  Find a Location
                 </Link>
               </li>
               <li>

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Phone, Menu, X, ChevronDown, ChevronRight, MapPin } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, ChevronRight, MapPin, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 import { services, serviceCategories, getServicesByCategory } from "@shared/services";
 import { usStates } from "@shared/states";
+import { serviceLocations } from "@shared/locations";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -29,6 +30,7 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services" },
+    { href: "/locations", label: "Locations" },
     { href: "/states", label: "States" },
     { href: "/contact", label: "Contact" },
   ];
@@ -44,7 +46,7 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
+    <header className="sticky top-0 z-[9999] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0">
