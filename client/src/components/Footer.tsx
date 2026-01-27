@@ -11,14 +11,8 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-md bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">AG</span>
-              </div>
-              <div>
-                <span className="font-bold text-lg text-foreground">Affordable Golf Cart</span>
-                <span className="block text-xs text-muted-foreground -mt-1">Service</span>
-              </div>
+            <div className="mb-4">
+              <img src="/logo.png" alt="Affordable Golf Cart Service" className="h-16 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
               Your trusted partner for professional golf cart service, repair, and maintenance. We offer over 100 services to keep your cart running smoothly.

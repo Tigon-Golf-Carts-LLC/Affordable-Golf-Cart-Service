@@ -37,13 +37,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-10 h-10 rounded-md bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">AG</span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-bold text-lg text-foreground">Affordable Golf Cart</span>
-              <span className="block text-xs text-muted-foreground -mt-1">Service</span>
-            </div>
+            <img src="/logo.png" alt="Affordable Golf Cart Service" className="h-12 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
