@@ -234,14 +234,14 @@ export function LocationSearch({ variant = "hero", className = "" }: LocationSea
                           <Phone className="h-4 w-4" />
                           {location.phone}
                         </a>
-                        <div className="flex gap-2">
-                          <Button size="sm" variant="outline" asChild className="flex-1">
+                        <div className="flex flex-col gap-2">
+                          <Button size="sm" variant="outline" asChild className="w-full">
                             <a href={getDirectionsUrl(location)} target="_blank" rel="noopener noreferrer">
                               <Navigation className="h-4 w-4 mr-1" />
                               Directions
                             </a>
                           </Button>
-                          <Button size="sm" asChild className="flex-1">
+                          <Button size="sm" asChild className="w-full">
                             <Link href={`/locations/${location.slug}`}>
                               View Details
                             </Link>
