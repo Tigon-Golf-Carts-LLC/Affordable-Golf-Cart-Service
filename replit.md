@@ -20,7 +20,14 @@ Preferred communication style: Simple, everyday language.
 - **Styling**: Tailwind CSS with CSS custom properties for theming (light/dark mode support)
 - **Build Tool**: Vite for development and production builds
 
-The frontend is a multi-page application with routes for Home, About, Services (with individual service detail pages), and Contact. Service data is defined as static TypeScript constants in the shared directory, enabling both server-side API responses and client-side imports.
+The frontend is a multi-page application with routes for Home, About, Services (with individual service detail pages), States (50 individual state pages for local SEO), and Contact. Service data and state data are defined as static TypeScript constants in the shared directory, enabling both server-side API responses and client-side imports.
+
+### State Pages
+- **50 State Pages**: Individual pages for each US state at `/states/:slug` (e.g., `/states/florida`)
+- **States Data**: Defined in `shared/states.ts` with name, slug, abbreviation, and coordinates
+- **SEO Optimization**: Each state page dynamically updates page title and meta description via useEffect
+- **Google Maps Integration**: Each state page includes an embedded Google Map centered on the state
+- **Navigation**: States dropdown menu in header and featured state links in footer
 
 ### Backend Architecture
 - **Framework**: Express 5 running on Node.js
