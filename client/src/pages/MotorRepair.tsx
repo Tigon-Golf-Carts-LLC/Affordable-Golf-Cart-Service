@@ -29,9 +29,9 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 const SITE_URL = "https://affordablegolfcartservice.com";
 const PAGE_URL = `${SITE_URL}/services/motor-repair`;
-const PAGE_TITLE = "Golf Cart Engine Repair Near Me | Motor Repair Experts";
+const PAGE_TITLE = "Gas Golf Cart Repair | Engine Service & Motor Repair";
 const PAGE_DESCRIPTION =
-  "Golf cart engine trouble? Our certified mechanics provide expert golf cart engine repair near you — fast diagnostics, same-week service, and fair pricing. Call 1-844-844-4070.";
+  "Expert gas golf cart repair from certified mechanics. From carburetor cleaning to engine overhaul, plus electric motor service — we fix it fast and at a fair price. Call 1-844-844-4070.";
 
 const symptoms = [
   "No power or the cart won't move despite a charged battery or full tank",
@@ -42,6 +42,39 @@ const symptoms = [
   "Hard starting, stalling, or rough idle on gas-powered carts",
   "Vibration, surging, or jerking under load",
   "Smoke from the engine bay or motor housing",
+];
+
+const gasRepairServices = [
+  {
+    title: "Carburetor Cleaning & Repair",
+    description:
+      "The carburetor is the single most common source of trouble on a gas golf cart. Old or ethanol-blended fuel leaves varnish and gum that clog the tiny jets, causing hard starting, rough idle, surging, and stalling. We remove, fully disassemble, and clean the carburetor, replace worn gaskets, needles, and floats with a quality rebuild kit, and re-tune the air-fuel mixture so your engine starts on the first pull and runs smoothly under load.",
+  },
+  {
+    title: "Fuel System Repair",
+    description:
+      "Beyond the carburetor, your gas cart relies on a clean, leak-free fuel system. We inspect and replace cracked fuel lines, clogged fuel filters, failing fuel pumps, and contaminated fuel, and we clean varnish out of the tank when stale gas is the culprit. Restoring proper fuel delivery brings back consistent power, eliminates hesitation, and prevents the lean or rich running conditions that damage an engine over time.",
+  },
+  {
+    title: "Spark Plug Replacement & Ignition",
+    description:
+      "A worn or fouled spark plug robs your gas cart of power and fuel economy and makes it hard to start. We replace spark plugs, set the correct gap, and inspect the ignition coil, plug wire, and flywheel magneto for a strong, consistent spark. Fixing the ignition cures misfires, improves cold starting, and restores smooth acceleration from a standstill and up hills.",
+  },
+  {
+    title: "Engine Oil Changes & Lubrication",
+    description:
+      "Just like a car, a gas golf cart engine needs regular oil changes to stay healthy. Dirty or low oil accelerates wear and can lead to expensive engine damage. We change the engine oil and filter, check the oil level and condition, and inspect for leaks around the seals and gaskets. Routine oil service is one of the cheapest, easiest ways to extend the life of your engine.",
+  },
+  {
+    title: "Governor Adjustments",
+    description:
+      "The governor controls your cart's top speed and protects the engine from over-revving. A misadjusted or sticking governor can leave your cart feeling sluggish, surging, or running dangerously fast. We inspect, clean, and adjust the governor and its linkage to deliver the correct top speed and smooth, safe power delivery, dialing in performance within safe limits on request.",
+  },
+  {
+    title: "Exhaust System Repair",
+    description:
+      "A leaking or damaged exhaust is loud, can release fumes into the cabin, and may point to deeper engine problems. We inspect the muffler, exhaust manifold, gaskets, and mounting hardware, then repair or replace corroded or cracked components. A properly sealed exhaust keeps your gas cart quiet, safe, and running at peak efficiency.",
+  },
 ];
 
 const diagnosticProcess = [
@@ -269,6 +302,30 @@ export default function MotorRepair() {
             </div>
             <p>
               Not sure whether you have an electric or gas powertrain problem? That's exactly what our diagnostic visit is for. We identify the system at fault and recommend the most cost-effective path — repair, rebuild, or replacement — based on your cart's age, condition, and how you use it.
+            </p>
+
+            <h2 id="gas-golf-cart-repair" className="text-2xl md:text-3xl font-bold text-foreground mt-10 mb-4 flex items-center gap-2">
+              <Flame className="h-7 w-7 text-primary shrink-0" />
+              Gas Golf Cart Repair
+            </h2>
+            <p>
+              Gas-powered golf carts deliver long range and quick refueling, but their engines need specialized care that electric carts simply don't. A gas cart is essentially a small single-cylinder engine, and like any engine it depends on clean fuel, a strong spark, fresh oil, and proper tuning to run its best. When any one of those systems falls out of spec, you'll notice it as hard starting, lost power, surging, or excess smoke. Our certified mechanics provide complete gas golf cart repair — from a quick carburetor clean to a full engine overhaul — on EZGO, Club Car, Yamaha, and every other major gas cart brand. We work on two-cycle and four-cycle engines alike and stock the most common service parts to get you back on the road quickly. If your gas cart won't start, bogs down, smokes, or burns through fuel, here are the most common gas golf cart repairs we handle every day.
+            </p>
+            <div className="not-prose grid gap-4 sm:grid-cols-2 my-6">
+              {gasRepairServices.map((svc, idx) => (
+                <div key={idx} className="rounded-lg border bg-card p-5" data-testid={`gas-repair-${idx}`}>
+                  <h3 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                    <Wrench className="h-5 w-5 text-primary shrink-0" />
+                    {svc.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{svc.description}</p>
+                </div>
+              ))}
+            </div>
+            <p>
+              Whether your gas cart needs a simple spark plug and oil change or a complete engine rebuild, our team diagnoses the real problem and fixes it right the first time. Every gas golf cart repair is backed by transparent, upfront pricing and a service warranty, with mobile and pickup options to minimize your downtime. Call{" "}
+              <a href={PHONE_HREF} className="text-primary font-medium" data-testid="link-gas-repair-phone">{PHONE_NUMBER}</a>{" "}
+              to schedule fast, affordable gas engine service near you.
             </p>
 
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-10 mb-4">

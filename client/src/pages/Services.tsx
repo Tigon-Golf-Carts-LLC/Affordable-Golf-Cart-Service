@@ -684,6 +684,13 @@ function ServicesList() {
               <p>
                 Our most-requested golf cart services include comprehensive tune-ups, battery testing and replacement (lead-acid and lithium), brake inspection and pad replacement, motor repair and rebuilds, electrical diagnostics and controller repair, and charger service. Each job is performed with quality parts and finished with a road test so your cart leaves running the way it should. And when you can't bring your cart to us, our mobile golf cart service brings the same expertise directly to your driveway or community.
               </p>
+              <p>
+                Drive a gas-powered cart? Our certified mechanics handle complete{" "}
+                <Link href="/services/motor-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-services-gas-repair">
+                  gas golf cart repair
+                </Link>{" "}
+                — from carburetor cleaning, fuel system fixes, and spark plug replacement to governor adjustments and full engine rebuilds — so your gas cart starts easily and runs strong.
+              </p>
             </div>
             <ul className="mt-8 grid gap-3 sm:grid-cols-2">
               {serviceListItems.map((item, idx) => (

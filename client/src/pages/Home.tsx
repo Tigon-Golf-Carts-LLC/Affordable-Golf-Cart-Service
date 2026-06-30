@@ -232,6 +232,10 @@ export default function Home() {
                 <Link href="/services/electrical-diagnostics" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-controller">
                   golf cart controller repair
                 </Link>{" "}
+                and expert{" "}
+                <Link href="/services/motor-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-gas-repair">
+                  gas golf cart repair
+                </Link>{" "}
                 to batteries, brakes, and motors, getting quality golf cart repair at a price you can afford has never been easier. Explore our full list of services and typical pricing to see how much you can save.
               </p>
             </div>
