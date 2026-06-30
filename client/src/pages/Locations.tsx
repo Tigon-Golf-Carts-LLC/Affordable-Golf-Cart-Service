@@ -251,6 +251,12 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
                   golf cart charger repair in {location.city}
                 </Link>? Book a technician today.
               </p>
+              <p>
+                Need golf cart engine repair in {location.city}? Our certified mechanics are nearby and ready to help with electric motor and gas engine service — get{" "}
+                <Link href="/services/motor-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-engine-anchor">
+                  golf cart engine repair near me
+                </Link>.
+              </p>
               {["FL", "SC", "GA", "PA", "NJ"].includes(location.stateAbbr) && (
                 <p>
                   {location.city} is Club Car country, and our certified technicians specialize in{" "}
