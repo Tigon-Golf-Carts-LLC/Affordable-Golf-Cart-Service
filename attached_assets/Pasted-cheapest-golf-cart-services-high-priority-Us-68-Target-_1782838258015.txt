@@ -1,0 +1,32 @@
+cheapest golf cart services
+high priority
+Us: #68
+Target: www.affordablecarts.com (#2)
+We sit at position 68 while www.affordablecarts.com dominates at position 2 and jerseycarts.com ranks at 17 — this high-value price-sensitive keyword needs a price-transparency-focused page update to compete.
+
+Page to update
+https://affordablegolfcartservice.com/services
+Suggested title: Cheapest Golf Cart Services | Affordable Repair & Maintenance Pricing | Tigon Golf Carts
+Action plan
+1.
+Update
+Update the /services page to include transparent pricing information that directly addresses the 'cheapest golf cart services' searcher intent.
+Add a 'Golf Cart Service Pricing' section to /services with a price table covering tune-ups, battery replacement, brake service, motor repair, and electrical diagnostics with starting-price ranges. Include a 'How We Keep Costs Low' subsection to match the value-positioning of affordablecarts.com at position 2.
+
+Impact: Price transparency content directly matches searcher intent, expected to move from position 68 toward top 30 within 60 days.
+
+Done?
+2.
+Update
+Update the page title and meta description to include cost/price language matching the 'cheapest' search intent.
+Title: 'Cheapest Golf Cart Services | Affordable Repair & Maintenance Pricing | Tigon Golf Carts'. Meta: 'Get the most affordable golf cart services without sacrificing quality. Tigon Golf Carts offers the best prices on repair, maintenance & tune-ups. See pricing!'
+
+Impact: Stronger CTR from position 68 accelerates ranking improvements for this competitive keyword.
+
+Done?
+3.
+Update
+Update the /services page with PriceSpecification schema for each service to signal pricing information to Google.
+Add JSON-LD Offer or PriceSpecification schema to each service listing on the page (e.g., tune-up: $79–$149, battery replacement: starting at $199) to improve rich result eligibility and signal price relevance to Google's algorithms.
+
+Impact: Price rich results increase CTR and signal direct relevance to cost-focused queries like 'cheapest golf cart services'.

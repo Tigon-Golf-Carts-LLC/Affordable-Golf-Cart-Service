@@ -1,18 +1,197 @@
 import { useLocation, useRoute, Link } from "wouter";
-import { Phone, ArrowLeft, ArrowRight, Search } from "lucide-react";
+import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services, serviceCategories, getServicesByCategory, getServiceById } from "@shared/services";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
+const SITE_URL = "https://affordablegolfcartservice.com";
+const SERVICES_TITLE = "Affordable Golf Cart Services | Repair, Maintenance & More";
+const SERVICES_DESCRIPTION = "From battery replacement to motor repair — we deliver affordable golf cart services across the US. Call 1-844-844-4070 to get your free quote today!";
+
+interface FeaturedService {
+  id: string;
+  name: string;
+  icon: typeof Wrench;
+  priceRange: string;
+  lowPrice: number;
+  highPrice: number;
+  turnaround: string;
+  description: string;
+  includes: string[];
+}
+
+const featuredServices: FeaturedService[] = [
+  {
+    id: "tune-up",
+    name: "Golf Cart Tune-Up",
+    icon: Wrench,
+    priceRange: "$100–$450",
+    lowPrice: 100,
+    highPrice: 450,
+    turnaround: "Same day – 1 day",
+    description:
+      "A tune-up keeps your golf cart running smoothly and prevents costly breakdowns. Our affordable golf cart tune-up service covers a full inspection and adjustment of the key components that affect performance and reliability.",
+    includes: [
+      "Multi-point safety inspection",
+      "Brake and accelerator adjustment",
+      "Battery and charging system check",
+      "Tire pressure and tread inspection",
+      "Lubrication of moving parts",
+    ],
+  },
+  {
+    id: "battery-replacement",
+    name: "Battery Replacement",
+    icon: Battery,
+    priceRange: "$700–$3,600",
+    lowPrice: 700,
+    highPrice: 3600,
+    turnaround: "1–2 days",
+    description:
+      "Weak or dead batteries are the most common reason a golf cart loses range and power. We replace lead-acid and lithium battery packs with quality components and dispose of your old batteries responsibly.",
+    includes: [
+      "Battery load testing and diagnosis",
+      "Lead-acid or lithium pack replacement",
+      "Terminal cleaning and corrosion removal",
+      "Professional installation and wiring",
+      "Old battery removal and recycling",
+    ],
+  },
+  {
+    id: "brake-service",
+    name: "Brake Service",
+    icon: Disc,
+    priceRange: "$30–$300",
+    lowPrice: 30,
+    highPrice: 300,
+    turnaround: "Same day – 1 day",
+    description:
+      "Safe, responsive brakes are essential. Our affordable brake service inspects, adjusts, and replaces worn brake components so your cart stops reliably every time.",
+    includes: [
+      "Complete brake system inspection",
+      "Brake pad and shoe replacement",
+      "Cable adjustment and lubrication",
+      "Brake fluid check (where applicable)",
+      "Road test and final adjustment",
+    ],
+  },
+  {
+    id: "motor-repair",
+    name: "Motor Repair",
+    icon: Cpu,
+    priceRange: "$150–$1,200",
+    lowPrice: 150,
+    highPrice: 1200,
+    turnaround: "2–4 days",
+    description:
+      "When your cart loses power, struggles on hills, or won't move, the motor may need attention. We diagnose and repair or replace electric and gas motors to restore full performance.",
+    includes: [
+      "Full motor diagnostics",
+      "Brush, bearing, and winding inspection",
+      "Motor repair or replacement",
+      "Speed controller testing",
+      "Performance verification",
+    ],
+  },
+  {
+    id: "electrical-diagnostics",
+    name: "Electrical Diagnostics",
+    icon: Zap,
+    priceRange: "$50–$350",
+    lowPrice: 50,
+    highPrice: 350,
+    turnaround: "Same day – 2 days",
+    description:
+      "Intermittent power, blown fuses, and faulty wiring can be frustrating to track down. Our technicians use professional diagnostic tools to find and fix electrical problems fast.",
+    includes: [
+      "Complete electrical system scan",
+      "Wiring and connection inspection",
+      "Solenoid, switch, and fuse testing",
+      "Controller and onboard computer check",
+      "Repair of faulty components",
+    ],
+  },
+  {
+    id: "charger-repair",
+    name: "Charger Repair",
+    icon: Plug,
+    priceRange: "$50–$250",
+    lowPrice: 50,
+    highPrice: 250,
+    turnaround: "Same day – 2 days",
+    description:
+      "A failing charger can leave you stranded with a dead cart. We inspect, repair, and replace both onboard and external chargers to keep your batteries topped up and healthy.",
+    includes: [
+      "Charger output and voltage testing",
+      "Onboard and external charger repair",
+      "Charging port and cable inspection",
+      "Battery compatibility check",
+      "Charger replacement if needed",
+    ],
+  },
+];
+
+const serviceFaqs = [
+  {
+    question: "How much does golf cart service cost?",
+    answer:
+      "Affordable golf cart services typically range from about $20 for minor adjustments to $3,600 for a full lithium battery replacement. A standard tune-up runs $100–$450, brake service $30–$300, and electrical diagnostics $50–$350. Labor generally runs $75–$350 per hour depending on complexity. Call 1-844-844-4070 for a free, accurate quote for your cart.",
+  },
+  {
+    question: "What does a golf cart tune-up include?",
+    answer:
+      "A golf cart tune-up includes a multi-point safety inspection, brake and accelerator adjustment, battery and charging system check, tire pressure and tread inspection, and lubrication of all moving parts. For gas carts it also covers spark plugs, air filters, and oil changes.",
+  },
+  {
+    question: "Do you offer mobile golf cart services?",
+    answer:
+      "Yes. We offer mobile golf cart service where our technicians come to you, as well as convenient pickup and delivery options. Mobile service calls are billed at a higher rate than in-house service. Call us to confirm mobile availability in your area.",
+  },
+  {
+    question: "How long does golf cart service take?",
+    answer:
+      "Most services are completed the same day or within 1–2 days. Tune-ups and brake service are often same-day, while motor repairs and battery replacements may take 2–4 days depending on parts availability.",
+  },
+  {
+    question: "What areas do you serve?",
+    answer:
+      "We provide affordable golf cart services across all 50 states through our network of 14 service locations. Visit our locations or state pages to find the nearest service center to you.",
+  },
+  {
+    question: "Do your services come with a warranty?",
+    answer:
+      "Yes. All of our golf cart repair and maintenance services include a service warranty, quality parts, and a post-service inspection for your peace of mind.",
+  },
+];
+
 function ServiceDetail({ serviceId }: { serviceId: string }) {
   const service = getServiceById(serviceId);
+
+  useEffect(() => {
+    if (service) {
+      document.title = `${service.name} | Affordable Golf Cart Services`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute(
+          "content",
+          `${service.name} (${service.priceRange}) — ${service.description} Affordable golf cart service nationwide. Call 1-844-844-4070 for a free quote!`
+        );
+      }
+    }
+  }, [service]);
 
   if (!service) {
     return (
@@ -167,6 +346,63 @@ function ServicesList() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryParam);
   const [searchQuery, setSearchQuery] = useState("");
 
+  useEffect(() => {
+    document.title = SERVICES_TITLE;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", SERVICES_DESCRIPTION);
+    }
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        ...featuredServices.map((s) => ({
+          "@type": "Service",
+          name: `Affordable Golf Cart ${s.name}`,
+          serviceType: s.name,
+          description: s.description,
+          url: `${SITE_URL}/services`,
+          offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: "USD",
+            lowPrice: s.lowPrice,
+            highPrice: s.highPrice,
+          },
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Affordable Golf Cart Service",
+            telephone: "+1-844-844-4070",
+            url: SITE_URL,
+          },
+        })),
+        {
+          "@type": "FAQPage",
+          mainEntity: serviceFaqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        },
+      ],
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "services-structured-data";
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      const existing = document.getElementById("services-structured-data");
+      if (existing) {
+        existing.remove();
+      }
+    };
+  }, []);
+
   const filteredServices = useMemo(() => {
     let result = selectedCategory
       ? getServicesByCategory(selectedCategory)
@@ -191,10 +427,10 @@ function ServicesList() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Our Services
+              Affordable Golf Cart Services
             </h1>
             <p className="text-lg text-muted-foreground mb-6">
-              Browse all 100 golf cart services we offer. From routine maintenance to custom upgrades, we've got you covered.
+              From tune-ups and battery replacement to motor repair and electrical diagnostics, we deliver affordable golf cart services across all 50 states. Browse our 100+ services below, see typical pricing and turnaround times, and call for a free quote.
             </p>
             <Button size="lg" asChild data-testid="button-services-header-call">
               <a href={PHONE_HREF} className="gap-2">
@@ -202,6 +438,69 @@ function ServicesList() {
                 Call Now: {PHONE_NUMBER}
               </a>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Our Most Popular Affordable Golf Cart Services
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Each service is performed by certified technicians using quality parts, backed by a service warranty. Pricing varies by cart model, parts, and location — call 1-844-844-4070 for an accurate quote.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            {featuredServices.map((service) => {
+              const Icon = service.icon;
+              return (
+                <Card key={service.id} data-testid={`card-featured-${service.id}`}>
+                  <CardHeader>
+                    <div className="flex items-start gap-3">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-foreground">{service.name}</h3>
+                        <div className="flex flex-wrap items-center gap-2 mt-2">
+                          <Badge variant="outline" data-testid={`badge-price-${service.id}`}>
+                            {service.priceRange}
+                          </Badge>
+                          <Badge variant="secondary" className="gap-1">
+                            <Clock className="h-3 w-3" />
+                            {service.turnaround}
+                          </Badge>
+                        </div>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-muted-foreground">{service.description}</p>
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2 text-sm">What's Included:</h4>
+                      <ul className="space-y-1">
+                        {service.includes.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <Wrench className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button className="w-full" asChild data-testid={`button-featured-call-${service.id}`}>
+                      <a href={PHONE_HREF} className="gap-2">
+                        <Phone className="h-4 w-4" />
+                        Call Now to Schedule Today!
+                      </a>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -280,6 +579,33 @@ function ServicesList() {
               </div>
             </>
           )}
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-card border-t">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Affordable Golf Cart Services FAQs
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Answers to the most common questions about our golf cart repair and maintenance services.
+              </p>
+            </div>
+            <Accordion type="single" collapsible className="w-full">
+              {serviceFaqs.map((faq, idx) => (
+                <AccordionItem key={idx} value={`faq-${idx}`} data-testid={`faq-item-${idx}`}>
+                  <AccordionTrigger className="text-left font-semibold" data-testid={`faq-question-${idx}`}>
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground" data-testid={`faq-answer-${idx}`}>
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </section>
 

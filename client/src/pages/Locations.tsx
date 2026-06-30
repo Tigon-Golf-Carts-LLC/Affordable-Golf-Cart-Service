@@ -228,7 +228,11 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>
-                Our {location.city}, {location.stateAbbr} service center offers comprehensive golf cart maintenance, repair, and customization services. Whether you need a routine tune-up, battery replacement, brake service, or custom upgrades, our experienced technicians are here to help.
+                Our {location.city}, {location.stateAbbr} service center offers comprehensive{" "}
+                <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid="link-services-anchor">
+                  affordable golf cart services
+                </Link>{" "}
+                including maintenance, repair, and customization. Whether you need a routine tune-up, battery replacement, brake service, or custom upgrades, our experienced technicians are here to help.
               </p>
               <p>
                 Located at {getFullAddress(location)}, we serve golf cart owners throughout the {location.city} area and surrounding communities. We work on all major golf cart brands and offer competitive pricing on parts and labor.

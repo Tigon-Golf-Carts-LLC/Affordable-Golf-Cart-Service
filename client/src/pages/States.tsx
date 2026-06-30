@@ -221,7 +221,11 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
                 , we're proud to serve golf cart owners throughout {state.name}. Whether you live in a golf course community, a retirement village, or simply enjoy the convenience of a golf cart for local transportation, we're here to help keep your cart in top condition.
               </p>
               <p>
-                Our {state.name} service technicians are fully trained and equipped to handle everything from routine maintenance like tune-ups and battery service to major repairs including motor replacement and electrical diagnostics. We also offer a wide range of customization options to make your golf cart uniquely yours.
+                Our {state.name} service technicians are fully trained and equipped to handle everything from routine maintenance like tune-ups and battery service to major repairs including motor replacement and electrical diagnostics. Explore our full range of{" "}
+                <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid="link-services-anchor">
+                  affordable golf cart services
+                </Link>{" "}
+                or call to make your golf cart uniquely yours.
               </p>
               <p>
                 We understand that {state.name} residents rely on their golf carts for various purposes, from golfing to neighborhood transportation. That's why we offer both mobile service (we come to you) and convenient pickup and delivery options throughout the {state.name} area.
