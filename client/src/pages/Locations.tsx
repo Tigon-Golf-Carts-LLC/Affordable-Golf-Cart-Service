@@ -246,7 +246,10 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
                 <Link href="/services/electrical-diagnostics" className="text-primary hover:text-primary/80 font-medium" data-testid="link-controller-anchor">
                   golf cart controller repair
                 </Link>{" "}
-                and electrical diagnostics for carts that surge, cut out, or won't respond.
+                and electrical diagnostics for carts that surge, cut out, or won't respond. Need{" "}
+                <Link href="/services/electrical-diagnostics" className="text-primary hover:text-primary/80 font-medium" data-testid="link-charger-anchor">
+                  golf cart charger repair in {location.city}
+                </Link>? Book a technician today.
               </p>
               <p>
                 Prefer not to haul your cart? We offer{" "}

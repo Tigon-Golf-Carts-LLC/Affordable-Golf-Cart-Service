@@ -10,6 +10,9 @@ import {
   ShieldCheck,
   Gauge,
   Zap,
+  Plug,
+  MapPin,
+  CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -26,9 +29,38 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 const SITE_URL = "https://affordablegolfcartservice.com";
 const PAGE_URL = `${SITE_URL}/services/electrical-diagnostics`;
-const PAGE_TITLE = "Golf Cart Controller Repair & Electrical Diagnostics";
+const PAGE_TITLE = "Golf Cart Charger Repair Near Me | Electrical Diagnostics & Fix";
 const PAGE_DESCRIPTION =
-  "Is your golf cart not responding? Our certified techs specialize in golf cart controller repair and electrical diagnostics. Fast service, fair prices. Call 1-844-844-4070.";
+  "Golf cart charger not working? Our certified technicians provide golf cart charger repair near you — fast diagnostics, fair pricing, same-week service. Call 1-844-844-4070.";
+
+const chargerSymptoms = [
+  "The charger won't power on or shows no lights at all",
+  "The cart won't charge even when it's plugged in",
+  "Charging is extremely slow or stops before a full charge",
+  "The charger clicks, hums, buzzes, or overheats",
+  "An error code or fault light appears on the charger",
+  "A blown fuse, damaged cord, or melted charging plug",
+];
+
+const chargerBrands = ["EZGO", "Club Car", "Yamaha", "Lester", "Delta-Q", "Schauer"];
+
+const chargerFaqs = [
+  {
+    question: "How much does golf cart charger repair cost?",
+    answer:
+      "Golf cart charger repair typically costs $50 to $250 for testing and component-level repairs, while a replacement onboard or external charger generally runs $150 to $500 depending on your cart's voltage and brand. We always test first and give you an upfront quote — call 1-844-844-4070 for a free estimate.",
+  },
+  {
+    question: "Can you fix golf cart chargers for EZGO, Club Car, and Yamaha?",
+    answer:
+      "Yes. Our certified technicians repair and replace both onboard and external chargers for all major brands, including EZGO, Club Car, and Yamaha, as well as common charger makers like Lester, Delta-Q, and Schauer, for 36V and 48V lead-acid and lithium systems.",
+  },
+  {
+    question: "Do you offer golf cart charger repair near me?",
+    answer:
+      "We provide golf cart charger repair nationwide across all 50 states, with technicians serving communities from coast to coast and mobile service that can come to you. Call 1-844-844-4070 to confirm availability in your area and book a local technician.",
+  },
+];
 
 const symptoms = [
   "Cart hesitates, surges, or jerks when you press the pedal",
@@ -119,8 +151,31 @@ export default function ElectricalDiagnostics() {
           },
         },
         {
+          "@type": "Service",
+          "@id": `${PAGE_URL}#charger-repair`,
+          name: "Golf Cart Charger Repair",
+          serviceType: "Golf Cart Charger Repair",
+          description:
+            "Golf cart charger repair and replacement for onboard and external chargers across all major brands including EZGO, Club Car, and Yamaha.",
+          url: PAGE_URL,
+          areaServed: { "@type": "Country", name: "United States" },
+          offers: {
+            "@type": "AggregateOffer",
+            priceCurrency: "USD",
+            lowPrice: 50,
+            highPrice: 500,
+          },
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Affordable Golf Cart Service",
+            telephone: "+1-844-844-4070",
+            url: SITE_URL,
+            priceRange: "$$",
+          },
+        },
+        {
           "@type": "FAQPage",
-          mainEntity: controllerFaqs.map((faq) => ({
+          mainEntity: [...controllerFaqs, ...chargerFaqs].map((faq) => ({
             "@type": "Question",
             name: faq.question,
             acceptedAnswer: {
@@ -278,17 +333,92 @@ export default function ElectricalDiagnostics() {
 
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto prose prose-lg max-w-none text-muted-foreground">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Golf Cart Charger Repair Near You
+            </h2>
+            <p>
+              A failing charger is one of the most common reasons a golf cart ends up sitting dead in the garage — and it's often mistaken for a battery problem. If your cart won't charge, the good news is that charger repair is usually far cheaper than replacing a whole battery pack. Our certified technicians provide golf cart charger repair near you, diagnosing the real cause fast and getting your cart powered back up, often with same-week service. Because we troubleshoot the charger, batteries, and charging port together, you never pay to replace a charger that wasn't the problem in the first place.
+            </p>
+            <p>
+              Not sure whether your charger is the culprit? These are the warning signs we see most often:
+            </p>
+            <ul className="not-prose grid gap-3 sm:grid-cols-2 my-6">
+              {chargerSymptoms.map((symptom, idx) => (
+                <li key={idx} className="flex items-start gap-2" data-testid={`charger-symptom-${idx}`}>
+                  <AlertTriangle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm text-foreground">{symptom}</span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-3">Charger Repair vs. Replacement</h3>
+            <p>
+              Just like with controllers, the right call depends on the failure. Many charger problems — a blown fuse, a damaged cord or plug, a faulty cooling fan, or a single failed internal component — can be repaired at a fraction of the cost of a new unit. Component-level charger repair typically runs $50 to $250, and it's often the smartest choice for a charger that's otherwise in good shape. When the transformer or main board is burned out, however, a replacement is more reliable. A new onboard or external charger generally costs $150 to $500 depending on your cart's voltage and brand. We test first, then give you an honest, upfront recommendation so you can decide based on cost and the age of your equipment.
+            </p>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-3">Compatible Charger Brands</h3>
+            <p>
+              We service both onboard and external chargers for every major golf cart brand, including EZGO, Club Car, and Yamaha, plus popular charger manufacturers like Lester, Delta-Q, and Schauer. Whether you run a 36V or 48V system, lead-acid or lithium batteries, our technicians have the diagnostic tools and replacement parts to get the job done right.
+            </p>
+            <ul className="not-prose flex flex-wrap gap-2 my-6">
+              {chargerBrands.map((brand, idx) => (
+                <li key={idx} className="flex items-center gap-1.5 rounded-full border bg-card px-3 py-1.5 text-sm font-medium text-foreground" data-testid={`charger-brand-${idx}`}>
+                  <CheckCircle2 className="h-4 w-4 text-primary" />
+                  {brand}
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-xl font-bold text-foreground mt-8 mb-3">Book a Local Technician</h3>
+            <p>
+              Booking golf cart charger repair near you is easy. Affordable Golf Cart Service has certified technicians serving golf cart owners nationwide across all 50 states, and we offer in-shop, pickup-and-delivery, and mobile service that comes directly to your home or community. Just call{" "}
+              <a href={PHONE_HREF} className="text-primary font-medium" data-testid="link-charger-phone">{PHONE_NUMBER}</a>{" "}
+              to describe the issue and book a local technician — we'll confirm service availability in your area and schedule a convenient time. You can also{" "}
+              <Link href="/locations" className="text-primary font-medium" data-testid="link-charger-locations">view our service locations</Link>{" "}
+              to find coverage near you. Every charger repair comes with the same transparent, upfront pricing and service warranty you'd expect from a trusted local shop.
+            </p>
+            <p>
+              Don't let a dead charger keep your cart parked. Whether you need a quick fuse and cord repair or a full charger replacement, our team delivers reliable golf cart charger repair near you at a fair price — so you can get back to driving instead of waiting.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <Plug className="h-7 w-7 text-primary" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-1">Onboard & External</h3>
+              <p className="text-sm text-muted-foreground">All charger types serviced</p>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <MapPin className="h-7 w-7 text-primary" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-1">Service Near You</h3>
+              <p className="text-sm text-muted-foreground">Nationwide, all 50 states</p>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                <ShieldCheck className="h-7 w-7 text-primary" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-1">Warranty Backed</h3>
+              <p className="text-sm text-muted-foreground">Fair, upfront pricing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-card border-y">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Golf Cart Controller Repair FAQs
+                Golf Cart Controller &amp; Charger Repair FAQs
               </h2>
               <p className="text-lg text-muted-foreground">
-                Answers to the most common questions about golf cart controller repair and electrical diagnostics.
+                Answers to the most common questions about golf cart controller repair, charger repair, and electrical diagnostics.
               </p>
             </div>
             <Accordion type="single" collapsible className="w-full">
-              {controllerFaqs.map((faq, idx) => (
+              {[...controllerFaqs, ...chargerFaqs].map((faq, idx) => (
                 <AccordionItem key={idx} value={`controller-faq-${idx}`} data-testid={`controller-faq-item-${idx}`}>
                   <AccordionTrigger className="text-left font-semibold" data-testid={`controller-faq-question-${idx}`}>
                     {faq.question}
