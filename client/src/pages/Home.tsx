@@ -217,6 +217,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 md:py-20 bg-card border-y">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Affordable Golf Cart Repair You Can Trust
+            </h2>
+            <div className="text-lg text-muted-foreground space-y-4 text-left mb-8">
+              <p>
+                When your cart breaks down, you shouldn't have to overpay to get it running again. Our affordable golf cart repair service combines certified, experienced technicians with honest, transparent pricing — so you always know what you're paying for before any work begins. From dead batteries and failing speed controllers to worn brakes, motor trouble, and charging problems, we diagnose the real issue and fix it right the first time.
+              </p>
+              <p>
+                We repair both electric and gas golf carts from every major brand, and we back every job with a service warranty and satisfaction guarantee. With in-shop, mobile, and pickup-and-delivery options across all 50 states, getting quality golf cart repair at a price you can afford has never been easier. Explore our full list of services and typical pricing to see how much you can save.
+              </p>
+            </div>
+            <Button size="lg" asChild data-testid="button-home-repair-services">
+              <Link href="/services" className="gap-2">
+                View Repair Services & Pricing
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

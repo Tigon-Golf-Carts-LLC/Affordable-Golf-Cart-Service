@@ -9,6 +9,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
 import GolfCartRepair from "@/pages/GolfCartRepair";
+import RepairCostGuide from "@/pages/RepairCostGuide";
 import States from "@/pages/States";
 import Locations from "@/pages/Locations";
 import Contact from "@/pages/Contact";
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/services" component={Services} />
       <Route path="/services/golf-cart-repair" component={GolfCartRepair} />
       <Route path="/services/:id" component={Services} />
+      <Route path="/blog/golf-cart-repair-cost" component={RepairCostGuide} />
       <Route path="/states" component={States} />
       <Route path="/states/:slug" component={States} />
       <Route path="/locations" component={Locations} />

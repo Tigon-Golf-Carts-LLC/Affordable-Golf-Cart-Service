@@ -1,5 +1,5 @@
 import { useLocation, useRoute, Link } from "wouter";
-import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug } from "lucide-react";
+import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug, Tag, ShieldCheck, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
@@ -18,8 +18,8 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Affordable Golf Cart Services | Repair, Maintenance & More";
-const SERVICES_DESCRIPTION = "From battery replacement to motor repair — we deliver affordable golf cart services across the US. Call 1-844-844-4070 to get your free quote today!";
+const SERVICES_TITLE = "Affordable Golf Cart Repair | Expert Service at Unbeatable Prices";
+const SERVICES_DESCRIPTION = "Looking for affordable golf cart repair? We offer transparent pricing, expert technicians & fast turnaround. See our services and save today! Call 1-844-844-4070.";
 
 interface FeaturedService {
   id: string;
@@ -174,6 +174,41 @@ const serviceFaqs = [
     question: "Do your services come with a warranty?",
     answer:
       "Yes. All of our golf cart repair and maintenance services include a service warranty, quality parts, and a post-service inspection for your peace of mind.",
+  },
+];
+
+const pricingRows = [
+  { service: "Tune-Up & Maintenance", price: "$100 – $450", turnaround: "Same day" },
+  { service: "Battery Replacement (per battery)", price: "$130 – $300", turnaround: "Same day" },
+  { service: "Full Battery Pack (lithium)", price: "$1,200 – $3,600", turnaround: "1 – 2 days" },
+  { service: "Brake Repair", price: "$30 – $300", turnaround: "Same day" },
+  { service: "Motor Repair", price: "$150 – $1,200", turnaround: "2 – 4 days" },
+  { service: "Speed Controller Repair", price: "$150 – $700", turnaround: "1 – 3 days" },
+  { service: "Electrical Diagnostics", price: "$50 – $350", turnaround: "Same day" },
+  { service: "Charger Repair", price: "$50 – $250", turnaround: "Same day" },
+];
+
+const beforeAfter = [
+  {
+    title: "Won't Hold a Charge",
+    before:
+      "Customer's electric cart lost power after just a few holes and took all night to charge.",
+    after:
+      "We load-tested the pack, replaced two failing batteries, and cleaned corroded cables — full range restored at an affordable price.",
+  },
+  {
+    title: "No Acceleration",
+    before:
+      "Cart hesitated and cut out when pressing the pedal, leaving the owner stranded.",
+    after:
+      "We diagnosed a failing speed controller, reprogrammed and replaced it, and the cart now accelerates smoothly.",
+  },
+  {
+    title: "Weak, Noisy Brakes",
+    before:
+      "Spongy brakes and grinding noise made the cart unsafe to drive around the neighborhood.",
+    after:
+      "We replaced worn pads, adjusted the cables, and road-tested it — safe, quiet, reliable stopping every time.",
   },
 ];
 
@@ -426,18 +461,120 @@ function ServicesList() {
       <section className="bg-gradient-to-br from-primary/10 via-background to-accent/20 py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Affordable Golf Cart Services
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+              Affordable Golf Cart Repair
             </h1>
-            <p className="text-lg text-muted-foreground mb-6">
-              From tune-ups and battery replacement to motor repair and electrical diagnostics, we deliver affordable golf cart services across all 50 states. Browse our 100+ services below, see typical pricing and turnaround times, and call for a free quote.
+            <p className="text-xl md:text-2xl font-semibold text-primary mb-4">
+              Quality Service Without the High Price Tag
             </p>
+            <p className="text-lg text-muted-foreground mb-6">
+              Get affordable golf cart repair from certified technicians who fix it right the first time — without the high price tag. From battery replacement and motor repair to brakes and electrical diagnostics, we offer transparent, upfront pricing on 100+ services across all 50 states, backed by our satisfaction guarantee.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-6">
+              <div className="flex items-center gap-2 text-sm font-medium text-foreground" data-testid="badge-guarantee">
+                <ShieldCheck className="h-5 w-5 text-primary" />
+                Satisfaction Guarantee
+              </div>
+              <div className="flex items-center gap-2 text-sm font-medium text-foreground" data-testid="badge-transparent-pricing">
+                <Tag className="h-5 w-5 text-primary" />
+                Transparent Pricing
+              </div>
+              <div className="flex items-center gap-2 text-sm font-medium text-foreground" data-testid="badge-fast-turnaround">
+                <Clock className="h-5 w-5 text-primary" />
+                Fast Turnaround
+              </div>
+            </div>
             <Button size="lg" asChild data-testid="button-services-header-call">
               <a href={PHONE_HREF} className="gap-2">
                 <Phone className="h-5 w-5" />
                 Call Now: {PHONE_NUMBER}
               </a>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Affordable Golf Cart Repair Pricing
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                No hidden fees, no surprises. Here's what affordable golf cart repair actually costs with us. You always get a clear, upfront quote before any work begins.
+              </p>
+            </div>
+            <Card>
+              <CardContent className="p-0 overflow-x-auto">
+                <table className="w-full text-left" data-testid="table-pricing">
+                  <thead>
+                    <tr className="border-b bg-muted/50">
+                      <th className="px-4 py-3 font-semibold text-foreground">Repair Service</th>
+                      <th className="px-4 py-3 font-semibold text-foreground">Typical Price Range</th>
+                      <th className="px-4 py-3 font-semibold text-foreground hidden sm:table-cell">Typical Turnaround</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {pricingRows.map((row, idx) => (
+                      <tr key={idx} className="border-b last:border-0" data-testid={`row-pricing-${idx}`}>
+                        <td className="px-4 py-3 font-medium text-foreground">{row.service}</td>
+                        <td className="px-4 py-3 text-primary font-semibold">{row.price}</td>
+                        <td className="px-4 py-3 text-muted-foreground hidden sm:table-cell">{row.turnaround}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </CardContent>
+            </Card>
+            <p className="text-sm text-muted-foreground mt-4 text-center">
+              Final pricing depends on your cart's make, model, parts needed, and location. Call{" "}
+              <a href={PHONE_HREF} className="text-primary hover:text-primary/80 font-medium" data-testid="link-pricing-phone">{PHONE_NUMBER}</a>{" "}
+              for a free, exact quote.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-card border-y">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Before &amp; After: Real Repair Results
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                See how affordable golf cart repair turns common problems into carts that run like new.
+              </p>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {beforeAfter.map((item, idx) => (
+                <Card key={idx} data-testid={`card-beforeafter-${idx}`}>
+                  <CardContent className="p-6">
+                    <h3 className="font-bold text-foreground mb-3">{item.title}</h3>
+                    <div className="space-y-3 text-sm">
+                      <div>
+                        <span className="inline-block text-xs font-semibold uppercase tracking-wide text-destructive mb-1">Before</span>
+                        <p className="text-muted-foreground">{item.before}</p>
+                      </div>
+                      <div>
+                        <span className="inline-block text-xs font-semibold uppercase tracking-wide text-primary mb-1">After</span>
+                        <p className="text-muted-foreground">{item.after}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 rounded-lg bg-primary/10 p-6 text-center">
+              <ShieldCheck className="h-10 w-10 text-primary shrink-0" />
+              <div className="text-left">
+                <h3 className="font-bold text-foreground">Our Satisfaction Guarantee</h3>
+                <p className="text-sm text-muted-foreground">
+                  Every repair is backed by a service warranty and post-service inspection. If you're not satisfied with the work, we'll make it right.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
