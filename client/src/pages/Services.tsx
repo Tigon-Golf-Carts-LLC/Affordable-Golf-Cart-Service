@@ -19,7 +19,7 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Affordable Golf Cart Services | Repair, Maintenance, Battery & More";
+const SERVICES_TITLE = "Golf Car Repair & Affordable Golf Cart Services | Maintenance, Battery & More";
 const SERVICES_DESCRIPTION = "Complete golf cart services from certified technicians — repair, maintenance, tune-ups, battery, brakes, motor, electrical & charger. All 50 states, fair upfront pricing. Call 1-844-844-4070.";
 
 interface ServiceListItem {
@@ -1020,14 +1020,14 @@ function ServicesList() {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Golf Cart Repair
+                Professional Golf Car Repair &amp; Maintenance Services
               </h2>
               <p className="text-lg text-muted-foreground">
-                Whatever's wrong with your cart, our certified technicians fix it right. Explore the most common golf cart repairs we handle for both electric and gas carts, or{" "}
+                Whether you call it a golf cart or a golf car, our certified technicians fix it right. We handle complete golf car repair and golf cart repair for both electric and gas models — explore the most common repairs below, or{" "}
                 <Link href="/services/golf-cart-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-repair-page-anchor">
                   visit our dedicated golf cart repair page
                 </Link>{" "}
-                for full details, pricing, and our repair process.
+                for full details, pricing, and our repair process. Our golf car repair service covers everything from quick fixes to full rebuilds at honest, upfront prices.
               </p>
             </div>
 
@@ -1039,9 +1039,9 @@ function ServicesList() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">Gas Golf Cart Repair</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Gas Golf Car Repair</h3>
                 <p>
-                  Gas-powered golf carts need their carburetor, ignition, fuel, and clutch systems in good working order. Hard starting, stalling, rough idling, loss of power on hills, and excessive smoke are all signs your gas cart needs attention. We perform tune-ups, carburetor cleaning and rebuilds, spark plug and filter replacement, fuel system service, and belt and clutch repair to restore reliable performance and smooth running.
+                  Gas-powered golf carts need their carburetor, ignition, fuel, and clutch systems in good working order. Hard starting, stalling, rough idling, loss of power on hills, and excessive smoke are all signs your gas cart needs attention. Our gas golf car repair service includes tune-ups, carburetor cleaning and rebuilds, spark plug and filter replacement, fuel system service, and belt and clutch repair to restore reliable performance and smooth running.
                 </p>
               </div>
               <div>

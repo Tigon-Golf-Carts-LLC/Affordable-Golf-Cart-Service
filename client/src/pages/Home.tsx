@@ -308,7 +308,7 @@ export default function Home() {
                 . Our certified technicians work on all major brands, including EZGO, Club Car, and Yamaha, with transparent, upfront pricing on every job.
               </p>
               <p>
-                Whether you need a quick fix or a full restoration, our combination of affordable golf carts and repair services means you get honest advice, quality parts, and dependable workmanship without the high price tag. Prefer not to haul your cart? We offer{" "}
+                Whether you call it a golf cart or a golf car, our repair experts fix all makes and models — so your golf car repair and golf cart repair are handled by the same trusted team. Whether you need a quick fix or a full restoration, our combination of affordable golf carts and repair services means you get honest advice, quality parts, and dependable workmanship without the high price tag. Prefer not to haul your cart? We offer{" "}
                 <Link href="/services/mobile-golf-cart-service" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-combo-mobile">
                   mobile golf cart service
                 </Link>{" "}
