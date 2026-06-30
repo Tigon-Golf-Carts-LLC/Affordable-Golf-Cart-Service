@@ -14,6 +14,7 @@ import MobileService from "@/pages/MobileService";
 import GolfCartMaintenance from "@/pages/GolfCartMaintenance";
 import ClubCarRepair from "@/pages/ClubCarRepair";
 import MotorRepair from "@/pages/MotorRepair";
+import GolfCartAlignment from "@/pages/GolfCartAlignment";
 import RepairCostGuide from "@/pages/RepairCostGuide";
 import States from "@/pages/States";
 import Locations from "@/pages/Locations";
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/services/golf-cart-tune-up" component={GolfCartMaintenance} />
       <Route path="/services/club-car-repair" component={ClubCarRepair} />
       <Route path="/services/motor-repair" component={MotorRepair} />
+      <Route path="/services/golf-cart-alignment" component={GolfCartAlignment} />
       <Route path="/services/:id" component={Services} />
       <Route path="/blog/golf-cart-repair-cost" component={RepairCostGuide} />
       <Route path="/states" component={States} />

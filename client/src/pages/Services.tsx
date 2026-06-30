@@ -1000,6 +1000,16 @@ function ServicesList() {
                   A failing charger can leave you with a dead cart and nowhere to go. We test charger output and voltage, repair onboard and external chargers, inspect charging ports and cables for damage, and replace chargers that are beyond repair. Getting your charging system right is essential to protecting your battery pack and your investment.
                 </p>
               </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Golf Cart Wheel Alignment</h3>
+                <p>
+                  A cart that pulls to one side or wears tires unevenly usually needs an alignment. Our{" "}
+                  <Link href="/services/golf-cart-alignment" className="text-primary hover:text-primary/80 font-medium" data-testid="link-alignment-anchor">
+                    golf cart wheel alignment
+                  </Link>{" "}
+                  service sets toe and camber back to spec, corrects steering pull, and protects your tires from premature wear — typically $50 to $150.
+                </p>
+              </div>
               <p>
                 No matter the make, model, or problem, our team has the tools, parts, and experience to get your cart running again. For a free quote on any golf cart repair, call{" "}
                 <a href={PHONE_HREF} className="text-primary hover:text-primary/80 font-medium" data-testid="link-repair-phone-anchor">
