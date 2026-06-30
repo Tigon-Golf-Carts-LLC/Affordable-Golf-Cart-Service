@@ -644,7 +644,11 @@ function ServicesList() {
             </div>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Whether you drive an electric or gas golf cart, our golf cart services cover the full lifecycle of your vehicle. Routine maintenance and tune-ups keep small issues from turning into expensive breakdowns, while our repair services tackle everything from dead batteries and worn brakes to failing motors, faulty controllers, and stubborn electrical gremlins. Because we work on every major brand and model, you don't have to track down a different specialist for each problem — we're a true one-stop shop for golf cart owners, communities, resorts, and fleets alike.
+                Whether you drive an electric or gas golf cart, our golf cart services cover the full lifecycle of your vehicle. Routine{" "}
+                <Link href="/services/golf-cart-tune-up" className="text-primary hover:text-primary/80 font-medium" data-testid="link-services-maintenance">
+                  golf cart maintenance
+                </Link>{" "}
+                and tune-ups keep small issues from turning into expensive breakdowns, while our repair services tackle everything from dead batteries and worn brakes to failing motors, faulty controllers, and stubborn electrical gremlins. Because we work on every major brand and model, you don't have to track down a different specialist for each problem — we're a true one-stop shop for golf cart owners, communities, resorts, and fleets alike.
               </p>
               <p>
                 Our most-requested golf cart services include comprehensive tune-ups, battery testing and replacement (lead-acid and lithium), brake inspection and pad replacement, motor repair and rebuilds, electrical diagnostics and controller repair, and charger service. Each job is performed with quality parts and finished with a road test so your cart leaves running the way it should. And when you can't bring your cart to us, our mobile golf cart service brings the same expertise directly to your driveway or community.

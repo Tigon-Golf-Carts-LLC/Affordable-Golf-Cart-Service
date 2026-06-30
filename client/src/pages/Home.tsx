@@ -256,7 +256,11 @@ export default function Home() {
               <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-golf-cart-services">
                 golf cart services
               </Link>{" "}
-              — from maintenance and tune-ups to battery, brake, motor, electrical, and charger work. Whatever your cart needs, our certified technicians handle it with transparent pricing and a satisfaction guarantee, in-shop or with mobile service that comes to you.
+              — from{" "}
+              <Link href="/services/golf-cart-tune-up" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-maintenance">
+                golf cart maintenance
+              </Link>{" "}
+              and tune-ups to battery, brake, motor, electrical, and charger work. Whatever your cart needs, our certified technicians handle it with transparent pricing and a satisfaction guarantee, in-shop or with mobile service that comes to you.
             </p>
             <Button size="lg" asChild data-testid="button-home-all-services">
               <Link href="/services" className="gap-2">
