@@ -268,6 +268,72 @@ const servicesStates = Array.from(
   new Set(serviceLocations.map((loc) => loc.state))
 ).sort();
 
+const fixProcessSteps = [
+  {
+    icon: Phone,
+    title: "1. Tell Us What's Wrong",
+    description:
+      "Call and describe the symptoms — won't start, no power, won't hold a charge, strange noises. We'll tell you what's likely going on and book the fastest way to get your golf cart fixed.",
+  },
+  {
+    icon: Search,
+    title: "2. Diagnose the Real Problem",
+    description:
+      "Our certified technicians run a full diagnostic to find the true cause before touching a wrench, so we fix your golf cart right the first time instead of guessing and swapping parts.",
+  },
+  {
+    icon: Tag,
+    title: "3. Approve an Upfront Quote",
+    description:
+      "You get a clear, written quote for parts and labor before any work begins — no hidden fees and no surprise charges, so you decide exactly how to fix your cart.",
+  },
+  {
+    icon: Wrench,
+    title: "4. Fix It Right",
+    description:
+      "We fix your golf cart with quality OEM or aftermarket parts and experienced workmanship, whether it's a quick repair, a battery replacement, or a full motor rebuild.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "5. Test & Warranty",
+    description:
+      "We road-test the cart to confirm the fix holds under real use, then back the work with a service warranty so you can drive with confidence.",
+  },
+];
+
+const commonFixes = [
+  {
+    icon: Zap,
+    problem: "Golf Cart Won't Move or Has No Power",
+    solution:
+      "We check the battery charge, key switch, forward/reverse selector, solenoid, and main wiring to find what's interrupting power. Most no-power carts are fixed by replacing a failed solenoid, repairing corroded cables, or addressing a weak battery pack.",
+  },
+  {
+    icon: Battery,
+    problem: "Battery Won't Hold a Charge",
+    solution:
+      "We load-test each battery, clean and repair corroded terminals, and check the charger output. If the batteries can no longer hold a charge, we replace lead-acid or lithium batteries to restore full range.",
+  },
+  {
+    icon: Cpu,
+    problem: "Cart Loses Power or Slows on Hills",
+    solution:
+      "Lost speed and weak hill-climbing usually trace to the speed controller, motor, or a tired battery pack. We test each component under load and repair, reprogram, or replace the part that's actually causing the power loss.",
+  },
+  {
+    icon: Wrench,
+    problem: "Cart Won't Start or Respond",
+    solution:
+      "For gas carts we service the carburetor, spark plug, and fuel system; for electric carts we check the controller, solenoid, and wiring. We pinpoint why your cart won't start and fix the root cause, not just the symptom.",
+  },
+  {
+    icon: Disc,
+    problem: "Weak, Noisy, or Spongy Brakes",
+    solution:
+      "We inspect the entire braking system, replace worn pads and shoes, adjust the cables, service the drums, and road-test the cart so it stops safely and quietly every time.",
+  },
+];
+
 const beforeAfter = [
   {
     title: "Won't Hold a Charge",
@@ -518,6 +584,18 @@ function ServicesList() {
               "@type": "Answer",
               text: faq.answer,
             },
+          })),
+        },
+        {
+          "@type": "HowTo",
+          name: "How to Fix Common Golf Cart Problems",
+          description:
+            "A step-by-step guide to diagnosing and fixing the five most common golf cart problems, from no power and dead batteries to weak brakes.",
+          step: commonFixes.map((fix, idx) => ({
+            "@type": "HowToStep",
+            position: idx + 1,
+            name: fix.problem,
+            text: fix.solution,
           })),
         },
       ],
@@ -1045,6 +1123,64 @@ function ServicesList() {
                 </Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto prose prose-lg max-w-none text-muted-foreground">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
+              How We Fix Golf Carts – Our Repair Process
+            </h2>
+            <p>
+              When something goes wrong, you just want your cart running again. Our process is built to fix your golf cart quickly, honestly, and affordably — no guesswork and no surprise charges. Here's exactly how we fix golf carts, from your first call to the final test drive.
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto mt-8">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+              {fixProcessSteps.map((step, idx) => {
+                const Icon = step.icon;
+                return (
+                  <div key={idx} className="text-center" data-testid={`fix-step-${idx}`}>
+                    <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                      <Icon className="h-7 w-7 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-1 text-sm">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div className="max-w-3xl mx-auto prose prose-lg max-w-none text-muted-foreground mt-12">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              How We Fix the 5 Most Common Golf Cart Problems
+            </h3>
+            <p>
+              Most service calls come down to a handful of issues. Here are the most common golf cart problems and exactly how we fix them:
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto mt-6">
+            <div className="grid gap-4 sm:grid-cols-2">
+              {commonFixes.map((fix, idx) => {
+                const Icon = fix.icon;
+                return (
+                  <div key={idx} className="rounded-lg border bg-card p-5" data-testid={`common-fix-${idx}`}>
+                    <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                      <Icon className="h-5 w-5 text-primary shrink-0" />
+                      {fix.problem}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">{fix.solution}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="text-center text-muted-foreground mt-8">
+              Whatever's wrong, we can get your cart fixed. Call{" "}
+              <a href={PHONE_HREF} className="text-primary font-medium" data-testid="link-fix-phone">{PHONE_NUMBER}</a>{" "}
+              to get your golf cart fixed fast.
+            </p>
           </div>
         </div>
       </section>
