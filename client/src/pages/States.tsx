@@ -45,6 +45,7 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
   }
 
   const featuredServices = services.slice(0, 8);
+  const isPriorityState = ["FL", "PA", "NJ", "NC"].includes(state.abbreviation);
 
   return (
     <div className="min-h-screen">
@@ -134,6 +135,15 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
               </h2>
               <p className="text-muted-foreground mb-6">
                 Whether you're in a golf community, retirement village, or just enjoy cruising around your {state.name} neighborhood, we provide comprehensive golf cart services to keep you moving. Our experienced technicians serve customers throughout {state.name} with professional repair, maintenance, and customization services.
+                {isPriorityState && (
+                  <>
+                    {" "}Browse our complete lineup of{" "}
+                    <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid={`link-state-affordable-services-${state.slug}`}>
+                      affordable golf cart services
+                    </Link>{" "}
+                    available across {state.name}.
+                  </>
+                )}
               </p>
               <div className="space-y-3 mb-6">
                 <h3 className="font-semibold text-foreground">Our {state.name} Services Include:</h3>
