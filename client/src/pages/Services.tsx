@@ -20,7 +20,7 @@ const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
 const SERVICES_TITLE = "Cart Repair & Golf Car Repair | Affordable Golf Cart Services & Maintenance";
-const SERVICES_DESCRIPTION = "Cart repair experts at Affordable Golf Cart Service — batteries, motors, brakes, electrical & more. Serving 14 locations across the US with fast, affordable golf cart service. Call 1-844-844-4070.";
+const SERVICES_DESCRIPTION = "Need cheap golf cart service without cutting corners? Affordable Golf Cart Service offers low-cost cart repair & maintenance from certified technicians. Get a free estimate — call 1-844-844-4070.";
 
 interface ServiceListItem {
   name: string;
@@ -332,6 +332,53 @@ const commonFixes = [
     solution:
       "We inspect the entire braking system, replace worn pads and shoes, adjust the cables, service the drums, and road-test the cart so it stops safely and quietly every time.",
   },
+];
+
+const servicePackages = [
+  {
+    icon: Tag,
+    name: "Quick Service Package",
+    price: "From $99",
+    blurb: "Perfect for keeping a healthy cart running right.",
+    features: [
+      "Multi-point safety inspection",
+      "Brake & accelerator adjustment",
+      "Battery & charging system check",
+      "Tire pressure & tread check",
+    ],
+  },
+  {
+    icon: ShieldCheck,
+    name: "Complete Care Package",
+    price: "From $249",
+    blurb: "Our most popular value bundle for full peace of mind.",
+    features: [
+      "Everything in Quick Service",
+      "Full tune-up & lubrication",
+      "Battery load testing & cleaning",
+      "Brake service & diagnostics scan",
+    ],
+    featured: true,
+  },
+  {
+    icon: Wrench,
+    name: "Performance & Restore",
+    price: "Custom quote",
+    blurb: "For major repairs, upgrades, and full restorations.",
+    features: [
+      "Motor & controller repair",
+      "Battery pack replacement",
+      "Custom upgrades & lift kits",
+      "Body, paint & full restoration",
+    ],
+  },
+];
+
+const dealershipComparison = [
+  { service: "Standard Tune-Up", ourPrice: "$100 – $450", dealerPrice: "$250 – $600" },
+  { service: "Battery Replacement (per battery)", ourPrice: "$130 – $300", dealerPrice: "$200 – $400" },
+  { service: "Brake Repair", ourPrice: "$30 – $300", dealerPrice: "$150 – $450" },
+  { service: "Electrical Diagnostics", ourPrice: "$50 – $350", dealerPrice: "$120 – $250" },
 ];
 
 const beforeAfter = [
@@ -724,6 +771,95 @@ function ServicesList() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Cheap Golf Cart Service Without the Cheap Results
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                We believe cheap golf cart service should mean a smaller bill — never lower quality. Our certified technicians use the same professional parts and diagnostic equipment as the dealerships, typically at lower prices. Compare our rates below and choose the value package that fits your cart.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3 mb-14">
+              {servicePackages.map((pkg, idx) => {
+                const Icon = pkg.icon;
+                return (
+                  <Card
+                    key={idx}
+                    className={pkg.featured ? "border-primary border-2 relative" : ""}
+                    data-testid={`card-package-${idx}`}
+                  >
+                    {pkg.featured && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
+                        Most Popular
+                      </span>
+                    )}
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-bold text-foreground mb-1">{pkg.name}</h3>
+                      <p className="text-2xl font-bold text-primary mb-2">{pkg.price}</p>
+                      <p className="text-sm text-muted-foreground mb-4">{pkg.blurb}</p>
+                      <ul className="space-y-2">
+                        {pkg.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-2 text-sm text-foreground">
+                            <CheckCircle2 className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
+                Our Rates vs. Typical Dealership Prices
+              </h3>
+              <p className="text-muted-foreground text-center mb-6">
+                Here's how affordable our service is compared to what dealerships and big repair shops typically charge for the same work.
+              </p>
+              <Card>
+                <CardContent className="p-0 overflow-x-auto">
+                  <table className="w-full text-left" data-testid="table-comparison">
+                    <thead>
+                      <tr className="border-b bg-muted/50">
+                        <th className="px-4 py-3 font-semibold text-foreground">Service</th>
+                        <th className="px-4 py-3 font-semibold text-primary">Our Price</th>
+                        <th className="px-4 py-3 font-semibold text-muted-foreground">Typical Dealership</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {dealershipComparison.map((row, idx) => (
+                        <tr key={idx} className="border-b last:border-0" data-testid={`row-comparison-${idx}`}>
+                          <td className="px-4 py-3 font-medium text-foreground">{row.service}</td>
+                          <td className="px-4 py-3 text-primary font-semibold">{row.ourPrice}</td>
+                          <td className="px-4 py-3 text-muted-foreground">{row.dealerPrice}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </CardContent>
+              </Card>
+              <p className="text-sm text-muted-foreground mt-4 text-center">
+                Dealership figures are typical industry estimates and vary by location, brand, and shop. Your final price always comes as a clear, upfront quote.
+              </p>
+              <p className="text-center text-muted-foreground mt-8">
+                Ready for cheap golf cart service that actually lasts? Call{" "}
+                <a href={PHONE_HREF} className="text-primary hover:text-primary/80 font-medium" data-testid="link-cheap-phone">{PHONE_NUMBER}</a>{" "}
+                for a free, no-obligation estimate.
+              </p>
             </div>
           </div>
         </div>
