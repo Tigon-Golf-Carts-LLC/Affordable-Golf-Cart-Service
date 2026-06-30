@@ -7,13 +7,77 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { LocationSearch } from "@/components/LocationSearch";
 import { services, serviceCategories, getServicesByCategory } from "@shared/services";
 import { serviceLocations } from "@shared/locations";
-import { useState } from "react";
+import { usStates } from "@shared/states";
+import { useEffect, useState } from "react";
 
 const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
+const SITE_URL = "https://affordablegolfcartservice.com";
+const HOME_TITLE = "Affordable Golf Cart Service | #1 Professional Golf Cart Repair & Maintenance Near You";
+const HOME_DESCRIPTION = "Looking for affordable golf cart service? Expert repair, maintenance & tune-ups at prices you can afford. Call 1-844-844-4070 to book your service today!";
+
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.title = HOME_TITLE;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", HOME_DESCRIPTION);
+    }
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": `${SITE_URL}/#business`,
+          name: "Affordable Golf Cart Service",
+          description:
+            "Professional golf cart repair and maintenance with over 100 affordable services including tune-ups, battery replacement, brake service, and custom upgrades.",
+          url: SITE_URL,
+          telephone: "+1-844-844-4070",
+          image: `${SITE_URL}/logo.png`,
+          logo: `${SITE_URL}/logo.png`,
+          priceRange: "$$",
+          serviceType: "Golf Cart Repair and Maintenance",
+          areaServed: usStates.map((state) => ({
+            "@type": "State",
+            name: state.name,
+          })),
+        },
+        {
+          "@type": "Service",
+          "@id": `${SITE_URL}/#service`,
+          name: "Affordable Golf Cart Service",
+          serviceType: "Golf Cart Repair and Maintenance",
+          description:
+            "Expert golf cart repair, maintenance, tune-ups, battery replacement, brake service, and custom upgrades at affordable prices.",
+          url: SITE_URL,
+          priceRange: "$$",
+          provider: { "@id": `${SITE_URL}/#business` },
+          areaServed: usStates.map((state) => ({
+            "@type": "State",
+            name: state.name,
+          })),
+        },
+      ],
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "home-structured-data";
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      const existing = document.getElementById("home-structured-data");
+      if (existing) {
+        existing.remove();
+      }
+    };
+  }, []);
 
   const displayedServices = selectedCategory
     ? getServicesByCategory(selectedCategory)
@@ -29,11 +93,11 @@ export default function Home() {
               {serviceLocations.length} Locations Nationwide
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Affordable Golf Cart
-              <span className="text-primary block">Service & Repair</span>
+              Affordable Golf Cart Service
+              <span className="text-primary block">Expert Repair & Maintenance Near You</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Professional golf cart maintenance, repair, and customization with over 100 services. Find the closest service center near you!
+              Affordable Golf Cart Service delivers professional golf cart repair and maintenance with over 100 services — tune-ups, battery replacement, brake service, and custom upgrades. With fast turnaround and {serviceLocations.length} service centers serving all 50 states, expert help is always near you.
             </p>
           </div>
           

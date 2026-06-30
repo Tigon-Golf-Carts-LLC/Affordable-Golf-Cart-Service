@@ -1,0 +1,32 @@
+golf cart services
+high priority
+Us: unranked
+Target: www.golfcartservices.com (#1)
+We are completely unranked (null) while www.golfcartservices.com dominates at position 1 and golfcartsearch.com sits at position 4 — this core plural keyword needs its own optimized landing page to establish any presence.
+
+Page to update
+https://affordablegolfcartservice.com/services
+Suggested title: Golf Cart Services | Repair, Maintenance & Tune-Up | Tigon Golf Carts
+Action plan
+1.
+Update
+Update the /services page to comprehensively target 'golf cart services' as the primary keyword, given the domain golfcartservices.com holds position 1 based on exact-match domain advantage.
+Restructure /services with H1 'Professional Golf Cart Services – Repair, Maintenance & More', with full coverage of every service type offered. Include a services overview table, pricing guidance, technician certifications, and a 'Why Choose Us' section. Target 1,000+ words to compete against the position-1 and position-4 competitor pages.
+
+Impact: Comprehensive content overhaul should bring us into the top 50 from null within 45 days and progress toward top 20 within 120 days.
+
+Done?
+2.
+Update
+Update the homepage to include 'golf cart services' in its H1 or H2 and link prominently to /services.
+Add or adjust an H2 on the homepage to 'Full-Range Golf Cart Services' and link to /services with anchor text 'golf cart services' to reinforce topical signals at the domain level.
+
+Impact: Homepage authority flowing to /services improves ranking potential for this competitive keyword.
+
+Done?
+3.
+Update
+Update /services with ItemList schema listing each service as a ListItem with name, description, and URL.
+Implement JSON-LD ItemList schema where each service sub-page (tune-up, battery, brakes, motor, electrical) is a ListItem, creating structured data eligibility for rich results and improving crawler understanding of service breadth.
+
+Impact: Rich result eligibility improves CTR and signals content comprehensiveness to Google's ranking systems.

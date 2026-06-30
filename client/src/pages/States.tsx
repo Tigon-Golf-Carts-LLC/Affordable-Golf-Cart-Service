@@ -214,7 +214,11 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>
-                At Affordable Golf Cart Service, we're proud to serve golf cart owners throughout {state.name}. Whether you live in a golf course community, a retirement village, or simply enjoy the convenience of a golf cart for local transportation, we're here to help keep your cart in top condition.
+                At{" "}
+                <Link href="/" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-anchor">
+                  affordable golf cart service
+                </Link>
+                , we're proud to serve golf cart owners throughout {state.name}. Whether you live in a golf course community, a retirement village, or simply enjoy the convenience of a golf cart for local transportation, we're here to help keep your cart in top condition.
               </p>
               <p>
                 Our {state.name} service technicians are fully trained and equipped to handle everything from routine maintenance like tune-ups and battery service to major repairs including motor replacement and electrical diagnostics. We also offer a wide range of customization options to make your golf cart uniquely yours.

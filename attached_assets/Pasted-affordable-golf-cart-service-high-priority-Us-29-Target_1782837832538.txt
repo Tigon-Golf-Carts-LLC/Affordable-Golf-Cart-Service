@@ -1,0 +1,40 @@
+affordable golf cart service
+high priority
+Us: #29
+Target: www.affordablecarts.com (#4)
+We sit at position 29 while www.affordablecarts.com holds position 4 — this is our brand-adjacent core keyword and the homepage is the natural target. Closing this gap requires stronger on-page signals, E-E-A-T content, and internal link authority flowing to the homepage.
+
+Page to update
+https://affordablegolfcartservice.com/
+Suggested title: Affordable Golf Cart Service | #1 Professional Golf Cart Repair & Maintenance Near You
+Action plan
+1.
+Update
+Update the homepage H1 and opening paragraph to lead with the exact phrase 'affordable golf cart service' and include secondary variants like 'professional golf cart repair and maintenance' within the first 100 words.
+Rewrite the hero section so the H1 reads 'Affordable Golf Cart Service – Expert Repair & Maintenance Near You' and the first paragraph answers the searcher intent by listing service types, turnaround speed, and coverage areas to beat the depth of affordablecarts.com at position 4.
+
+Impact: Stronger keyword-to-page relevance signal expected to push from position 29 toward top 15 within 60–90 days.
+
+Done?
+2.
+Update
+Update homepage structured data to include LocalBusiness and Service schema with aggregateRating, areaServed, and priceRange fields.
+Add JSON-LD LocalBusiness schema with 'name': 'Affordable Golf Cart Service', 'serviceType': 'Golf Cart Repair and Maintenance', 'priceRange': '$$', 'areaServed' listing all serviced states, and aggregateRating pulled from real reviews to improve rich-result eligibility and CTR.
+
+Impact: Rich snippets in SERP should lift CTR by 15–25%, indirectly supporting rankings.
+
+Done?
+3.
+Update
+Update internal linking across all location and service pages to point to the homepage using anchor text containing 'affordable golf cart service'.
+Audit all 70+ location and state pages and add a footer or in-body link back to the homepage with the anchor 'affordable golf cart service' to consolidate PageRank and reinforce topical relevance.
+
+Impact: Improved PageRank flow to homepage expected to accelerate ranking movement by 5–10 positions.
+
+Done?
+4.
+Update
+Update the homepage meta description to be CTR-optimized, including a pricing hook and call-to-action.
+Write a meta description: 'Looking for affordable golf cart service? Tigon Golf Carts offers expert repair, maintenance & tune-ups at prices you can afford. Book your service today!' Keep it under 155 characters.
+
+Impact: Higher organic CTR signals quality to Google, supporting ranking improvement from position 29.

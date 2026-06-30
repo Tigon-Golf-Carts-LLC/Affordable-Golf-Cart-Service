@@ -62,8 +62,15 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
               Golf Cart Service
               <span className="text-primary block">{location.city}, {location.stateAbbr}</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-6">
+            <p className="text-lg md:text-xl text-muted-foreground mb-2">
               {getFullAddress(location)}
+            </p>
+            <p className="text-base text-muted-foreground mb-6">
+              Your local source for{" "}
+              <Link href="/" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-anchor">
+                affordable golf cart service
+              </Link>{" "}
+              in {location.city}, {location.stateAbbr}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild data-testid={`button-call-${location.slug}`}>

@@ -23,7 +23,11 @@ export function Footer() {
               <img src="/logo.png" alt="Affordable Golf Cart Service" className="h-16 w-auto" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Your trusted partner for professional golf cart service, repair, and maintenance. Serving all 50 states with over 100 services.
+              Your trusted partner for{" "}
+              <Link href="/" className="text-primary hover:text-primary/80 transition-colors font-medium" data-testid="footer-link-home-anchor">
+                affordable golf cart service
+              </Link>
+              , repair, and maintenance. Serving all 50 states with over 100 services.
             </p>
             <a
               href={PHONE_HREF}

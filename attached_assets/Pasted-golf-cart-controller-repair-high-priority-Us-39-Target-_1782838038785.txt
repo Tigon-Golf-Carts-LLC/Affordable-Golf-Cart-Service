@@ -1,0 +1,40 @@
+golf cart controller repair
+high priority
+Us: #39
+Target: golfcartsearch.com (#17)
+We rank at position 39 while golfcartsearch.com holds position 17 — this is a striking-distance opportunity for a specific, lower-competition technical service keyword where a dedicated page already exists.
+
+Page to update
+https://affordablegolfcartservice.com/services/electrical-diagnostics
+Suggested title: Golf Cart Controller Repair & Electrical Diagnostics | Tigon Golf Carts
+Action plan
+1.
+Update
+Update the /services/electrical-diagnostics page to prominently target 'golf cart controller repair' as a primary topic alongside electrical diagnostics.
+Add an H1 'Golf Cart Controller Repair & Electrical Diagnostics' with dedicated H2 sections for 'What Is a Golf Cart Controller?', 'Signs Your Controller Needs Repair', 'Controller Repair vs. Replacement', and 'Our Repair Process'. Include at least 800 words of original content to surpass golfcartsearch.com's position-17 page in depth.
+
+Impact: Content depth and keyword targeting improvements expected to move from position 39 into top 15 within 60 days.
+
+Done?
+2.
+Update
+Update the page title and meta description to lead with 'golf cart controller repair'.
+Title: 'Golf Cart Controller Repair & Electrical Diagnostics | Tigon Golf Carts'. Meta: 'Is your golf cart not responding? Our certified techs specialize in golf cart controller repair and electrical diagnostics. Fast service, fair prices.'
+
+Impact: CTR improvement from striking-distance position 39 supports algorithmic ranking boost.
+
+Done?
+3.
+Update
+Update the page with FAQPage schema targeting controller repair questions.
+Add JSON-LD FAQPage schema with questions: 'How do I know if my golf cart controller is bad?', 'How much does golf cart controller repair cost?', 'Can a golf cart controller be repaired or does it need replacement?' to compete for featured snippet and AI overview positions currently unowned by tracked competitors.
+
+Impact: FAQ rich results could capture SERP visibility above current position and attract clicks from positions 10–20.
+
+Done?
+4.
+Update
+Update internal linking from /services, the homepage, and relevant location pages to point to the electrical diagnostics page with anchor text 'golf cart controller repair'.
+Add contextual links on /services and at least 5 high-traffic location pages using the exact anchor 'golf cart controller repair' to channel authority to this page.
+
+Impact: Stronger internal link profile should accelerate movement from 39 into top 10 for this lower-competition term.

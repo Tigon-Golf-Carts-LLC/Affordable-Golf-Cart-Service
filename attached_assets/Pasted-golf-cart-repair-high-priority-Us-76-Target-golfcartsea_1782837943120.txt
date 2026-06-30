@@ -1,0 +1,40 @@
+golf cart repair
+high priority
+Us: #76
+Target: golfcartsearch.com (#33)
+We are at position 76 while golfcartsearch.com holds position 33 and even jerseycarts.com ranks at 48 — this is one of the highest-volume core repair keywords and we are severely under-ranking with no SERP features to compensate.
+
+Page to update
+https://affordablegolfcartservice.com/services
+Suggested title: Golf Cart Repair Services | Expert & Affordable | Tigon Golf Carts
+Action plan
+1.
+Update
+Update the /services page to include a dedicated 'Golf Cart Repair' section with comprehensive coverage of repair types, common problems, and solutions.
+Add an H2 'Golf Cart Repair' with sub-sections covering electric golf cart repair, gas golf cart repair, motor repair, controller repair, battery issues, brake repair, and charger repair. Include at least 600 words of original content addressing repair scenarios to surpass golfcartsearch.com's content at position 33.
+
+Impact: Significant content depth improvement expected to move from position 76 toward top 30 within 90 days.
+
+Done?
+2.
+Create
+Create a dedicated /services/golf-cart-repair page targeting 'golf cart repair' as the primary keyword.
+Build a standalone page with URL /services/golf-cart-repair, H1 'Golf Cart Repair – Fast, Reliable & Affordable Service', covering all repair types, a step-by-step repair process section, pricing transparency, technician credentials, service area coverage, and customer testimonials. This page should be longer and more authoritative than golfcartsearch.com's position-33 page.
+
+Impact: A dedicated, authoritative page should be the primary driver to break into top 20 for this high-volume term.
+
+Done?
+3.
+Update
+Update all location pages to internally link to the new /services/golf-cart-repair page using the anchor text 'golf cart repair'.
+Add a contextual sentence on each location page such as 'Need golf cart repair in [city]? Our certified technicians are ready to help.' linked to /services/golf-cart-repair.
+
+Impact: Concentrated internal link equity to the new page accelerates indexing and ranking movement.
+
+Done?
+4.
+Update
+Update the /services/golf-cart-repair page with HowTo and Service schema markup.
+Implement JSON-LD HowTo schema for a 'How to diagnose common golf cart problems' section and Service schema for the repair service itself, targeting rich result eligibility.
+
+Impact: Schema markup increases SERP real estate and CTR, indirectly supporting rank improvement.

@@ -1,0 +1,40 @@
+mobile golf cart service
+high priority
+Us: unranked
+Target: golfcartsearch.com (#27)
+We are completely unranked (null) while golfcartsearch.com sits at position 27 — 'mobile golf cart service' is a high-intent, service-area keyword with no SERP features yet claimed, representing a clean content creation opportunity.
+
+Page to update
+New page recommended (no existing match)
+Suggested title: Mobile Golf Cart Service | On-Site Repair & Maintenance | Tigon Golf Carts
+Action plan
+1.
+Create
+Create a dedicated /services/mobile-golf-cart-service page targeting this keyword as a standalone service offering.
+Build a page at /services/mobile-golf-cart-service with H1 'Mobile Golf Cart Service – We Come to You', covering how mobile service works, what's included (tune-ups, battery replacement, brake service, diagnostics at your location), service areas, booking process, and pricing. Must be 800+ words to surpass golfcartsearch.com's position-27 page.
+
+Impact: A targeted new page should enter the top 50 within 30 days and compete for top 20 within 90 days.
+
+Done?
+2.
+Update
+Update the main /services page to include a section on mobile service and link to the new mobile service page.
+Add a prominent 'Mobile Golf Cart Service Available' section with 100–150 words and a CTA linking to /services/mobile-golf-cart-service to pass authority and establish it as a sub-service.
+
+Impact: Internal link authority from /services accelerates the new page's indexing and ranking potential.
+
+Done?
+3.
+Update
+Update all location pages to mention and link to mobile golf cart service availability in each area.
+Add a line on each location page such as 'We offer mobile golf cart service in [city] — our technicians come directly to you.' linked to the new mobile service page, creating geo-targeted relevance signals.
+
+Impact: Geo-targeted internal links strengthen local and national relevance for the new page, targeting top 15 within 90 days.
+
+Done?
+4.
+Create
+Create a LocalBusiness and MobileService schema on the new mobile service page.
+Implement JSON-LD with Service schema including 'serviceType': 'Mobile Golf Cart Repair', 'areaServed' covering all serviced locations, and 'availableChannel' set to mobile/on-site to signal mobile service to Google for local pack and rich result eligibility.
+
+Impact: Schema increases eligibility for local pack and rich results, adding SERP visibility beyond organic position.
