@@ -19,7 +19,7 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Fast Golf Cart Service & Golf Car Service and Repair | Affordable Golf Cart Service";
+const SERVICES_TITLE = "Golf Cart Service – Expert Repair, Maintenance & Tune-Up | Affordable Golf Cart Service";
 const SERVICES_DESCRIPTION = "Need cheap golf cart service without cutting corners? Affordable Golf Cart Service offers low-cost cart repair & maintenance from certified technicians. Get a free estimate — call 1-844-844-4070.";
 
 interface ServiceListItem {
@@ -695,13 +695,13 @@ function ServicesList() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-              Professional Cart Repair &amp; Affordable Golf Cart Services – Maintenance, Battery Replacement &amp; More
+              Professional Golf Cart Service – Cart Repair, Maintenance, Battery Replacement &amp; More
             </h1>
             <p className="text-xl md:text-2xl font-semibold text-primary mb-4">
               Quality Golf Cart Services You Can Count On — Without the High Price Tag
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Affordable golf cart services don't have to mean cutting corners. Our certified technicians deliver complete cart repair, maintenance, and tune-ups for every golf cart — from battery replacement and motor repair to brakes and electrical diagnostics — at honest, upfront prices. Our comprehensive golf car service and repair solutions cover everything from routine maintenance to full motor overhauls, and our cart repair specialists fix electric and gas carts of all makes and models. With 100+ services available across all 50 states and local service centers nationwide, quality affordable golf cart services are always within reach, backed by our satisfaction guarantee.
+              Looking for dependable golf cart service near you? Affordable golf cart services don't have to mean cutting corners. Our certified technicians deliver complete cart repair, maintenance, and tune-ups for every golf cart — from battery replacement and motor repair to brakes and electrical diagnostics — at honest, upfront prices. Our comprehensive golf car service and repair solutions cover everything from routine maintenance to full motor overhauls, and our cart repair specialists fix electric and gas carts of all makes and models. With 100+ services available across all 50 states and local service centers nationwide, quality affordable golf cart services are always within reach, backed by our satisfaction guarantee.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-6">
               <div className="flex items-center gap-2 text-sm font-medium text-foreground" data-testid="badge-guarantee">
