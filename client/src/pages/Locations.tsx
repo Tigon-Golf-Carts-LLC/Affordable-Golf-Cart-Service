@@ -277,6 +277,13 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
                 — our technicians come directly to you at home, your community, or your business.
               </p>
               <p>
+                Explore our full range of{" "}
+                <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid="link-golf-cart-services-anchor">
+                  golf cart services
+                </Link>{" "}
+                available in the {location.city} area.
+              </p>
+              <p>
                 Stop by during our business hours or give us a call at {location.phone} to schedule your service appointment. We look forward to helping you keep your golf cart running at peak performance!
               </p>
             </div>

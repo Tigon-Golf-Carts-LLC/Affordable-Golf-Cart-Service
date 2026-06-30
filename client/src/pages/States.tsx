@@ -240,6 +240,13 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
               <p>
                 We understand that {state.name} residents rely on their golf carts for various purposes, from golfing to neighborhood transportation. That's why we offer both mobile service (we come to you) and convenient pickup and delivery options throughout the {state.name} area.
               </p>
+              <p>
+                Explore our full range of{" "}
+                <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid={`link-golf-cart-services-${state.slug}`}>
+                  golf cart services
+                </Link>{" "}
+                available in the {state.name} area.
+              </p>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import { useLocation, useRoute, Link } from "wouter";
-import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug, Tag, ShieldCheck, CheckCircle2, Truck } from "lucide-react";
+import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug, Tag, ShieldCheck, CheckCircle2, Truck, MapPin, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
@@ -12,14 +12,15 @@ import {
 } from "@/components/ui/accordion";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services, serviceCategories, getServicesByCategory, getServiceById } from "@shared/services";
+import { serviceLocations } from "@shared/locations";
 import { useState, useMemo, useEffect } from "react";
 
 const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Affordable Golf Cart Services | Repair, Tune-Up & Maintenance Pricing";
-const SERVICES_DESCRIPTION = "Affordable golf cart services from certified technicians — repair, tune-ups, battery, brakes, motor & electrical, all 50 states. Quality work at fair, upfront prices. Call 1-844-844-4070.";
+const SERVICES_TITLE = "Affordable Golf Cart Services | Repair, Maintenance, Battery & More";
+const SERVICES_DESCRIPTION = "Complete golf cart services from certified technicians — repair, maintenance, tune-ups, battery, brakes, motor, electrical & charger. All 50 states, fair upfront pricing. Call 1-844-844-4070.";
 
 interface ServiceListItem {
   name: string;
@@ -235,6 +236,37 @@ const costSavers = [
   "Mobile, pickup, and in-shop options so you only pay for the service level you need.",
   "A nationwide network that keeps overhead low and our rates competitive.",
 ];
+
+const technicianProfiles = [
+  {
+    role: "Master Electric Drive Technicians",
+    focus: "Motors, controllers & lithium systems",
+    description:
+      "Our electric drive specialists diagnose and repair drive motors, speed controllers, solenoids, and both lead-acid and lithium battery systems. They use professional diagnostic equipment to pinpoint power loss, range, and charging problems on EZGO, Club Car, Yamaha, and every other major brand.",
+  },
+  {
+    role: "Gas Engine Specialists",
+    focus: "Carburetors, ignition & engine rebuilds",
+    description:
+      "Trained on both two-cycle and four-cycle golf cart engines, our gas specialists handle carburetor cleaning, fuel system repair, ignition tuning, governor adjustments, and full engine rebuilds to restore smooth, reliable power to your cart.",
+  },
+  {
+    role: "Brake & Safety Technicians",
+    focus: "Brakes, steering, suspension & tires",
+    description:
+      "These technicians inspect and repair braking systems, steering, suspension, and tires so your cart stops, handles, and rides safely every single time it leaves our shop or a mobile visit.",
+  },
+  {
+    role: "Mobile Service Technicians",
+    focus: "On-site repair & maintenance",
+    description:
+      "Our mobile technicians bring the shop to you, performing tune-ups, battery service, electrical diagnostics, and many repairs on-site at your home, golf community, or business across all 50 states.",
+  },
+];
+
+const servicesStates = Array.from(
+  new Set(serviceLocations.map((loc) => loc.state))
+).sort();
 
 const beforeAfter = [
   {
@@ -529,10 +561,10 @@ function ServicesList() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-              Affordable Golf Cart Services – Quality You Can Count On
+              Affordable Golf Cart Services – Repair, Maintenance, Battery Replacement &amp; More
             </h1>
             <p className="text-xl md:text-2xl font-semibold text-primary mb-4">
-              Expert Golf Cart Repair &amp; Maintenance Without the High Price Tag
+              Quality Golf Cart Services You Can Count On — Without the High Price Tag
             </p>
             <p className="text-lg text-muted-foreground mb-6">
               Affordable golf cart services don't have to mean cutting corners. Our certified technicians deliver complete golf cart repair, maintenance, and tune-ups — from battery replacement and motor repair to brakes and electrical diagnostics — at honest, upfront prices. With 100+ services available across all 50 states and local service centers nationwide, quality affordable golf cart services are always within reach, backed by our satisfaction guarantee.
@@ -999,6 +1031,69 @@ function ServicesList() {
               <Button asChild data-testid="button-services-mobile">
                 <Link href="/services/mobile-golf-cart-service" className="gap-2">
                   Explore Mobile Golf Cart Service
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 mb-2 text-primary">
+                <Users className="h-6 w-6" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Meet Our Certified Golf Cart Technicians
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Every golf cart services job is handled by factory-trained, experienced technicians who specialize in repair and maintenance across all major gas and electric cart brands.
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {technicianProfiles.map((tech, idx) => (
+                <div key={idx} className="flex items-start gap-4 rounded-lg border bg-card p-5" data-testid={`technician-${idx}`}>
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <Wrench className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-foreground">{tech.role}</h3>
+                    <p className="text-sm font-medium text-primary mb-1">{tech.focus}</p>
+                    <p className="text-sm text-muted-foreground">{tech.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-card border-y">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Golf Cart Service Areas
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                We provide golf cart services nationwide across all 50 states, with local service centers and mobile technicians in these areas and the surrounding communities.
+              </p>
+            </div>
+            <ul className="flex flex-wrap justify-center gap-2 mb-8">
+              {servicesStates.map((state, idx) => (
+                <li key={idx} className="flex items-center gap-1.5 rounded-full border bg-background px-3 py-1.5 text-sm font-medium text-foreground" data-testid={`service-area-${idx}`}>
+                  <MapPin className="h-4 w-4 text-primary" />
+                  {state}
+                </li>
+              ))}
+            </ul>
+            <div className="text-center">
+              <Button variant="outline" asChild data-testid="button-services-locations">
+                <Link href="/locations" className="gap-2">
+                  Find a Golf Cart Service Location Near You
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
