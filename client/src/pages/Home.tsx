@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Phone, Shield, Clock, Award, Wrench, ArrowRight, MapPin } from "lucide-react";
+import { Phone, Shield, Clock, Award, Wrench, ArrowRight, MapPin, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -99,6 +99,16 @@ export default function Home() {
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Affordable Golf Cart Service delivers professional golf cart repair and maintenance with over 100 services — tune-ups, battery replacement, brake service, and custom upgrades. With fast turnaround and {serviceLocations.length} service centers serving all 50 states, expert help is always near you.
             </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+              <div className="flex items-center gap-2 text-sm font-medium text-foreground" data-testid="badge-hero-turnaround">
+                <Clock className="h-5 w-5 text-primary" />
+                Many repairs completed in 1–3 business days
+              </div>
+              <div className="flex items-center gap-2 text-sm font-medium text-foreground" data-testid="badge-hero-sameweek">
+                <Zap className="h-5 w-5 text-primary" />
+                Same-week golf cart service available
+              </div>
+            </div>
           </div>
           
           <div className="max-w-3xl mx-auto mb-8">

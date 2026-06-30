@@ -19,7 +19,7 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Golf Car Service and Repair | Cart Repair & Affordable Golf Cart Services";
+const SERVICES_TITLE = "Fast Golf Cart Service & Golf Car Service and Repair | Affordable Golf Cart Service";
 const SERVICES_DESCRIPTION = "Need cheap golf cart service without cutting corners? Affordable Golf Cart Service offers low-cost cart repair & maintenance from certified technicians. Get a free estimate — call 1-844-844-4070.";
 
 interface ServiceListItem {
@@ -372,6 +372,15 @@ const servicePackages = [
       "Body, paint & full restoration",
     ],
   },
+];
+
+const fastTurnarounds = [
+  { service: "Tune-Ups & Maintenance", time: "Same day" },
+  { service: "Battery Replacement", time: "Same day" },
+  { service: "Brake Repair", time: "Same day" },
+  { service: "Electrical Diagnostics", time: "Same day" },
+  { service: "Charger Repair", time: "Same day" },
+  { service: "Motor & Controller Repair", time: "1 – 4 days" },
 ];
 
 const dealershipComparison = [
@@ -777,6 +786,82 @@ function ServicesList() {
       </section>
 
       <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Fast Golf Cart Service – Quick Turnarounds You Can Count On
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                When your cart is down, you want it back fast. Our fast golf cart service is built around same-week scheduling, efficient certified technicians, and mobile repair that comes to you — so you spend less time waiting and more time driving.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-3 mb-12">
+              <div className="text-center" data-testid="fast-feature-sameweek">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                  <Clock className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-1">Same-Week Scheduling</h3>
+                <p className="text-sm text-muted-foreground">
+                  Most repairs are booked and completed within the same week — many tune-ups and quick fixes are done the same day.
+                </p>
+              </div>
+              <div className="text-center" data-testid="fast-feature-mobile">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                  <Truck className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-1">Mobile Service to You</h3>
+                <p className="text-sm text-muted-foreground">
+                  Skip the hauling. Our mobile technicians bring fast golf cart service straight to your home, community, or business.
+                </p>
+              </div>
+              <div className="text-center" data-testid="fast-feature-emergency">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+                  <Zap className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-semibold text-foreground mb-1">Priority &amp; Emergency Repair</h3>
+                <p className="text-sm text-muted-foreground">
+                  Need it sooner? Ask about priority and emergency repair availability when you call — we'll do our best to fit you in fast.
+                </p>
+              </div>
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
+                Average Repair Times by Service
+              </h3>
+              <Card>
+                <CardContent className="p-0 overflow-x-auto">
+                  <table className="w-full text-left" data-testid="table-turnaround">
+                    <thead>
+                      <tr className="border-b bg-muted/50">
+                        <th className="px-4 py-3 font-semibold text-foreground">Service</th>
+                        <th className="px-4 py-3 font-semibold text-primary">Typical Turnaround</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {fastTurnarounds.map((row, idx) => (
+                        <tr key={idx} className="border-b last:border-0" data-testid={`row-turnaround-${idx}`}>
+                          <td className="px-4 py-3 font-medium text-foreground">{row.service}</td>
+                          <td className="px-4 py-3 text-primary font-semibold">{row.time}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </CardContent>
+              </Card>
+              <p className="text-center text-muted-foreground mt-8">
+                Need fast golf cart service today? Call{" "}
+                <a href={PHONE_HREF} className="text-primary hover:text-primary/80 font-medium" data-testid="link-fast-phone">{PHONE_NUMBER}</a>{" "}
+                to check same-week and mobile availability in your area.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-card border-y">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-10">
