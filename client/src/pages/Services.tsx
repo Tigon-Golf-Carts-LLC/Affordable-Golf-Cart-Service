@@ -18,8 +18,8 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Golf Cart Services | Repair, Maintenance & Tune-Up | Affordable Golf Cart Service";
-const SERVICES_DESCRIPTION = "Professional golf cart services — repair, maintenance, tune-ups, battery, brakes, motor & electrical. Certified technicians, transparent pricing, all 50 states. Call 1-844-844-4070.";
+const SERVICES_TITLE = "Cheapest Golf Cart Services | Affordable Repair & Maintenance Pricing";
+const SERVICES_DESCRIPTION = "Get the most affordable golf cart services without sacrificing quality. We offer the best prices on repair, maintenance & tune-ups — see our transparent pricing. Call 1-844-844-4070.";
 
 interface ServiceListItem {
   name: string;
@@ -225,6 +225,15 @@ const pricingRows = [
   { service: "Speed Controller Repair", price: "$150 – $700", turnaround: "1 – 3 days" },
   { service: "Electrical Diagnostics", price: "$50 – $350", turnaround: "Same day" },
   { service: "Charger Repair", price: "$50 – $250", turnaround: "Same day" },
+];
+
+const costSavers = [
+  "Diagnostic-first repairs — we fix the real problem, so you never pay to replace parts that aren't broken.",
+  "Quality OEM and aftermarket parts sourced at fair prices and passed on to you.",
+  "Flat, upfront quotes with no hidden fees or surprise charges.",
+  "Efficient certified technicians who get the job done right the first time.",
+  "Mobile, pickup, and in-shop options so you only pay for the service level you need.",
+  "A nationwide network that keeps overhead low and our rates competitive.",
 ];
 
 const beforeAfter = [
@@ -454,6 +463,12 @@ function ServicesList() {
             priceCurrency: "USD",
             lowPrice: s.lowPrice,
             highPrice: s.highPrice,
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              priceCurrency: "USD",
+              minPrice: s.lowPrice,
+              maxPrice: s.highPrice,
+            },
           },
           provider: {
             "@type": "LocalBusiness",
@@ -551,10 +566,10 @@ function ServicesList() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Affordable Golf Cart Repair Pricing
+                Golf Cart Service Pricing – Some of the Cheapest Rates Around
               </h2>
               <p className="text-lg text-muted-foreground">
-                No hidden fees, no surprises. Here's what affordable golf cart repair actually costs with us. You always get a clear, upfront quote before any work begins.
+                Looking for the cheapest golf cart services that don't cut corners? No hidden fees, no surprises — here's what our affordable golf cart repair and maintenance actually costs. You always get a clear, upfront quote before any work begins.
               </p>
             </div>
             <Card>
@@ -584,6 +599,22 @@ function ServicesList() {
               <a href={PHONE_HREF} className="text-primary hover:text-primary/80 font-medium" data-testid="link-pricing-phone">{PHONE_NUMBER}</a>{" "}
               for a free, exact quote.
             </p>
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
+                How We Keep Costs Low
+              </h3>
+              <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-6">
+                We've built our business to deliver some of the cheapest golf cart services in the country without sacrificing quality. Here's how we keep your repair bill down:
+              </p>
+              <ul className="grid gap-3 sm:grid-cols-2">
+                {costSavers.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2" data-testid={`cost-saver-${idx}`}>
+                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
