@@ -55,6 +55,14 @@
     <priority>0.9</priority>
   </url>
   
+  <!-- Club Car Repair -->
+  <url>
+    <loc>https://affordablegolfcartservice.com/services/club-car-repair</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
   <!-- Contact Page -->
   <url>
     <loc>https://affordablegolfcartservice.com/contact</loc>

@@ -251,6 +251,18 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
                   golf cart charger repair in {location.city}
                 </Link>? Book a technician today.
               </p>
+              {["FL", "SC", "GA", "PA", "NJ"].includes(location.stateAbbr) && (
+                <p>
+                  {location.city} is Club Car country, and our certified technicians specialize in{" "}
+                  <Link href="/services/club-car-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-clubcar-anchor">
+                    Club Car repair in {location.city}
+                  </Link>{" "}
+                  — covering DS, Precedent, and Onward models. Searching for{" "}
+                  <Link href="/services/club-car-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-clubcar-nearme-anchor">
+                    Club Car repairs near me
+                  </Link>? We've got you covered with diagnostics, drivetrain, charging, and brake service.
+                </p>
+              )}
               <p>
                 Prefer not to haul your cart? We offer{" "}
                 <Link href="/services/mobile-golf-cart-service" className="text-primary hover:text-primary/80 font-medium" data-testid="link-mobile-anchor">
