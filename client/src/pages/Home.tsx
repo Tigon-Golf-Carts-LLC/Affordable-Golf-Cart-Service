@@ -228,7 +228,11 @@ export default function Home() {
                 When your cart breaks down, you shouldn't have to overpay to get it running again. Our affordable golf cart repair service combines certified, experienced technicians with honest, transparent pricing — so you always know what you're paying for before any work begins. From dead batteries and failing speed controllers to worn brakes, motor trouble, and charging problems, we diagnose the real issue and fix it right the first time.
               </p>
               <p>
-                We repair both electric and gas golf carts from every major brand, and we back every job with a service warranty and satisfaction guarantee. With in-shop, mobile, and pickup-and-delivery options across all 50 states, getting quality golf cart repair at a price you can afford has never been easier. Explore our full list of services and typical pricing to see how much you can save.
+                We repair both electric and gas golf carts from every major brand, and we back every job with a service warranty and satisfaction guarantee. From{" "}
+                <Link href="/services/electrical-diagnostics" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-controller">
+                  golf cart controller repair
+                </Link>{" "}
+                to batteries, brakes, and motors, getting quality golf cart repair at a price you can afford has never been easier. Explore our full list of services and typical pricing to see how much you can save.
               </p>
             </div>
             <Button size="lg" asChild data-testid="button-home-repair-services">

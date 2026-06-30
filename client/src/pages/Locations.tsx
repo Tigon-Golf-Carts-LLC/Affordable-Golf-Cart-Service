@@ -242,7 +242,11 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
                 <Link href="/services/golf-cart-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-repair-anchor">
                   golf cart repair
                 </Link>{" "}
-                in {location.city}? Our certified technicians are ready to help with electric and gas cart repairs, from motor and controller issues to battery, brake, and charger problems.
+                in {location.city}? Our certified technicians are ready to help with electric and gas cart repairs, from motor and controller issues to battery, brake, and charger problems. We also offer expert{" "}
+                <Link href="/services/electrical-diagnostics" className="text-primary hover:text-primary/80 font-medium" data-testid="link-controller-anchor">
+                  golf cart controller repair
+                </Link>{" "}
+                and electrical diagnostics for carts that surge, cut out, or won't respond.
               </p>
               <p>
                 Stop by during our business hours or give us a call at {location.phone} to schedule your service appointment. We look forward to helping you keep your golf cart running at peak performance!

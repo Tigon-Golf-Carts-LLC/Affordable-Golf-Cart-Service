@@ -757,7 +757,11 @@ function ServicesList() {
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2">Controller Repair</h3>
                 <p>
-                  The speed controller regulates how power is delivered from the batteries to the motor. Jerky acceleration, sudden cut-outs, limited top speed, or diagnostic error codes usually point to a controller problem. We diagnose, reprogram, repair, or replace controllers from all major brands and verify smooth, consistent throttle response.
+                  The speed controller regulates how power is delivered from the batteries to the motor. Jerky acceleration, sudden cut-outs, limited top speed, or diagnostic error codes usually point to a controller problem. Our{" "}
+                  <Link href="/services/electrical-diagnostics" className="text-primary hover:text-primary/80 font-medium" data-testid="link-controller-anchor">
+                    golf cart controller repair
+                  </Link>{" "}
+                  service diagnoses, reprograms, repairs, or replaces controllers from all major brands and verifies smooth, consistent throttle response.
                 </p>
               </div>
               <div>
