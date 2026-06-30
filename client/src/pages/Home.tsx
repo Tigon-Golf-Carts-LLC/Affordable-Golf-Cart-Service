@@ -15,7 +15,7 @@ const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
 const HOME_TITLE = "Affordable Golf Cart Service | #1 Professional Golf Cart Repair & Maintenance Near You";
-const HOME_DESCRIPTION = "Looking for affordable golf cart service? Expert repair, maintenance & tune-ups at prices you can afford. Call 1-844-844-4070 to book your service today!";
+const HOME_DESCRIPTION = "Affordable Golf Cart Service offers affordable golf carts and repair services across the US — tune-ups, battery replacement, motor repair & more. Get your free quote today! Call 1-844-844-4070.";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -272,6 +272,57 @@ export default function Home() {
                 <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-card border-y">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Affordable Golf Carts and Repair Services – Everything You Need in One Place
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                From keeping your current cart running like new to dialing in performance, we bring affordable golf carts and repair services together under one roof — so you never have to juggle multiple shops.
+              </p>
+            </div>
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p>
+                Owning a golf cart should be simple and affordable. That's exactly why we built our business around affordable golf carts and repair services that cover every stage of ownership — routine{" "}
+                <Link href="/services/golf-cart-tune-up" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-combo-maintenance">
+                  maintenance and tune-ups
+                </Link>
+                ,{" "}
+                <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-combo-repair">
+                  expert repairs
+                </Link>{" "}
+                for electric and gas carts, battery and{" "}
+                <Link href="/services/motor-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-combo-motor">
+                  motor service
+                </Link>
+                , brakes, and{" "}
+                <Link href="/services/electrical-diagnostics" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-combo-electrical">
+                  electrical diagnostics
+                </Link>
+                . Our certified technicians work on all major brands, including EZGO, Club Car, and Yamaha, with transparent, upfront pricing on every job.
+              </p>
+              <p>
+                Whether you need a quick fix or a full restoration, our combination of affordable golf carts and repair services means you get honest advice, quality parts, and dependable workmanship without the high price tag. Prefer not to haul your cart? We offer{" "}
+                <Link href="/services/mobile-golf-cart-service" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-combo-mobile">
+                  mobile golf cart service
+                </Link>{" "}
+                that comes to you, plus convenient pickup and delivery in many areas.
+              </p>
+            </div>
+            <div className="text-center mt-8">
+              <Button size="lg" asChild data-testid="button-home-combo-services">
+                <Link href="/services" className="gap-2">
+                  Explore Our Services
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
