@@ -1,5 +1,5 @@
 import { useLocation, useRoute, Link } from "wouter";
-import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug, Tag, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug, Tag, ShieldCheck, CheckCircle2, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
@@ -789,6 +789,33 @@ function ServicesList() {
                 </a>{" "}
                 today.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="rounded-xl border bg-gradient-to-br from-primary/10 via-card to-accent/20 p-8 md:p-10">
+              <div className="flex items-center gap-2 mb-4">
+                <Truck className="h-6 w-6 text-primary" />
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Mobile Golf Cart Service Available
+                </h2>
+              </div>
+              <p className="text-muted-foreground mb-4">
+                Can't bring your cart to us? We'll come to you. Our mobile golf cart service brings certified technicians directly to your home, golf community, or business — no trailer rental or transport required. We handle on-site tune-ups, battery replacement, brake service, and electrical diagnostics, all backed by the same upfront pricing and service warranty you'd get in the shop.
+              </p>
+              <p className="text-muted-foreground mb-6">
+                Available across all 50 states, mobile service saves you time and hassle while keeping your cart running at peak performance. Call to confirm availability in your area and book a visit.
+              </p>
+              <Button asChild data-testid="button-services-mobile">
+                <Link href="/services/mobile-golf-cart-service" className="gap-2">
+                  Explore Mobile Golf Cart Service
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
