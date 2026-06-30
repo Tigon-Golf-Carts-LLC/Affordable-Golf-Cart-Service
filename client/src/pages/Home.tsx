@@ -245,6 +245,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Full-Range Golf Cart Services
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              We're your one-stop shop for complete{" "}
+              <Link href="/services" className="text-primary hover:text-primary/80 font-medium" data-testid="link-home-golf-cart-services">
+                golf cart services
+              </Link>{" "}
+              — from maintenance and tune-ups to battery, brake, motor, electrical, and charger work. Whatever your cart needs, our certified technicians handle it with transparent pricing and a satisfaction guarantee, in-shop or with mobile service that comes to you.
+            </p>
+            <Button size="lg" asChild data-testid="button-home-all-services">
+              <Link href="/services" className="gap-2">
+                Explore All Golf Cart Services
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

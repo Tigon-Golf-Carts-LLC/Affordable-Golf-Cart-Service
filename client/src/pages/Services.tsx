@@ -18,8 +18,47 @@ const PHONE_NUMBER = "1-844-844-4070";
 const PHONE_HREF = "tel:+18448444070";
 
 const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Affordable Golf Cart Repair | Expert Service at Unbeatable Prices";
-const SERVICES_DESCRIPTION = "Looking for affordable golf cart repair? We offer transparent pricing, expert technicians & fast turnaround. See our services and save today! Call 1-844-844-4070.";
+const SERVICES_TITLE = "Golf Cart Services | Repair, Maintenance & Tune-Up | Affordable Golf Cart Service";
+const SERVICES_DESCRIPTION = "Professional golf cart services — repair, maintenance, tune-ups, battery, brakes, motor & electrical. Certified technicians, transparent pricing, all 50 states. Call 1-844-844-4070.";
+
+interface ServiceListItem {
+  name: string;
+  description: string;
+  url: string;
+}
+
+const serviceListItems: ServiceListItem[] = [
+  {
+    name: "Golf Cart Tune-Up & Maintenance",
+    description: "Multi-point inspections, adjustments, and preventative maintenance to keep your cart running reliably.",
+    url: `${SITE_URL}/services/full-tune-up-package`,
+  },
+  {
+    name: "Golf Cart Battery Service & Replacement",
+    description: "Battery load testing, terminal cleaning, and lead-acid or lithium pack replacement.",
+    url: `${SITE_URL}/services/lead-acid-battery-replacement-set`,
+  },
+  {
+    name: "Golf Cart Brake Service",
+    description: "Brake inspection, pad and shoe replacement, and adjustment for safe, reliable stopping.",
+    url: `${SITE_URL}/services/brake-pad-replacement`,
+  },
+  {
+    name: "Golf Cart Motor Repair",
+    description: "Diagnosis, repair, rebuild, and replacement of electric and gas golf cart motors.",
+    url: `${SITE_URL}/services/motor-repair-or-rebuild`,
+  },
+  {
+    name: "Golf Cart Electrical Diagnostics & Controller Repair",
+    description: "Professional electrical diagnostics, controller repair, and wiring fixes for carts that surge or cut out.",
+    url: `${SITE_URL}/services/electrical-diagnostics`,
+  },
+  {
+    name: "Golf Cart Charger Repair",
+    description: "Testing, repair, and replacement of onboard and external golf cart chargers.",
+    url: `${SITE_URL}/services/charger-inspection-or-repair`,
+  },
+];
 
 interface FeaturedService {
   id: string;
@@ -391,6 +430,19 @@ function ServicesList() {
     const structuredData = {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "ItemList",
+          name: "Golf Cart Services",
+          description:
+            "Professional golf cart services including repair, maintenance, tune-ups, battery, brake, motor, electrical, and charger service.",
+          itemListElement: serviceListItems.map((item, idx) => ({
+            "@type": "ListItem",
+            position: idx + 1,
+            name: item.name,
+            description: item.description,
+            url: item.url,
+          })),
+        },
         ...featuredServices.map((s) => ({
           "@type": "Service",
           name: `Affordable Golf Cart ${s.name}`,
@@ -462,13 +514,13 @@ function ServicesList() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
-              Affordable Golf Cart Repair
+              Professional Golf Cart Services – Repair, Maintenance &amp; More
             </h1>
             <p className="text-xl md:text-2xl font-semibold text-primary mb-4">
-              Quality Service Without the High Price Tag
+              Affordable Golf Cart Repair Without the High Price Tag
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Get affordable golf cart repair from certified technicians who fix it right the first time — without the high price tag. From battery replacement and motor repair to brakes and electrical diagnostics, we offer transparent, upfront pricing on 100+ services across all 50 states, backed by our satisfaction guarantee.
+              From routine maintenance and tune-ups to battery replacement, motor repair, brakes, and electrical diagnostics, our certified technicians deliver complete golf cart services that fix it right the first time. We offer transparent, upfront pricing on 100+ services across all 50 states, backed by our satisfaction guarantee.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-6">
               <div className="flex items-center gap-2 text-sm font-medium text-foreground" data-testid="badge-guarantee">
@@ -573,6 +625,98 @@ function ServicesList() {
                 <p className="text-sm text-muted-foreground">
                   Every repair is backed by a service warranty and post-service inspection. If you're not satisfied with the work, we'll make it right.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Complete Golf Cart Services Under One Roof
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Everything your cart needs, handled by one trusted team.
+              </p>
+            </div>
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+              <p>
+                Whether you drive an electric or gas golf cart, our golf cart services cover the full lifecycle of your vehicle. Routine maintenance and tune-ups keep small issues from turning into expensive breakdowns, while our repair services tackle everything from dead batteries and worn brakes to failing motors, faulty controllers, and stubborn electrical gremlins. Because we work on every major brand and model, you don't have to track down a different specialist for each problem — we're a true one-stop shop for golf cart owners, communities, resorts, and fleets alike.
+              </p>
+              <p>
+                Our most-requested golf cart services include comprehensive tune-ups, battery testing and replacement (lead-acid and lithium), brake inspection and pad replacement, motor repair and rebuilds, electrical diagnostics and controller repair, and charger service. Each job is performed with quality parts and finished with a road test so your cart leaves running the way it should. And when you can't bring your cart to us, our mobile golf cart service brings the same expertise directly to your driveway or community.
+              </p>
+            </div>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              {serviceListItems.map((item, idx) => (
+                <li key={idx} className="flex items-start gap-3" data-testid={`overview-service-${idx}`}>
+                  <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm text-foreground font-medium">{item.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-16 bg-card border-y">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Why Choose Us for Golf Cart Services
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Certified expertise, honest pricing, and service that puts you first.
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">Certified, Experienced Technicians</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Our technicians are factory-trained and experienced across all major golf cart brands, gas and electric, so the job is done right the first time.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Tag className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">Transparent, Upfront Pricing</h3>
+                  <p className="text-sm text-muted-foreground">
+                    You get a clear quote before any work begins — no hidden fees and no surprises when you pick up your cart.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">Satisfaction Guarantee</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Every repair is backed by a service warranty and post-service inspection. If you're not happy, we'll make it right.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Clock className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">Fast Turnaround & Nationwide Service</h3>
+                  <p className="text-sm text-muted-foreground">
+                    With in-shop, mobile, and pickup options across all 50 states, we get you back on the course or the road quickly.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
