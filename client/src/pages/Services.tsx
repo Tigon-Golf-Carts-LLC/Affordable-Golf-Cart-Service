@@ -582,6 +582,77 @@ function ServicesList() {
         </div>
       </section>
 
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Golf Cart Repair
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Whatever's wrong with your cart, our certified technicians fix it right. Explore the most common golf cart repairs we handle for both electric and gas carts, or{" "}
+                <Link href="/services/golf-cart-repair" className="text-primary hover:text-primary/80 font-medium" data-testid="link-repair-page-anchor">
+                  visit our dedicated golf cart repair page
+                </Link>{" "}
+                for full details, pricing, and our repair process.
+              </p>
+            </div>
+
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Electric Golf Cart Repair</h3>
+                <p>
+                  Electric golf carts depend on a healthy battery pack, solenoid, speed controller, and motor all working together. When an electric cart loses speed, won't accelerate, hesitates, or stops charging, the fault can be anywhere in the system. Our technicians trace the problem from the key switch and forward/reverse selector through the solenoid, controller, and onboard charger, then repair only what's actually broken. Common electric cart repairs include replacing worn solenoids, repairing or reprogramming speed controllers, fixing corroded battery cables, and replacing batteries that no longer hold a charge.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Gas Golf Cart Repair</h3>
+                <p>
+                  Gas-powered golf carts need their carburetor, ignition, fuel, and clutch systems in good working order. Hard starting, stalling, rough idling, loss of power on hills, and excessive smoke are all signs your gas cart needs attention. We perform tune-ups, carburetor cleaning and rebuilds, spark plug and filter replacement, fuel system service, and belt and clutch repair to restore reliable performance and smooth running.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Motor Repair</h3>
+                <p>
+                  A worn or failing motor leads to slow speeds, struggling on inclines, overheating, or a cart that won't move at all. We test motor windings, brushes, and bearings to determine whether a repair or replacement makes more sense, then service electric and gas motors and confirm full power output under load before returning your cart.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Controller Repair</h3>
+                <p>
+                  The speed controller regulates how power is delivered from the batteries to the motor. Jerky acceleration, sudden cut-outs, limited top speed, or diagnostic error codes usually point to a controller problem. We diagnose, reprogram, repair, or replace controllers from all major brands and verify smooth, consistent throttle response.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Battery Issues</h3>
+                <p>
+                  Battery trouble is the most common reason a golf cart underperforms. Reduced range, slow charging, or a cart that dies quickly often means one or more batteries are failing. We load-test each battery individually, clean and repair corroded terminals and cables, balance the pack, and replace lead-acid or lithium batteries when they can no longer hold a charge — so you get back the range and power you expect.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Brake Repair</h3>
+                <p>
+                  Spongy, noisy, or weak brakes are a serious safety hazard. Our brake repair service includes a full inspection of the braking system, replacement of worn pads and shoes, cable adjustment, drum service, and a road test so your cart stops safely and reliably every time you need it to.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">Charger Repair</h3>
+                <p>
+                  A failing charger can leave you with a dead cart and nowhere to go. We test charger output and voltage, repair onboard and external chargers, inspect charging ports and cables for damage, and replace chargers that are beyond repair. Getting your charging system right is essential to protecting your battery pack and your investment.
+                </p>
+              </div>
+              <p>
+                No matter the make, model, or problem, our team has the tools, parts, and experience to get your cart running again. For a free quote on any golf cart repair, call{" "}
+                <a href={PHONE_HREF} className="text-primary hover:text-primary/80 font-medium" data-testid="link-repair-phone-anchor">
+                  {PHONE_NUMBER}
+                </a>{" "}
+                today.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 md:py-16 bg-card border-t">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">

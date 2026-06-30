@@ -1,0 +1,36 @@
+golf cart alignment cost
+medium priority
+Us: #65
+Target: golfcartsearch.com (#13)
+Dismiss
+We rank at position 65 while golfcartsearch.com holds position 13, and an AI overview is present owned by extremekartz.com — this informational keyword with an active AI overview represents both a ranking and AI overview capture opportunity.
+
+Page to update
+Change URL
+https://affordablegolfcartservice.com/services
+Suggested title: Golf Cart Alignment Cost | Wheel Alignment Service & Pricing | Tigon Golf Carts
+Action plan
+1.
+Create
+Create a dedicated /services/golf-cart-alignment page targeting 'golf cart alignment cost' and alignment services.
+Build a page at /services/golf-cart-alignment with H1 'Golf Cart Alignment Service & Cost Guide', covering what golf cart alignment is, signs of misalignment, the alignment process, cost breakdown (typically $50–$150), how often to align, and a booking CTA. Must be 700+ words structured to compete for the AI overview currently owned by extremekartz.com.
+
+Impact: A dedicated alignment page should enter top 30 from position 65 within 60 days and target AI overview with structured content.
+
+Done?
+Dismiss
+2.
+Update
+Update the new alignment page with FAQPage and HowTo schema targeting the AI overview and featured snippet for cost-related queries.
+Add JSON-LD FAQPage schema with 'How much does golf cart alignment cost?', 'How do I know if my golf cart needs alignment?', 'How long does golf cart alignment take?' and HowTo schema for the alignment process to directly challenge extremekartz.com's AI overview at position 0.
+
+Impact: Structured data targeting AI overview and featured snippet can deliver top-of-SERP visibility even from a lower organic rank.
+
+Done?
+Dismiss
+3.
+Update
+Update the /services page to include golf cart alignment as a listed service with a link to the new alignment page.
+Add 'Golf Cart Wheel Alignment' as a service item on /services with a 50-word description and link to /services/golf-cart-alignment to pass internal authority and establish it within the service taxonomy.
+
+Impact: Internal link authority accelerates the new page's entry into competitive positions.

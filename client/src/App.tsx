@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Services from "@/pages/Services";
+import GolfCartRepair from "@/pages/GolfCartRepair";
 import States from "@/pages/States";
 import Locations from "@/pages/Locations";
 import Contact from "@/pages/Contact";
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/services" component={Services} />
+      <Route path="/services/golf-cart-repair" component={GolfCartRepair} />
       <Route path="/services/:id" component={Services} />
       <Route path="/states" component={States} />
       <Route path="/states/:slug" component={States} />
