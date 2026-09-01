@@ -11,16 +11,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ServiceCard } from "@/components/ServiceCard";
-import { services, serviceCategories, getServicesByCategory, getServiceById } from "@shared/services";
-import { serviceLocations } from "@shared/locations";
+import { services, serviceCategories, getServicesByCategory, getServiceById, serviceLocations } from "@/lib/data";
 import { useState, useMemo, useEffect } from "react";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO, serviceSeo } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
+const { title: SERVICES_TITLE, description: SERVICES_DESCRIPTION } = STATIC_PAGE_SEO["/services"];
 
-const SITE_URL = "https://affordablegolfcartservice.com";
-const SERVICES_TITLE = "Golf Cart Service – Expert Repair, Maintenance & Tune-Up | Affordable Golf Cart Service";
-const SERVICES_DESCRIPTION = "Need cheap golf cart service without cutting corners? Affordable Golf Cart Service offers low-cost cart repair & maintenance from certified technicians. Get a free estimate — call 1-844-844-4070.";
+
 
 interface ServiceListItem {
   name: string;
@@ -419,14 +417,9 @@ function ServiceDetail({ serviceId }: { serviceId: string }) {
 
   useEffect(() => {
     if (service) {
-      document.title = `${service.name} | Affordable Golf Cart Services`;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute(
-          "content",
-          `${service.name} (${service.priceRange}) — ${service.description} Affordable golf cart service nationwide. Call 1-844-844-4070 for a free quote!`
-        );
-      }
+      const seo = serviceSeo(service);
+      document.title = seo.title;
+      document.querySelector('meta[name="description"]')?.setAttribute("content", seo.description);
     }
   }, [service]);
 

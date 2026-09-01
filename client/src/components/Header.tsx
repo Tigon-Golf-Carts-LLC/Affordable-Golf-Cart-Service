@@ -3,9 +3,9 @@ import { Link, useLocation } from "wouter";
 import { Phone, Menu, X, ChevronDown, ChevronRight, MapPin, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import { services, serviceCategories, getServicesByCategory } from "@shared/services";
-import { usStates } from "@shared/states";
-import { serviceLocations } from "@shared/locations";
+import { Img } from "./Img";
+import { PHONE_HREF, PHONE_NUMBER, BUSINESS_NAME } from "@/lib/site";
+import { services, serviceCategories, getServicesByCategory, usStates, serviceLocations } from "@/lib/data";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,9 +15,6 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,7 +47,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <img src="/logo.png" alt="Affordable Golf Cart Service" className="h-12 w-auto" />
+            <Img name="logo" alt={BUSINESS_NAME} className="h-12 w-auto" sizes="48px" priority />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

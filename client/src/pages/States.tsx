@@ -5,23 +5,20 @@ import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge";
 import { ServiceCard } from "@/components/ServiceCard";
 import { LocationSearch } from "@/components/LocationSearch";
-import { services, serviceCategories } from "@shared/services";
-import { usStates, getStateBySlug, getGoogleMapsEmbedUrl } from "@shared/states";
+import { services, serviceCategories, usStates, getStateBySlug, getGoogleMapsEmbedUrl } from "@/lib/data";
 import { useEffect } from "react";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/site";
+import { STATIC_PAGE_SEO, stateSeo } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
 
 function StateDetail({ stateSlug }: { stateSlug: string }) {
   const state = getStateBySlug(stateSlug);
 
   useEffect(() => {
     if (state) {
-      document.title = `Affordable Golf Cart Services in ${state.name} | Golf Cart Repair & Maintenance`;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', `Professional golf cart service, repair, and maintenance in ${state.name}. Over 100 services including tune-ups, battery replacement, brake service, and custom upgrades. Call 1-844-844-4070 today for ${state.name} golf cart service!`);
-      }
+      const seo = stateSeo(state);
+      document.title = seo.title;
+      document.querySelector('meta[name="description"]')?.setAttribute("content", seo.description);
     }
   }, [state]);
 
@@ -274,11 +271,9 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
 
 function StatesLanding() {
   useEffect(() => {
-    document.title = "Golf Cart Services by State | Affordable Golf Cart Service";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Find affordable golf cart service, repair, and maintenance in your state. We serve all 50 US states with professional golf cart services. Call 1-844-844-4070 today!');
-    }
+    const seo = STATIC_PAGE_SEO["/states"];
+    document.title = seo.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", seo.description);
   }, []);
 
   return (

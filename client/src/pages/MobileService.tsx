@@ -22,17 +22,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { serviceLocations } from "@shared/locations";
-import { usStates } from "@shared/states";
+import { serviceLocations, usStates } from "@/lib/data";
 import { useEffect } from "react";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
-const SITE_URL = "https://affordablegolfcartservice.com";
+const { title: PAGE_TITLE, description: PAGE_DESCRIPTION } = STATIC_PAGE_SEO["/services/mobile-golf-cart-service"];
+
 const PAGE_URL = `${SITE_URL}/services/mobile-golf-cart-service`;
-const PAGE_TITLE = "Mobile Golf Cart Service | On-Site Repair & Maintenance";
-const PAGE_DESCRIPTION =
-  "Mobile golf cart service that comes to you. On-site tune-ups, battery replacement, brake service & diagnostics at your home or community. Call 1-844-844-4070 to book!";
 
 const included = [
   { icon: Wrench, name: "On-Site Tune-Ups", description: "Full multi-point tune-ups performed right in your driveway or community." },

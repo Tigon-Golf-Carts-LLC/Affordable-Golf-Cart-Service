@@ -1,11 +1,8 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { serviceCategories } from "@shared/services";
-import { usStates } from "@shared/states";
-import { serviceLocations } from "@shared/locations";
-
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
+import { serviceCategories, usStates, serviceLocations } from "@/lib/data";
+import { Img } from "./Img";
+import { PHONE_HREF, PHONE_NUMBER, BUSINESS_NAME, SITE_ORIGIN } from "@/lib/site";
 
 export function Footer() {
   // Featured states where we have service locations
@@ -20,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="mb-4">
-              <img src="/logo.png" alt="Affordable Golf Cart Service" className="h-16 w-auto" />
+              <Img name="logo" alt={BUSINESS_NAME} className="h-16 w-auto" sizes="64px" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
               Your trusted partner for{" "}
@@ -162,8 +159,8 @@ export function Footer() {
             © {new Date().getFullYear()} Affordable Golf Cart Service. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            <a href="https://affordablegolfcartservice.com" className="hover:text-foreground transition-colors" data-testid="footer-link-website">
-              affordablegolfcartservice.com
+            <a href={SITE_ORIGIN} className="hover:text-foreground transition-colors" data-testid="footer-link-website">
+              {SITE_ORIGIN.replace(/^https?:\/\//, "")}
             </a>
           </p>
         </div>

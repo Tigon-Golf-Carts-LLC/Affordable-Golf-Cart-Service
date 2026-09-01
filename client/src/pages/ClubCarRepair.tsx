@@ -20,15 +20,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useEffect } from "react";
-import { serviceLocations } from "@shared/locations";
+import { serviceLocations } from "@/lib/data";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
-const SITE_URL = "https://affordablegolfcartservice.com";
+const { title: PAGE_TITLE, description: PAGE_DESCRIPTION } = STATIC_PAGE_SEO["/services/club-car-repair"];
+
 const PAGE_URL = `${SITE_URL}/services/club-car-repair`;
-const PAGE_TITLE = "Club Car Repairs Near Me | Certified Club Car Service";
-const PAGE_DESCRIPTION =
-  "Need Club Car repairs near you? Our certified technicians service Club Car DS, Precedent & Onward carts — diagnostics, repairs & parts at fair prices. Call 1-844-844-4070.";
 
 const clubCarModels = [
   {

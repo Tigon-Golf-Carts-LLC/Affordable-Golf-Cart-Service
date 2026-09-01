@@ -5,17 +5,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ServiceCard } from "@/components/ServiceCard";
 import { LocationSearch } from "@/components/LocationSearch";
-import { services, serviceCategories, getServicesByCategory } from "@shared/services";
-import { serviceLocations } from "@shared/locations";
-import { usStates } from "@shared/states";
+import { services, serviceCategories, getServicesByCategory, serviceLocations, usStates } from "@/lib/data";
 import { useEffect, useState } from "react";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL, absoluteUrl } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
+const { title: HOME_TITLE, description: HOME_DESCRIPTION } = STATIC_PAGE_SEO["/"];
 
-const SITE_URL = "https://affordablegolfcartservice.com";
-const HOME_TITLE = "Affordable Golf Cart Service | #1 Professional Golf Cart Repair & Maintenance Near You";
-const HOME_DESCRIPTION = "Affordable Golf Cart Service offers affordable golf carts and repair services across the US — tune-ups, battery replacement, motor repair & more. Get your free quote today! Call 1-844-844-4070.";
+
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -38,8 +35,8 @@ export default function Home() {
             "Professional golf cart repair and maintenance with over 100 affordable services including tune-ups, battery replacement, brake service, and custom upgrades.",
           url: SITE_URL,
           telephone: "+1-844-844-4070",
-          image: `${SITE_URL}/logo.png`,
-          logo: `${SITE_URL}/logo.png`,
+          image: absoluteUrl("/og-image.png"),
+          logo: absoluteUrl("/og-image.png"),
           priceRange: "$$",
           serviceType: "Golf Cart Repair and Maintenance",
           areaServed: usStates.map((state) => ({

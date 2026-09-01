@@ -3,9 +3,9 @@ import { Phone, ArrowRight, Wrench, Battery, Circle, Gauge, Zap, Paintbrush, Spa
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import type { Service } from "@shared/services";
+import type { Service } from "@/lib/data";
+import { PHONE_HREF } from "@/lib/site";
 
-const PHONE_HREF = "tel:+18448446638";
 
 const categoryIcons: Record<string, typeof Wrench> = {
   "Maintenance & Tune-Ups": Wrench,

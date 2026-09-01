@@ -16,15 +16,12 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
+const { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION } = STATIC_PAGE_SEO["/about"];
 
-const SITE_URL = "https://affordablegolfcartservice.com";
-const ABOUT_TITLE =
-  "Golf Car Mechanic | Meet Our Certified Golf Cart Repair Technicians | Affordable Golf Cart Service";
-const ABOUT_DESCRIPTION =
-  "Meet the certified golf car mechanics at Affordable Golf Cart Service — factory-trained on EZGO, Club Car & Yamaha with years of repair experience. Call 1-844-844-4070 to book your service.";
+
 
 const mechanics = [
   {
