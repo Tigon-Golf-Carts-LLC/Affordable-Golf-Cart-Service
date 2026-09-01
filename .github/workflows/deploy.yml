@@ -30,12 +30,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
@@ -52,6 +52,10 @@ jobs:
       - name: Build static site
         run: npm run build:site
 
+      # configure-pages, upload-pages-artifact and deploy-pages still declare the
+      # node20 action runtime and log a deprecation warning. These are already
+      # their latest majors — the node24 work is on their main branches but not
+      # yet tagged, so the warning clears when GitHub ships those releases.
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
