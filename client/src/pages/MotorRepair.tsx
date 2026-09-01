@@ -23,15 +23,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useEffect } from "react";
-import { serviceLocations } from "@shared/locations";
+import { serviceLocations } from "@/lib/data";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
-const SITE_URL = "https://affordablegolfcartservice.com";
+const { title: PAGE_TITLE, description: PAGE_DESCRIPTION } = STATIC_PAGE_SEO["/services/motor-repair"];
+
 const PAGE_URL = `${SITE_URL}/services/motor-repair`;
-const PAGE_TITLE = "Gas Golf Cart Repair | Engine Service & Motor Repair";
-const PAGE_DESCRIPTION =
-  "Expert gas golf cart repair from certified mechanics. From carburetor cleaning to engine overhaul, plus electric motor service — we fix it fast and at a fair price. Call 1-844-844-4070.";
 
 const symptoms = [
   "No power or the cart won't move despite a charged battery or full tank",

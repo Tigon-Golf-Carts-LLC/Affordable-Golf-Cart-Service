@@ -21,15 +21,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useEffect } from "react";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
-const SITE_URL = "https://affordablegolfcartservice.com";
+const { title: PAGE_TITLE, description: PAGE_DESCRIPTION } = STATIC_PAGE_SEO["/services/golf-cart-tune-up"];
+
 const PAGE_URL = `${SITE_URL}/services/golf-cart-tune-up`;
 const PDF_URL = "/golf-cart-maintenance-checklist.pdf";
-const PAGE_TITLE = "Golf Cart Maintenance & Tune-Up Services | Keep Your Cart Running";
-const PAGE_DESCRIPTION =
-  "Complete golf cart maintenance & tune-up services: battery care, tires, brakes, electrical checks & storage prep. Free maintenance checklist. Call 1-844-844-4070!";
 
 const checklistSteps = [
   { name: "Check battery water levels", text: "Top off each lead-acid battery cell with distilled water to the proper level — never overfill." },

@@ -9,14 +9,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useEffect } from "react";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
-const SITE_URL = "https://affordablegolfcartservice.com";
+const { title: PAGE_TITLE, description: PAGE_DESCRIPTION } = STATIC_PAGE_SEO["/blog/golf-cart-repair-cost"];
+
 const PAGE_URL = `${SITE_URL}/blog/golf-cart-repair-cost`;
-const PAGE_TITLE = "How Much Does Golf Cart Repair Cost? A Complete Pricing Guide";
-const PAGE_DESCRIPTION =
-  "How much does golf cart repair cost? Our complete pricing guide breaks down motor, battery, brake & electrical repair costs, plus DIY vs. pro and how to save.";
 
 const costTable = [
   { repair: "Diagnostic / Inspection", cost: "$50 – $150", notes: "Often waived if you proceed with the repair" },

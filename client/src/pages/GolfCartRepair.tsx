@@ -28,16 +28,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { serviceLocations } from "@shared/locations";
+import { serviceLocations } from "@/lib/data";
 import { useEffect } from "react";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
-const SITE_URL = "https://affordablegolfcartservice.com";
+const { title: PAGE_TITLE, description: PAGE_DESCRIPTION } = STATIC_PAGE_SEO["/services/golf-cart-repair"];
+
 const PAGE_URL = `${SITE_URL}/services/golf-cart-repair`;
-const PAGE_TITLE = "Golf Cart Repair Services | Expert & Affordable";
-const PAGE_DESCRIPTION =
-  "Fast, reliable golf cart repair for electric & gas carts — motor, controller, battery, brake & charger repair. Call 1-844-844-4070 for affordable golf cart repair near you!";
 
 const repairTypes = [
   {

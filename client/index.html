@@ -1,95 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <!--
+      Everything between seo:start and seo:end is replaced per route by
+      script/prerender.ts. The values below are the dev-server defaults.
+    -->
+    <!--seo:start-->
+    <title>Affordable Golf Cart Service | Golf Cart Repair &amp; Maintenance</title>
+    <meta name="description" content="Expert golf cart repair, maintenance and tune-ups at prices you can afford. Call 1-844-844-4070 to book your service today." />
+    <!--seo:end-->
+
+    <link rel="icon" type="image/png" href="%BASE_URL%favicon.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
+    <link rel="manifest" href="%BASE_URL%manifest.json" />
+    <link rel="search" type="application/opensearchdescription+xml" title="Affordable Golf Cart Service" href="%BASE_URL%opensearch.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Affordable Golf Cart Service RSS" href="%BASE_URL%feed.xml" />
+
+    <meta name="theme-color" content="#e7682e" />
+    <meta name="msapplication-TileColor" content="#e7682e" />
+    <meta name="msapplication-config" content="%BASE_URL%browserconfig.xml" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Golf Cart Service" />
+    <meta name="author" content="Noah Jaslow, Jaslow Digital Marketing — jaslowdigital.com" />
+
+    <!-- Website developer credit -->
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://jaslowdigital.com/#noah-jaslow","name":"Noah Jaslow","url":"https://jaslowdigital.com","jobTitle":"Website Developer","description":"Noah Jaslow is a golf cart and vehicle dealership marketing expert. Website developed by Noah Jaslow @ jaslowdigital.com.","knowsAbout":["Golf Cart Dealership Marketing","Vehicle Dealership Marketing","Web Development","Search Engine Optimization"],"worksFor":{"@id":"https://jaslowdigital.com/#organization"}},{"@type":"Organization","@id":"https://jaslowdigital.com/#organization","name":"Jaslow Digital Marketing","url":"https://jaslowdigital.com","description":"Digital marketing agency specializing in golf cart and vehicle dealership marketing, led by Noah Jaslow.","founder":{"@id":"https://jaslowdigital.com/#noah-jaslow"}}]}
+    </script>
+
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T26PM2QK');</script>
-    <!-- End Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T26PM2QK");
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N1QJMEJX49"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-N1QJMEJX49');
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-N1QJMEJX49");
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>Affordable Golf Cart Service | #1 Professional Golf Cart Repair & Maintenance Near You</title>
-    <meta name="description" content="Looking for affordable golf cart service? Expert repair, maintenance & tune-ups at prices you can afford. Call 1-844-844-4070 to book your service today!" />
-    <meta name="keywords" content="golf cart service, golf cart repair, golf cart maintenance, battery replacement, tune-up, brake service, custom golf cart" />
-    <meta property="og:title" content="Affordable Golf Cart Service" />
-    <meta property="og:description" content="Looking for affordable golf cart service? Expert repair, maintenance & tune-ups at prices you can afford. Call 1-844-844-4070 to book your service today!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://affordablegolfcartservice.com" />
-    <meta property="og:image" content="https://affordablegolfcartservice.com/og-image.png" />
-    <meta property="og:site_name" content="Affordable Golf Cart Service" />
-    <meta property="article:publisher" content="https://www.facebook.com/AffordableGolfCartService/" />
-    <meta property="fb:page_id" content="AffordableGolfCartService" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://affordablegolfcartservice.com/og-image.png" />
-    <meta name="twitter:site" content="@AffordableGolfCartService" />
-    <link rel="canonical" href="https://affordablegolfcartservice.com" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="search" type="application/opensearchdescription+xml" title="Affordable Golf Cart Service" href="/opensearch.xml" />
-    <link rel="alternate" type="application/rss+xml" title="Affordable Golf Cart Service RSS" href="/feed.xml" />
-    <meta name="author" content="Noah Jaslow, Jaslow Digital Marketing — jaslowdigital.com" />
-    <!-- Website Developer Credit -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://jaslowdigital.com/#noah-jaslow",
-          "name": "Noah Jaslow",
-          "url": "https://jaslowdigital.com",
-          "jobTitle": "Website Developer",
-          "description": "Noah Jaslow is a golf cart and vehicle dealership marketing expert. Website developed by Noah Jaslow @ jaslowdigital.com.",
-          "knowsAbout": [
-            "Golf Cart Dealership Marketing",
-            "Vehicle Dealership Marketing",
-            "Web Development",
-            "Search Engine Optimization"
-          ],
-          "worksFor": {
-            "@id": "https://jaslowdigital.com/#organization"
-          }
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://jaslowdigital.com/#organization",
-          "name": "Jaslow Digital Marketing",
-          "url": "https://jaslowdigital.com",
-          "description": "Digital marketing agency specializing in golf cart and vehicle dealership marketing, led by Noah Jaslow.",
-          "founder": {
-            "@id": "https://jaslowdigital.com/#noah-jaslow"
-          }
-        }
-      ]
-    }
-    </script>
-    <meta name="theme-color" content="#e7682e" />
-    <meta name="msapplication-TileColor" content="#e7682e" />
-    <meta name="msapplication-config" content="/browserconfig.xml" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <meta name="apple-mobile-web-app-title" content="Golf Cart Service" />
-    <link rel="apple-touch-icon" href="/logo.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T26PM2QK"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div id="root"></div>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T26PM2QK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

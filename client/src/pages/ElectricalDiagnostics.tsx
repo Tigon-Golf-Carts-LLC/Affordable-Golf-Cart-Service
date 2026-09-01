@@ -24,14 +24,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useEffect } from "react";
+import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
+import { STATIC_PAGE_SEO } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
-const SITE_URL = "https://affordablegolfcartservice.com";
+const { title: PAGE_TITLE, description: PAGE_DESCRIPTION } = STATIC_PAGE_SEO["/services/electrical-diagnostics"];
+
 const PAGE_URL = `${SITE_URL}/services/electrical-diagnostics`;
-const PAGE_TITLE = "Golf Cart Charger Repair Near Me | Electrical Diagnostics & Fix";
-const PAGE_DESCRIPTION =
-  "Golf cart charger not working? Our certified technicians provide golf cart charger repair near you — fast diagnostics, fair pricing, same-week service. Call 1-844-844-4070.";
 
 const chargerSymptoms = [
   "The charger won't power on or shows no lights at all",

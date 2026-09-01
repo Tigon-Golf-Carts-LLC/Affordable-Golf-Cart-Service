@@ -5,22 +5,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LocationSearch } from "@/components/LocationSearch";
-import { serviceLocations, getLocationBySlug, getFullAddress, getDirectionsUrl, type ServiceLocation } from "@shared/locations";
-import { serviceCategories } from "@shared/services";
+import { serviceLocations, getLocationBySlug, getFullAddress, getDirectionsUrl, type ServiceLocation, serviceCategories } from "@/lib/data";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/site";
+import { STATIC_PAGE_SEO, locationSeo } from "@shared/seo";
 
-const PHONE_NUMBER = "1-844-844-4070";
-const PHONE_HREF = "tel:+18448444070";
 
 function LocationDetail({ locationSlug }: { locationSlug: string }) {
   const location = getLocationBySlug(locationSlug);
 
   useEffect(() => {
     if (location) {
-      document.title = `Golf Cart Service in ${location.city}, ${location.stateAbbr} | Affordable Golf Cart Service`;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', `Professional golf cart service, repair, and maintenance at ${getFullAddress(location)}. Over 100 services available. Call ${location.phone} today!`);
-      }
+      const seo = locationSeo(location);
+      document.title = seo.title;
+      document.querySelector('meta[name="description"]')?.setAttribute("content", seo.description);
     }
   }, [location]);
 
@@ -313,11 +310,9 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
 
 function LocationsLanding() {
   useEffect(() => {
-    document.title = "Service Locations | Affordable Golf Cart Service";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Find an Affordable Golf Cart Service location near you. We have 14 service centers across the United States. Call 1-844-844-4070 today!');
-    }
+    const seo = STATIC_PAGE_SEO["/locations"];
+    document.title = seo.title;
+    document.querySelector('meta[name="description"]')?.setAttribute("content", seo.description);
   }, []);
 
   const locationsByState: Record<string, ServiceLocation[]> = {};
