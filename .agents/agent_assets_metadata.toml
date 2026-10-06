@@ -1,0 +1,74 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "MfjRQVp2abIuO9dvaaSez"
+uri = "file://attached_assets/generated_images/villages_logo.png"
+type = "image"
+title = "villages golf cart logo"
+
+[[generated]]
+id = "lHGfSZ9yl8AhEjnMdRM_0"
+uri = "file://client/public/blog-images/blog-tire-replacement-villages.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "DPmSqSaMUKarBCpmLjbyQ"
+uri = "file://client/public/blog-images/blog-florida-weather.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "oVK9dlqdzU3kGM5eKNr7H"
+uri = "file://client/public/blog-images/blog-mobile-service-villages.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "quKQLRHq3xDCS6e2ic2X8"
+uri = "file://client/public/blog-images/blog-service-center-villages.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "tv8_eyQJvnWAUIpv9m0Bi"
+uri = "file://client/public/blog-images/blog-lady-lake-wildwood.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "MXywkb8OK9EBqoUn8rawg"
+uri = "file://client/public/blog-images/blog-golf-cart-maintenance-guide.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "uxgjXmWJAoeONrnkfR6g5"
+uri = "file://client/public/blog-images/blog-electric-vs-gas-golf-carts.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "DkrdRir1CTGh21r4urq93"
+uri = "file://client/public/blog-images/blog-battery-lithium-upgrades.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "eFOLr4Wf_jVGdI5s_3OAN"
+uri = "file://client/public/blog-images/blog-service-the-villages.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "HpIgiYJqqmF0rP8Z3kp3P"
+uri = "file://client/public/blog-images/blog-how-often-service.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Q_wfqighvZRTmNLKY7Til"
+uri = "file://client/public/blog-images/blog-lithium-upgrades-villages.png"
+type = "image"
+title = "generated_image"

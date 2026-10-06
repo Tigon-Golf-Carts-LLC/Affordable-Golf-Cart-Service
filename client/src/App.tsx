@@ -1,79 +1,62 @@
-import { Route, Router, Switch } from "wouter";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Switch, Route, useLocation } from "wouter";
+import { useEffect } from "react";
+import { queryClient } from "./lib/queryClient";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Page, type PageName } from "@/pages/registry";
-import { ROUTER_BASE } from "@/lib/site";
+import Home from "@/pages/Home";
+import About from "@/pages/About";
+import Services from "@/pages/Services";
+import States from "@/pages/States";
+import Contact from "@/pages/Contact";
+import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
+import NotFound from "@/pages/not-found";
+import { captureTigonAttribution } from "@/lib/tigon-lead";
+import { ServiceInquiryDialog } from "@/components/ServiceInquiryDialog";
 
-/** path -> page, in wouter match order (most specific first). */
-const ROUTES: Array<[string, PageName]> = [
-  ["/", "Home"],
-  ["/about", "About"],
-  ["/services", "Services"],
-  ["/services/golf-cart-repair", "GolfCartRepair"],
-  ["/services/electrical-diagnostics", "ElectricalDiagnostics"],
-  ["/services/mobile-golf-cart-service", "MobileService"],
-  ["/services/golf-cart-tune-up", "GolfCartMaintenance"],
-  ["/services/club-car-repair", "ClubCarRepair"],
-  ["/services/motor-repair", "MotorRepair"],
-  ["/services/golf-cart-alignment", "GolfCartAlignment"],
-  ["/services/:id", "Services"],
-  ["/blog/golf-cart-repair-cost", "RepairCostGuide"],
-  ["/states", "States"],
-  ["/states/:slug", "States"],
-  ["/locations", "Locations"],
-  ["/locations/:slug", "Locations"],
-  ["/contact", "Contact"],
-];
+function Router() {
+  const [location] = useLocation();
 
-/**
- * Which page a pathname resolves to, using the same table and the same order as
- * <Switch>. Used by the browser entry to load the route's chunk *before*
- * hydrating, so the first client render matches the prerendered markup exactly.
- */
-export function pageNameForPath(pathname: string): PageName {
-  let rel = pathname;
-  if (ROUTER_BASE && rel.startsWith(ROUTER_BASE)) rel = rel.slice(ROUTER_BASE.length) || "/";
-  rel = rel.replace(/\/+$/, "") || "/";
-  for (const [pattern, name] of ROUTES) {
-    const source = "^" + pattern.replace(/:[^/]+/g, "[^/]+") + "$";
-    if (new RegExp(source).test(rel)) return name;
-  }
-  return "NotFound";
-}
+  useEffect(() => {
+    captureTigonAttribution();
+  }, [location]);
 
-function Routes() {
   return (
     <Switch>
-      {ROUTES.map(([path, name]) => (
-        <Route key={path} path={path}>
-          {(params) => <Page name={name} {...params} />}
-        </Route>
-      ))}
-      <Route>{() => <Page name="NotFound" />}</Route>
+      <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/services" component={Services} />
+      <Route path="/services/:id" component={Services} />
+      <Route path="/states" component={States} />
+      <Route path="/states/:slug" component={States} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/page/:page" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
+      <Route component={NotFound} />
     </Switch>
   );
 }
 
-/**
- * `ssrPath` is supplied only by the prerenderer (`script/prerender.ts`); in the
- * browser wouter reads the real location. `base` keeps every route correct when
- * the site is deployed under a project-page sub-path.
- */
-export default function App({ ssrPath }: { ssrPath?: string } = {}) {
+function App() {
   return (
-    <Router base={ROUTER_BASE} ssrPath={ssrPath}>
+    <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-1">
-            <Routes />
+            <Router />
           </main>
           <Footer />
         </div>
+        <ServiceInquiryDialog />
         <Toaster />
       </TooltipProvider>
-    </Router>
+    </QueryClientProvider>
   );
 }
+
+export default App;

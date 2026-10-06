@@ -1,0 +1,34 @@
+# Villages Golf Cart Services - Compliance & Standards
+# https://villagesgolfcartservices.com
+# Last Updated: 2026-06-25
+
+## Business Overview
+Villages Golf Cart Services provides nationwide golf cart service, repair, and
+maintenance across all 50 US states. Phone-based booking; no physical storefront.
+Phone: 1-888-502-7074  |  Email: info@villagesgolfcartservices.com
+
+## Privacy & Data (GDPR / CCPA)
+- We collect only the information needed to respond to service inquiries.
+- No sale of personal data to third parties.
+- Customers may request access to or deletion of their information by contacting us.
+- Cookies/analytics, where used, are limited to site performance and improvement.
+
+## Accessibility (WCAG 2.1 AA)
+- Semantic HTML and ARIA where appropriate.
+- Sufficient color contrast and keyboard navigability.
+- Descriptive alt text on images (see images.txt).
+- Light and dark mode support.
+
+## Industry Standards
+- Service work performed by qualified, certified technicians.
+- Transparent, range-based pricing published per service.
+- Work on all major golf cart makes and models.
+
+## Search & Crawl Compliance
+- Google Search Console and Bing Webmaster Tools compatible.
+- Valid XML sitemaps (see sitemap.xml and sitemap-index.xml).
+- Open crawl policy (see robots.txt).
+
+## Contact for Compliance Inquiries
+Email: info@villagesgolfcartservices.com
+Phone: 1-888-502-7074

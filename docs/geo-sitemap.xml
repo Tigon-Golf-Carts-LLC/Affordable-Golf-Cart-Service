@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Geographic sitemap: nationwide golf cart service areas (all 50 US states) -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/alabama</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Alabama (AL) lat=32.806671 lng=-86.79113 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/alaska</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Alaska (AK) lat=61.370716 lng=-152.404419 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/arizona</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Arizona (AZ) lat=33.729759 lng=-111.431221 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/arkansas</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Arkansas (AR) lat=34.969704 lng=-92.373123 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/california</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- California (CA) lat=36.116203 lng=-119.681564 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/colorado</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Colorado (CO) lat=39.059811 lng=-105.311104 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/connecticut</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Connecticut (CT) lat=41.597782 lng=-72.755371 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/delaware</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Delaware (DE) lat=39.318523 lng=-75.507141 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/florida</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Florida (FL) lat=27.766279 lng=-81.686783 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/georgia</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Georgia (GA) lat=33.040619 lng=-83.643074 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/hawaii</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Hawaii (HI) lat=21.094318 lng=-157.498337 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/idaho</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Idaho (ID) lat=44.240459 lng=-114.478828 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/illinois</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Illinois (IL) lat=40.349457 lng=-88.986137 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/indiana</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Indiana (IN) lat=39.849426 lng=-86.258278 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/iowa</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Iowa (IA) lat=42.011539 lng=-93.210526 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/kansas</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Kansas (KS) lat=38.5266 lng=-96.726486 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/kentucky</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Kentucky (KY) lat=37.66814 lng=-84.670067 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/louisiana</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Louisiana (LA) lat=31.169546 lng=-91.867805 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/maine</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Maine (ME) lat=44.693947 lng=-69.381927 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/maryland</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Maryland (MD) lat=39.063946 lng=-76.802101 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/massachusetts</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Massachusetts (MA) lat=42.230171 lng=-71.530106 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/michigan</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Michigan (MI) lat=43.326618 lng=-84.536095 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/minnesota</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Minnesota (MN) lat=45.694454 lng=-93.900192 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/mississippi</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Mississippi (MS) lat=32.741646 lng=-89.678696 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/missouri</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Missouri (MO) lat=38.456085 lng=-92.288368 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/montana</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Montana (MT) lat=46.921925 lng=-110.454353 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/nebraska</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Nebraska (NE) lat=41.12537 lng=-98.268082 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/nevada</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Nevada (NV) lat=38.313515 lng=-117.055374 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/new-hampshire</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- New Hampshire (NH) lat=43.452492 lng=-71.563896 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/new-jersey</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- New Jersey (NJ) lat=40.298904 lng=-74.521011 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/new-mexico</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- New Mexico (NM) lat=34.840515 lng=-106.248482 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/new-york</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- New York (NY) lat=42.165726 lng=-74.948051 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/north-carolina</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- North Carolina (NC) lat=35.630066 lng=-79.806419 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/north-dakota</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- North Dakota (ND) lat=47.528912 lng=-99.784012 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/ohio</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Ohio (OH) lat=40.388783 lng=-82.764915 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/oklahoma</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Oklahoma (OK) lat=35.565342 lng=-96.928917 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/oregon</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Oregon (OR) lat=44.572021 lng=-122.070938 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/pennsylvania</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Pennsylvania (PA) lat=40.590752 lng=-77.209755 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/rhode-island</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Rhode Island (RI) lat=41.680893 lng=-71.51178 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/south-carolina</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- South Carolina (SC) lat=33.856892 lng=-80.945007 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/south-dakota</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- South Dakota (SD) lat=44.299782 lng=-99.438828 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/tennessee</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Tennessee (TN) lat=35.747845 lng=-86.692345 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/texas</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Texas (TX) lat=31.054487 lng=-97.563461 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/utah</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Utah (UT) lat=40.150032 lng=-111.862434 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/vermont</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Vermont (VT) lat=44.045876 lng=-72.710686 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/virginia</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Virginia (VA) lat=37.769337 lng=-78.169968 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/washington</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Washington (WA) lat=47.400902 lng=-121.490494 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/west-virginia</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- West Virginia (WV) lat=38.491226 lng=-80.954453 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/wisconsin</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Wisconsin (WI) lat=44.268543 lng=-89.616508 -->
+  </url>
+  <url>
+    <loc>https://villagesgolfcartservices.com/states/wyoming</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <!-- Wyoming (WY) lat=42.755966 lng=-107.30249 -->
+  </url>
+</urlset>

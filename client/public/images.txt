@@ -1,0 +1,37 @@
+# Villages Golf Cart Services - Image Optimization Guidelines
+# https://villagesgolfcartservices.com
+# Last Updated: 2026-06-25
+
+## Purpose
+Standards for image SEO, accessibility, and performance across the site.
+
+## Alt Text
+- Every image has descriptive, keyword-relevant alt text.
+- Alt text describes the subject and context (e.g. "Technician performing golf cart battery replacement").
+- Decorative-only images use empty alt attributes.
+
+## File Formats
+- Prefer modern formats (WebP/AVIF) with PNG/JPEG fallbacks.
+- Logos and icons: PNG or SVG.
+- Photographs: WebP or optimized JPEG.
+
+## Naming Conventions
+- Lowercase, hyphen-separated, descriptive filenames.
+- Example: golf-cart-tune-up.webp, lithium-battery-replacement.webp
+
+## Compression & Delivery
+- Compress all images without visible quality loss.
+- Serve responsive sizes via srcset where applicable.
+- Lazy-load below-the-fold images (loading="lazy").
+
+## Indexable Images (publicly accessible)
+https://villagesgolfcartservices.com/og-image.png
+https://villagesgolfcartservices.com/logo.png
+https://villagesgolfcartservices.com/favicon.png
+
+## Image Sitemap
+https://villagesgolfcartservices.com/image-sitemap.xml
+
+## Contact
+Email: info@villagesgolfcartservices.com
+Phone: 1-888-502-7074

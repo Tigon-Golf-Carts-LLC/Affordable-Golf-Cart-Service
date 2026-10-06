@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Villages Golf Cart Services</ShortName>
+  <Description>Search Villages Golf Cart Services for golf cart repair and maintenance services</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/png">https://villagesgolfcartservices.com/favicon.png</Image>
+  <Url type="text/html" template="https://villagesgolfcartservices.com/services?q={searchTerms}"/>
+  <Contact>info@villagesgolfcartservices.com</Contact>
+  <LongName>Villages Golf Cart Services - Golf Cart Repair and Maintenance</LongName>
+  <Developer>Villages Golf Cart Services</Developer>
+  <Language>en-US</Language>
+</OpenSearchDescription>

@@ -1,87 +1,81 @@
 import { Link } from "wouter";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { serviceCategories, usStates, serviceLocations } from "@/lib/data";
-import { Img } from "./Img";
-import { PHONE_HREF, PHONE_NUMBER, BUSINESS_NAME, SITE_ORIGIN } from "@/lib/site";
+import { Phone, Mail, MapPin, Clock, ShieldCheck, Wrench, Star } from "lucide-react";
+import { FaCcVisa, FaCcMastercard, FaCcAmex, FaCcDiscover, FaGoogle } from "react-icons/fa";
+import { serviceCategories } from "@shared/services";
+import { usStates } from "@shared/states";
+import { Button } from "@/components/ui/button";
+
+import { trackServicePhoneClick } from "@/lib/lead-analytics";
+const PHONE_NUMBER = "1-888-502-7074";
+const PHONE_HREF = "tel:+18885027074";
 
 export function Footer() {
-  // Featured states where we have service locations
-  const featuredStateSlugs = ['pennsylvania', 'new-jersey', 'delaware', 'north-carolina', 'south-carolina', 'florida', 'virginia', 'indiana'];
+  const featuredStateSlugs = ['florida', 'arizona', 'california', 'texas', 'south-carolina', 'north-carolina', 'georgia', 'pennsylvania'];
   const featuredStates = featuredStateSlugs
     .map(slug => usStates.find(s => s.slug === slug))
     .filter(Boolean) as typeof usStates;
 
   return (
-    <footer className="bg-card border-t mt-auto">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          <div>
-            <div className="mb-4">
-              <Img name="logo" alt={BUSINESS_NAME} className="h-16 w-auto" sizes="64px" />
-            </div>
-            <p className="text-sm text-muted-foreground mb-4">
-              Your trusted partner for{" "}
-              <Link href="/" className="text-primary hover:text-primary/80 transition-colors font-medium" data-testid="footer-link-home-anchor">
-                affordable golf cart service
-              </Link>
-              , repair, and maintenance. Serving all 50 states with over 100 services.
+    <footer className="bg-secondary text-secondary-foreground border-t mt-auto pt-16">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12">
+          
+          <div className="lg:col-span-4 space-y-6">
+            <Link href="/" className="inline-block bg-white p-3 rounded-lg">
+              <img src="/logo.png" alt="Villages Golf Cart Services" className="h-14 w-auto object-contain" />
+            </Link>
+            <p className="text-secondary-foreground/80 leading-relaxed max-w-sm">
+              Nationwide, phone-based professional golf cart service and repair. We bring the experts to you with transparent pricing and guaranteed satisfaction.
             </p>
-            <a
-              href={PHONE_HREF}
-              className="flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors"
-              data-testid="footer-link-phone"
-            >
-              <Phone className="h-5 w-5" />
-              {PHONE_NUMBER}
-            </a>
+            <div className="flex flex-col gap-3">
+              <a
+                href={PHONE_HREF}
+                onClick={() => trackServicePhoneClick("footer")}
+                className="flex items-center gap-3 text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
+                data-testid="footer-link-phone"
+              >
+                <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                  <Phone className="h-5 w-5 fill-current" />
+                </div>
+                {PHONE_NUMBER}
+              </a>
+              <div className="flex items-center gap-3 text-secondary-foreground/80 font-medium">
+                <ShieldCheck className="w-5 h-5 text-primary" />
+                Licensed, Insured & Certified
+              </div>
+            </div>
           </div>
 
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-home">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-about">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-services">
-                  Our Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-locations">
-                  Find a Location
-                </Link>
-              </li>
-              <li>
-                <Link href="/states" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-states">
-                  Service by State
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="footer-link-contact">
-                  Contact Us
-                </Link>
-              </li>
+          <div className="lg:col-span-2">
+            <h3 className="font-bold text-lg mb-5 text-white">Company</h3>
+            <ul className="space-y-3">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About Us" },
+                { href: "/services", label: "All Services" },
+                { href: "/states", label: "Service Areas" },
+                { href: "/blog", label: "Blog" },
+                { href: "/contact", label: "Contact Us" },
+              ].map(link => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-secondary-foreground/70 hover:text-primary transition-colors font-medium">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Service Categories</h3>
-            <ul className="space-y-2">
+          <div className="lg:col-span-3">
+            <h3 className="font-bold text-lg mb-5 text-white">Top Services</h3>
+            <ul className="space-y-3">
               {serviceCategories.slice(0, 6).map((category) => (
                 <li key={category}>
                   <Link
                     href={`/services?category=${encodeURIComponent(category)}`}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    data-testid={`footer-link-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="text-secondary-foreground/70 hover:text-primary transition-colors font-medium flex items-center gap-2"
                   >
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary/50"></span>
                     {category}
                   </Link>
                 </li>
@@ -89,80 +83,60 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Service Areas</h3>
-            <ul className="space-y-2">
-              {featuredStates.map((state) => (
-                <li key={state.slug}>
-                  <Link
-                    href={`/states/${state.slug}`}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    data-testid={`footer-link-state-${state.slug}`}
-                  >
-                    {state.name}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link
-                  href="/states"
-                  className="text-sm text-primary hover:text-primary/80 transition-colors font-medium"
-                  data-testid="footer-link-all-states"
-                >
-                  View All 50 States
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Contact Info</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2">
-                <Phone className="h-4 w-4 text-primary mt-1 shrink-0" />
+          <div className="lg:col-span-3">
+            <h3 className="font-bold text-lg mb-5 text-white">Contact & Hours</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <Mail className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-sm text-muted-foreground">Call Us</span>
-                  <a href={PHONE_HREF} className="block text-sm font-medium text-foreground hover:text-primary">
-                    {PHONE_NUMBER}
+                  <a href="mailto:info@villagesgolfcartservices.com" className="text-secondary-foreground/80 hover:text-primary transition-colors font-medium break-all">
+                    info@villagesgolfcartservices.com
                   </a>
                 </div>
               </li>
-              <li className="flex items-start gap-2">
-                <Mail className="h-4 w-4 text-primary mt-1 shrink-0" />
-                <div>
-                  <span className="text-sm text-muted-foreground">Email</span>
-                  <a href="mailto:info@affordablegolfcartservice.com" className="block text-sm font-medium text-foreground hover:text-primary break-all">
-                    info@affordablegolfcartservice.com
-                  </a>
+              <li className="flex items-start gap-3">
+                <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <div className="text-secondary-foreground/80 font-medium">
+                  <p>Mon - Sat: 8:00 AM - 5:00 PM</p>
+                  <p className="text-secondary-foreground/60 text-sm mt-0.5">Sunday: Closed</p>
                 </div>
               </li>
-              <li className="flex items-start gap-2">
-                <Clock className="h-4 w-4 text-primary mt-1 shrink-0" />
-                <div>
-                  <span className="text-sm text-muted-foreground">Hours</span>
-                  <span className="block text-sm font-medium text-foreground">Mon-Sat: 8AM-6PM</span>
-                </div>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-primary mt-1 shrink-0" />
-                <div>
-                  <span className="text-sm text-muted-foreground">Service Area</span>
-                  <span className="block text-sm font-medium text-foreground">Nationwide Coverage</span>
+              <li className="flex items-start gap-3">
+                <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                <div className="text-secondary-foreground/80 font-medium">
+                  <p>Nationwide Coverage</p>
+                  <p className="text-secondary-foreground/60 text-sm mt-0.5">We serve all 50 US States</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Affordable Golf Cart Service. All rights reserved.
+        <div className="py-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4" data-testid="footer-payments">
+            <span className="text-sm font-semibold text-secondary-foreground/70">We Accept:</span>
+            <div className="flex items-center gap-3 text-secondary-foreground/90">
+              <FaCcVisa className="w-10 h-10" title="Visa" />
+              <FaCcMastercard className="w-10 h-10" title="Mastercard" />
+              <FaCcAmex className="w-10 h-10" title="American Express" />
+              <FaCcDiscover className="w-10 h-10" title="Discover" />
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-sm font-semibold text-secondary-foreground/70">
+            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Licensed & Insured</span>
+            <span className="flex items-center gap-2"><FaGoogle className="w-4 h-4" /> <span className="flex items-center gap-1"><Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" /> 4.9 Rated</span></span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /> Satisfaction Guaranteed</span>
+          </div>
+        </div>
+
+        <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/60 font-medium">
+          <p>
+            © {new Date().getFullYear()} Villages Golf Cart Services. All rights reserved.
           </p>
-          <p className="text-sm text-muted-foreground">
-            <a href={SITE_ORIGIN} className="hover:text-foreground transition-colors" data-testid="footer-link-website">
-              {SITE_ORIGIN.replace(/^https?:\/\//, "")}
-            </a>
-          </p>
+          <div className="flex gap-6">
+            <Link href="/" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/" className="hover:text-white transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

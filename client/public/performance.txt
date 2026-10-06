@@ -1,0 +1,37 @@
+# Villages Golf Cart Services - Performance Optimization Guidelines
+# https://villagesgolfcartservices.com
+# Last Updated: 2026-06-25
+
+## Goals
+Fast, mobile-first experience that meets Google Core Web Vitals targets.
+
+## Core Web Vitals Targets
+- Largest Contentful Paint (LCP): < 2.5s
+- Interaction to Next Paint (INP): < 200ms
+- Cumulative Layout Shift (CLS): < 0.1
+
+## Mobile-First Indexing
+- Responsive layouts across all breakpoints.
+- Tap targets sized for touch; no horizontal scrolling.
+- Identical content served to mobile and desktop crawlers.
+
+## Frontend Optimization
+- React + Vite production build with code splitting and tree shaking.
+- Vendor and UI bundles split for better caching.
+- Minified, gzip/brotli-compressed assets.
+- Lazy-loaded, compressed images (see images.txt).
+
+## Caching Strategy
+- Hashed asset filenames enable long-term immutable caching.
+- HTML served with revalidation; static assets cached aggressively.
+
+## Delivery
+- Static build deployable to CDN / GitHub Pages for edge distribution.
+- HTTPS enforced on the production domain.
+
+## AMP
+- Not used; the site is already lightweight and mobile-optimized.
+
+## Contact
+Email: info@villagesgolfcartservices.com
+Phone: 1-888-502-7074

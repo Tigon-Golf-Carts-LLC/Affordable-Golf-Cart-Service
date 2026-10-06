@@ -1,372 +1,149 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
-import {
-  Phone,
-  Shield,
-  Users,
-  Award,
-  Clock,
-  Wrench,
-  CheckCircle,
-  ArrowRight,
-  Cpu,
-  Fuel,
-  Disc,
-  Truck,
-} from "lucide-react";
+import { Phone, Shield, Users, Award, Clock, CheckCircle2, ArrowRight, Wrench, MapPin } from "lucide-react";
+import { SITE_DOMAIN } from "@shared/blog";
+import { useSeo } from "@/lib/seo";
+import { organizationJsonLd, breadcrumbJsonLd } from "@/lib/jsonld";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
-import { STATIC_PAGE_SEO } from "@shared/seo";
+import { Badge } from "@/components/ui/badge";
 
-const { title: ABOUT_TITLE, description: ABOUT_DESCRIPTION } = STATIC_PAGE_SEO["/about"];
+const PHONE_NUMBER = "1-888-502-7074";
+import { trackServicePhoneClick } from "@/lib/lead-analytics";
+const PHONE_HREF = "tel:+18885027074";
 
-
-
-const mechanics = [
-  {
-    id: "electric-drive-mechanics",
-    icon: Cpu,
-    name: "Electric Drive Mechanics",
-    focus: "Motors, controllers & lithium systems",
-    description:
-      "Each electric-drive golf car mechanic on our team diagnoses and repairs drive motors, speed controllers, solenoids, and both lead-acid and lithium battery systems. They use professional diagnostic equipment to pinpoint power loss, range, and charging problems on every major brand.",
-    certifications: ["EZGO", "Club Car", "Yamaha"],
-    knowsAbout: [
-      "golf cart repair",
-      "EZGO repair",
-      "Club Car service",
-      "lithium battery systems",
-      "speed controller repair",
-    ],
-  },
-  {
-    id: "gas-engine-mechanics",
-    icon: Fuel,
-    name: "Gas Engine Mechanics",
-    focus: "Carburetors, ignition & engine rebuilds",
-    description:
-      "Trained on both two-cycle and four-cycle golf cart engines, every gas golf car mechanic handles carburetor cleaning, fuel system repair, ignition tuning, governor adjustments, and full engine rebuilds to restore smooth, reliable power.",
-    certifications: ["EZGO", "Club Car", "Yamaha"],
-    knowsAbout: [
-      "gas golf cart repair",
-      "carburetor service",
-      "engine rebuilds",
-      "EZGO repair",
-      "Yamaha golf cart service",
-    ],
-  },
-  {
-    id: "brake-safety-mechanics",
-    icon: Disc,
-    name: "Brake & Safety Mechanics",
-    focus: "Brakes, steering, suspension & tires",
-    description:
-      "These technicians inspect and repair braking systems, steering, suspension, and tires so your cart stops, handles, and rides safely every single time it leaves our shop or a mobile visit.",
-    certifications: ["Club Car", "EZGO", "Yamaha"],
-    knowsAbout: [
-      "golf cart brake repair",
-      "suspension repair",
-      "steering service",
-      "tire service",
-    ],
-  },
-  {
-    id: "mobile-service-mechanics",
-    icon: Truck,
-    name: "Mobile Service Mechanics",
-    focus: "On-site repair & maintenance",
-    description:
-      "Our mobile golf car mechanics bring the shop to you, performing tune-ups, battery service, electrical diagnostics, and many repairs on-site at your home, golf community, or business across all 50 states.",
-    certifications: ["EZGO", "Club Car", "Yamaha"],
-    knowsAbout: [
-      "mobile golf cart repair",
-      "golf cart maintenance",
-      "battery service",
-      "electrical diagnostics",
-    ],
-  },
-];
-
-const features = [
-  "Over 100 professional services",
-  "Experienced certified technicians",
-  "Mobile service available",
-  "Competitive pricing",
-  "Fast turnaround times",
-  "Quality parts and materials",
-  "All makes and models",
-  "Satisfaction guaranteed",
+const guarantees = [
+  { icon: Shield, title: "Licensed & Insured", desc: "Full protection for your valuable vehicle" },
+  { icon: Users, title: "Certified Technicians", desc: "Expert care for all major cart brands" },
+  { icon: Award, title: "Satisfaction Promised", desc: "We don't stop until the job is done right" },
+  { icon: Clock, title: "Prompt Service", desc: "Fast scheduling to get you back riding" },
 ];
 
 export default function About() {
-  useEffect(() => {
-    document.title = ABOUT_TITLE;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", ABOUT_DESCRIPTION);
-    }
-
-    const orgId = `${SITE_URL}/#organization`;
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": ["LocalBusiness", "Organization"],
-          "@id": orgId,
-          name: "Affordable Golf Cart Service",
-          description:
-            "Professional golf cart repair, maintenance, and customization performed by certified golf car mechanics across the US.",
-          telephone: "+1-844-844-4070",
-          url: SITE_URL,
-          areaServed: "United States",
-          employee: mechanics.map((m) => ({
-            "@id": `${SITE_URL}/about#${m.id}`,
-          })),
-        },
-        ...mechanics.map((m) => ({
-          "@type": "Person",
-          "@id": `${SITE_URL}/about#${m.id}`,
-          name: m.name,
-          jobTitle: "Golf Cart Mechanic",
-          description: m.description,
-          knowsAbout: m.knowsAbout,
-          worksFor: { "@id": orgId },
-        })),
-      ],
-    };
-
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = "about-structured-data";
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-
-    return () => {
-      const existing = document.getElementById("about-structured-data");
-      if (existing) {
-        existing.remove();
-      }
-    };
-  }, []);
+  useSeo({
+    title: "About Us | Nationwide Golf Cart Service | Villages",
+    description:
+      "Learn how Villages Golf Cart Services delivers nationwide golf cart service, connecting you with certified technicians for honest repairs in all 50 states. Call 1-888-502-7074.",
+    canonical: `${SITE_DOMAIN}/about`,
+    jsonLd: [
+      organizationJsonLd(),
+      breadcrumbJsonLd([
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+      ]),
+    ],
+  });
 
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-primary/10 via-background to-accent/20 py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Meet Our Certified Golf Car Mechanics
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              When you need a golf car mechanic you can trust, our factory-trained team delivers honest, expert repair and maintenance for every make and model — backed by years of hands-on experience.
-            </p>
-          </div>
+      {/* Hero */}
+      <section className="bg-secondary text-secondary-foreground py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <Badge variant="outline" className="border-primary text-primary font-bold px-3 py-1 mb-6 bg-primary/10">About Us</Badge>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight text-white">
+            Built on Trust. <span className="text-primary">Driven by Expertise.</span>
+          </h1>
+          <p className="text-xl text-secondary-foreground/80 max-w-2xl mx-auto font-medium leading-relaxed">
+            We're a nationwide golf cart service network of certified professionals dedicated to transparent pricing, honest repairs, and keeping you on the move.
+          </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-20">
+      {/* Story & Philosophy */}
+      <section className="py-20 md:py-32">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                Who We Are
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+                We believe golf cart repair shouldn't be a hassle.
               </h2>
-              <p className="text-muted-foreground mb-4">
-                At Affordable Golf Cart Service, every golf car mechanic on our team is dedicated to providing top-quality golf cart maintenance, repair, and customization at prices that won't break the bank. Our technicians bring years of expertise to every job, ensuring your cart receives the care it deserves.
+              <div className="w-20 h-1.5 bg-primary rounded-full"></div>
+              <p className="text-lg text-muted-foreground font-medium leading-relaxed">
+                Finding a reliable mechanic for your golf cart can be frustrating. You're never quite sure what the price will be, if the technicians are certified, or if they can even service your specific model.
               </p>
-              <p className="text-muted-foreground mb-4">
-                Whether you need a simple tune-up, battery replacement, brake service, or a complete custom makeover, our mechanics have the skills and equipment to handle it all. We service all makes and models, including Club Car, EZ-GO, Yamaha, and more.
+              <p className="text-lg text-muted-foreground font-medium leading-relaxed">
+                Villages Golf Cart Services was built to solve exactly that. We operate as a nationwide phone-based service—one central hub connecting you to top-tier, vetted professionals in your area. We provide transparent price ranges before the work begins, ensuring you never face surprise bills.
               </p>
-              <p className="text-muted-foreground mb-6">
-                We understand that your golf cart is an important investment, which is why we treat every cart as if it were our own. From routine maintenance to major repairs, you can count on a skilled golf car mechanic for honest, reliable service at fair prices.
-              </p>
-              <Button asChild data-testid="button-about-contact">
-                <Link href="/contact">
-                  Contact Us
-                  <ArrowRight className="h-4 w-4 ml-2" />
-                </Link>
-              </Button>
+              <ul className="space-y-3 pt-4">
+                {[
+                  "No physical showrooms — lower overhead means better service value.",
+                  "Over 100 specialized services for Club Car, EZ-GO, Yamaha, and more.",
+                  "One phone number handles everything from quotes to scheduling."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
+                    <span className="font-semibold text-foreground/90">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <Card className="hover-elevate">
-                <CardContent className="p-6 text-center">
-                  <Shield className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Licensed & Insured</h3>
-                  <p className="text-sm text-muted-foreground">Fully certified for your peace of mind</p>
-                </CardContent>
-              </Card>
-              <Card className="hover-elevate">
-                <CardContent className="p-6 text-center">
-                  <Users className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Expert Team</h3>
-                  <p className="text-sm text-muted-foreground">Skilled technicians with years of experience</p>
-                </CardContent>
-              </Card>
-              <Card className="hover-elevate">
-                <CardContent className="p-6 text-center">
-                  <Award className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Quality Service</h3>
-                  <p className="text-sm text-muted-foreground">Commitment to excellence every time</p>
-                </CardContent>
-              </Card>
-              <Card className="hover-elevate">
-                <CardContent className="p-6 text-center">
-                  <Clock className="h-10 w-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Fast Turnaround</h3>
-                  <p className="text-sm text-muted-foreground">Get back on the course quickly</p>
-                </CardContent>
-              </Card>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {guarantees.map((g, i) => {
+                const Icon = g.icon;
+                return (
+                  <Card key={i} className="bg-muted/30 border-border/50 hover-elevate">
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center mb-4 shadow-sm">
+                        <Icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <h3 className="font-bold text-lg mb-2">{g.title}</h3>
+                      <p className="text-sm text-muted-foreground font-medium">{g.desc}</p>
+                    </CardContent>
+                  </Card>
+                )
+              })}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-card border-y">
+      {/* Stats/Scale */}
+      <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Our Certified Golf Car Mechanic Team
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              From electric drive systems to gas engines, brakes, and on-site mobile repair, every golf car mechanic on our team is factory-trained on the brands you drive — including EZGO, Club Car, and Yamaha.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {mechanics.map((tech, idx) => {
-              const Icon = tech.icon;
-              return (
-                <Card key={tech.id} className="hover-elevate" data-testid={`card-mechanic-${idx}`}>
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                        <Icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-foreground mb-1">{tech.name}</h3>
-                        <p className="text-sm font-medium text-primary mb-2">{tech.focus}</p>
-                        <p className="text-sm text-muted-foreground mb-3">{tech.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {tech.certifications.map((cert) => (
-                            <span
-                              key={cert}
-                              className="inline-flex items-center gap-1 text-xs font-medium text-foreground bg-background border rounded-full px-2.5 py-1"
-                              data-testid={`badge-cert-${idx}-${cert.toLowerCase()}`}
-                            >
-                              <CheckCircle className="h-3.5 w-3.5 text-primary" />
-                              {cert} Certified
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Why Choose Our Mechanics?
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              We're committed to providing the best golf cart service experience in the industry.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {features.map((feature) => (
-              <div key={feature} className="flex items-center gap-3 p-3 rounded-lg bg-card border">
-                <CheckCircle className="h-5 w-5 text-primary shrink-0" />
-                <span className="text-sm text-foreground">{feature}</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/20 text-center">
+            <div className="py-4 md:py-0">
+              <div className="text-5xl font-extrabold mb-2 text-white">50</div>
+              <div className="text-lg font-bold uppercase tracking-wider opacity-90 flex items-center justify-center gap-2">
+                <MapPin className="w-5 h-5" /> States Covered
               </div>
-            ))}
+            </div>
+            <div className="py-4 md:py-0">
+              <div className="text-5xl font-extrabold mb-2 text-white">100+</div>
+              <div className="text-lg font-bold uppercase tracking-wider opacity-90 flex items-center justify-center gap-2">
+                <Wrench className="w-5 h-5" /> Professional Services
+              </div>
+            </div>
+            <div className="py-4 md:py-0">
+              <div className="text-5xl font-extrabold mb-2 text-white">1</div>
+              <div className="text-lg font-bold uppercase tracking-wider opacity-90 flex items-center justify-center gap-2">
+                <Phone className="w-5 h-5" /> Call Solves It All
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-card border-y">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-foreground mb-6">
-              What Our Mechanics Repair
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Our golf car mechanics handle over 100 different services to meet all your golf cart needs, including:
-            </p>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 text-left mb-10">
-              <Card>
-                <CardContent className="p-4">
-                  <Wrench className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Maintenance & Tune-Ups</h3>
-                  <p className="text-sm text-muted-foreground">Regular maintenance to keep your cart running smoothly</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-4">
-                  <Wrench className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Battery Services</h3>
-                  <p className="text-sm text-muted-foreground">Testing, replacement, and maintenance for all battery types</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-4">
-                  <Wrench className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Electrical & Motor</h3>
-                  <p className="text-sm text-muted-foreground">Expert diagnosis and repair of electrical systems</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-4">
-                  <Wrench className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Brakes & Suspension</h3>
-                  <p className="text-sm text-muted-foreground">Safety-critical repairs and upgrades</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-4">
-                  <Wrench className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Body & Exterior</h3>
-                  <p className="text-sm text-muted-foreground">Cosmetic repairs and custom paint services</p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-4">
-                  <Wrench className="h-8 w-8 text-primary mb-3" />
-                  <h3 className="font-semibold text-foreground mb-1">Custom Upgrades</h3>
-                  <p className="text-sm text-muted-foreground">Lift kits, sound systems, lighting, and more</p>
-                </CardContent>
-              </Card>
-            </div>
-            <Button size="lg" asChild data-testid="button-about-services">
-              <Link href="/services">
-                View All 100+ Services
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Link>
+      {/* CTA */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-6">
+            Experience the professional difference.
+          </h2>
+          <p className="text-xl text-muted-foreground font-medium mb-10">
+            Our expert dispatchers are ready to answer your questions and provide transparent pricing for your cart's needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="h-14 px-8 text-lg font-bold shadow-lg" asChild>
+              <a href={PHONE_HREF} onClick={() => trackServicePhoneClick("page_cta")} className="gap-2">
+                <Phone className="w-5 h-5 fill-current" />
+                Call {PHONE_NUMBER}
+              </a>
+            </Button>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-bold" asChild>
+              <Link href="/services">Browse Our Services <ArrowRight className="w-5 h-5 ml-2" /></Link>
             </Button>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Contact us today to schedule your golf cart service appointment. Our friendly team of mechanics is ready to help!
-          </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-about-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
         </div>
       </section>
     </div>

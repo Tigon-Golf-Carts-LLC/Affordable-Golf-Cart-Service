@@ -1,0 +1,9 @@
+- [Zero-trace rebrand](zero-trace-rebrand.md) — brand traces hide in baked-in logo PNGs, public SEO/AI files, humans.txt, manifest shortcuts; resync docs/ via build-static.ts
+- [CSS token contract](css-token-contract.md) — index.css must define exact triplet-vs-full-color vars + elevate utilities that tailwind.config.ts and shadcn Button/Badge need; theme rewrites silently drop them (build still passes)
+- [SEO suite & no-inventory](seo-suite-no-inventory.md) — service site, NO inventory; adapt product/vehicle specs to services+states; sitemaps come from scripts/generate-seo-files.ts (165 URLs), resync docs/ after
+- [SPA SEO head management](spa-seo-head.md) — index.html bakes static homepage canonical/og on ALL routes; useSeo must UPSERT singletons in place (never append → dup canonical) + reconcile managed tags each nav
+- [TIGON lead security](tigon-lead-security.md) — unsigned server-side delivery; private endpoint key; static GitHub Pages needs a hosted relay, not a browser-exposed secret.
+- [Service inquiry scope](service-inquiry-scope.md) — user confirmed the new service inquiry modal belongs on ALL PAGES, not absent product or financing pages.
+- [Dependency security checks](dependency-security.md) — parent upgrades can retain blocked transitive versions; verify fixes with a clean lockfile install.
+- [Static lead hosting](static-lead-hosting.md) — use a verified generated deployment origin so the relay survives custom-domain changes; verify publishing separately.
+- [Safe browser regression testing](browser-regression-safety.md) — never let lead tests reach live delivery; Nix browser downloads need a wrapped system browser.

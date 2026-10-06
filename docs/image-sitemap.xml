@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://villagesgolfcartservices.com/</loc>
+    <image:image>
+      <image:loc>https://villagesgolfcartservices.com/og-image.png</image:loc>
+      <image:title>Villages Golf Cart Services - Nationwide Golf Cart Service</image:title>
+      <image:caption>Professional golf cart service, repair, and maintenance nationwide.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://villagesgolfcartservices.com/logo.png</image:loc>
+      <image:title>Villages Golf Cart Services Logo</image:title>
+      <image:caption>Villages Golf Cart Services logo.</image:caption>
+    </image:image>
+  </url>
+</urlset>

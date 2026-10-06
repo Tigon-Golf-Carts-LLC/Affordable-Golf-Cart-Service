@@ -1,48 +1,55 @@
 import { Link } from "wouter";
-import { AlertCircle, Phone } from "lucide-react";
+import { Wrench, Phone, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { NOT_FOUND_SEO } from "@shared/seo";
-import { usePageSeo } from "@/lib/usePageSeo";
-import { PHONE_HREF, PHONE_NUMBER } from "@/lib/site";
+
+const PHONE_NUMBER = "1-888-502-7074";
+import { trackServicePhoneClick } from "@/lib/lead-analytics";
+const PHONE_HREF = "tel:+18885027074";
 
 export default function NotFound() {
-  usePageSeo(NOT_FOUND_SEO);
-
   return (
-    <div className="min-h-[70vh] w-full flex items-center justify-center px-4 py-16">
-      <Card className="w-full max-w-lg">
-        <CardContent className="pt-6">
-          <div className="flex items-center mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold text-foreground">404 Page Not Found</h1>
+    <div className="min-h-[80vh] bg-background flex items-center justify-center py-20">
+      <div className="container mx-auto px-4 max-w-2xl text-center space-y-8">
+        
+        <div className="relative inline-flex items-center justify-center">
+          <div className="text-[150px] md:text-[200px] font-extrabold text-muted/30 leading-none select-none">
+            404
           </div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-24 h-24 md:w-32 md:h-32 bg-primary rounded-full flex items-center justify-center shadow-xl shadow-primary/20 rotate-12">
+              <Wrench className="w-12 h-12 md:w-16 md:h-16 text-white" />
+            </div>
+          </div>
+        </div>
 
-          <p className="text-muted-foreground mb-6">
-            We couldn't find that page. It may have moved, or the link may be out of date.
-            Try one of these instead — or call us and we'll point you the right way.
+        <div className="space-y-4">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-foreground tracking-tight">
+            Oops! Looks like we took a wrong turn.
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-lg mx-auto">
+            The page you are looking for has been moved, deleted, or possibly never existed.
           </p>
+        </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 mb-6">
-            <Button size="lg" asChild className="flex-1" data-testid="button-404-call">
-              <a href={PHONE_HREF}>
-                <Phone className="h-5 w-5 mr-2" />
-                Call {PHONE_NUMBER}
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" asChild className="flex-1">
-              <Link href="/">Back to home</Link>
-            </Button>
-          </div>
-
-          <nav className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
-            <Link href="/services" className="text-primary hover:underline">All services</Link>
-            <Link href="/locations" className="text-primary hover:underline">Service locations</Link>
-            <Link href="/states" className="text-primary hover:underline">Coverage by state</Link>
-            <Link href="/contact" className="text-primary hover:underline">Contact us</Link>
-          </nav>
-        </CardContent>
-      </Card>
+        <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button size="lg" className="h-14 px-8 text-lg font-bold w-full sm:w-auto shadow-lg" asChild data-testid="404-call-button">
+            <a href={PHONE_HREF} onClick={() => trackServicePhoneClick("page_cta")} className="gap-2">
+              <Phone className="w-5 h-5 fill-current" />
+              Call Dispatch Instead
+            </a>
+          </Button>
+          <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-bold w-full sm:w-auto" asChild data-testid="404-home-button">
+            <Link href="/" className="gap-2">
+              <ArrowLeft className="w-5 h-5" />
+              Return Home
+            </Link>
+          </Button>
+        </div>
+        
+        <div className="pt-12 text-sm font-semibold text-muted-foreground">
+          Need a specific service? <Link href="/services" className="text-primary hover:underline">Browse all 100+ services here.</Link>
+        </div>
+      </div>
     </div>
   );
 }

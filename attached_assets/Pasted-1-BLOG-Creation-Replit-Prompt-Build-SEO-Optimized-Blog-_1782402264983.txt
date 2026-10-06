@@ -1,0 +1,113 @@
+1: BLOG Creation
+Replit Prompt: Build SEO-Optimized Blog System with City Clusters
+Role
+You are a senior full-stack engineer and technical SEO specialist. You are extending an existing website (do not rebuild or restructure unrelated pages, just delete and start over). Match the existing tech stack, design system, colors, component conventions, routing patterns, and styling. If anything is ambiguous, inspect the codebase first and ask before guessing.Use the title of this new website for guidance on location and terms. All images need to have golf carts in the photos. USE THE LOCATION FOR {-}. USE THE NEW BRAND NAME {-}
+Project Goal
+Build a fully integrated, production-ready blog section, and blog for this website, and this websites location. optimized for semantic SEO, generative engine optimization (GEO), and local/city-level search rankings for golf carts. Deliver a working blog index, individual post pages, complete metadata wiring, and a city-cluster content architecture that maximizes topical authority. Use the title of this new website for guidance on location and terms. All images need to have golf carts in the photos. Also do link silos and internal linking. Link to brand, Link to Models, Link too Inventory, Link to NAV Pages, Link to location pages. Make Topic Link Clusters. 
+.
+
+Inputs I Will Provide (ask me for these before starting)
+Site name and primary domain (used in branding, canonicals, OG URLs).
+Primary service area cities/regions for GEO targeting (the "city cluster" list).
+Existing tech stack confirmation (e.g., Next.js, Astro, WordPress, plain HTML — verify by inspecting the repo).
+Brand voice / tone sample or existing pages to mirror.
+Number of blog posts: generate exactly 12 posts in this pass (3 evergreen pillars + 9 city-cluster posts), each with its own unique hero image (12 posts → 12 unique images, 1:1). You decide on the evergreen pillars, use the site title in all 3 evergreen pillar posts. 
+
+Deliverable 1: Blog Index Page (/blog)
+Lists every blog post automatically (driven by the post source — MD/MDX/CMS/DB, whichever the site uses).
+Each card shows: title, short excerpt (140–160 chars), publish date (ISO + human-readable), unique featured hero image, primary category/city tag, and "Read more" link.
+Every card displays its own unique post image (no shared placeholder).
+Responsive grid, accessible (semantic <article>, proper heading order, keyboard focus states, alt text).
+Pagination is required on /blog (do not use infinite scroll). Show 6 posts per page, with numbered page links (1, 2, …) plus Previous / Next controls. Pagination must be:
+SEO-friendly with crawlable URLs (/blog, /blog/page/2, /blog/page/3, …) — not query-string-only or JS-only.
+Each paginated page has its own canonical URL pointing to itself.
+Add rel="prev" and rel="next" link tags where applicable.
+Accessible: keyboard navigable, current page marked with aria-current="page".
+Page 1 must canonicalize to /blog (not /blog/page/1).
+Add a visible text link to /blog in the global footer navigation, matching existing footer styling.
+Deliverable 2: Individual Blog Post Pages (/blog/[slug])
+Each post page must include:
+Content Structure
+One <h1> matching the post title.
+Logical <h2>–<h6> hierarchy (no skipped levels).
+Minimum 3–5 internal links per post (to relevant service pages, city pages, and related posts).
+Hero image at top, set as the Open Graph primary image.
+Schema.org BlogPosting JSON-LD (headline, image, datePublished, dateModified, author, publisher, mainEntityOfPage).
+Per-Post SEO Fields
+Unique SEO <title> tag (≤60 chars, includes primary keyword + location where relevant).
+Meta description (150–160 chars, compelling, keyword-rich, includes location modifier where relevant).
+Clean URL slug (lowercase, hyphenated, keyword-focused, no stop words).
+Canonical URL tag.
+Open Graph Tags
+og:title, og:description, og:image, og:image:alt, og:url, og:type (article), article:published_time, article:modified_time, article:author, article:tag (multiple where appropriate).
+Twitter/X Card Tags
+twitter:card (summary_large_image), twitter:title, twitter:description, twitter:image, twitter:image:alt.
+Hero Image Asset
+For each post, generate:
+An AI image generation prompt derived from the exact blog title (style, scene, lighting, composition — production-photo realism unless brand calls for illustration).
+Alt text that is descriptive, location-aware, and keyword-rich (≤125 chars, never keyword-stuffed).
+
+Deliverable 3: City-Specific Content Clusters (Ranking Power)
+Build a hub-and-spoke topical cluster architecture for each target city:
+Structure
+Pillar page (broad topic, e.g., "Golf Carts in [City], [State]: The Complete Buyer's & Owner's Guide").
+Cluster posts (3–6 per city) covering specific intents: pricing, street-legal regulations, financing, maintenance, models, communities/neighborhoods, seasonal considerations, local events, dealer comparisons.
+Bidirectional internal linking: pillar links to every cluster post; every cluster post links back to its pillar and laterally to 2–3 sibling posts.
+Consistent URL pattern: /blog/[city-slug]-[topic-slug] (or /blog/city/[city]/[topic] if the stack supports nested routing — pick one and stay consistent).
+Per-Post GEO Targeting
+Primary keyword + city/region modifier in: title, H1, first 100 words, at least one H2, meta description, slug, image alt, and OG tags.
+Natural inclusion of neighborhood names, nearby landmarks, ZIP codes, and regional terminology where authentic.
+LocalBusiness or Place schema reference where contextually appropriate.
+Avoid keyword stuffing — content must read naturally for humans first.
+Semantic SEO
+Use semantically related terms, not just exact-match repetition (e.g., "electric golf cart," "low-speed vehicle," "LSV," "neighborhood electric vehicle," "street-legal cart," "lifted cart," "lithium upgrade").
+Cover entity relationships (brands, models, regulations, use cases).
+Answer common questions explicitly with question-formatted H2s/H3s for AI Overview / featured snippet eligibility.
+
+Output Format for Each Generated Post
+For every post, deliver a structured object/file containing:
+- slug
+- seoTitle
+- metaDescription
+- canonicalUrl
+- targetCity
+- primaryKeyword
+- semanticKeywords[]
+- publishDate (ISO 8601) [THIS CURRENT YEAR - 2026]
+- author
+- category
+- tags[]
+- heroImage:
+    - aiPrompt
+    - altText
+    - filename
+- openGraph: { title, description, image, imageAlt, url, type, publishedTime, tags[] }
+- twitter:    { card, title, description, image, imageAlt }
+- jsonLd:     { BlogPosting schema object }
+- bodyMarkdown (full post with H1–H6 hierarchy and inline internal links)
+- internalLinks[] (target URL + anchor text)
+
+
+Acceptance Criteria (verify before declaring done)
+Exactly 12 blog posts generated, each with its own unique hero image (12 posts ↔ 12 distinct images, no duplicates or shared placeholders).
+/blog index renders all posts with unique images, excerpts, and dates.
+Pagination on /blog shows 6 posts per page, uses crawlable URLs (/blog, /blog/page/2, …), with correct canonicals, rel="prev"/rel="next", and aria-current on the active page.
+Footer link to /blog is live on every page.
+Each post page has valid, unique <title>, meta description, canonical, full OG set, full Twitter card set, and JSON-LD that passes Google's Rich Results Test.
+View-source confirms each post's metadata is the post's own (no leaked defaults from the site shell).
+Each city has one pillar + at least 3 cluster posts, all interlinked.
+All images have descriptive, location-aware alt text.
+Lighthouse SEO score 95+ on a sampled post and on /blog.
+No 404s on any internal link generated by this build.
+Heading hierarchy is valid (one H1, no level skips) on every post.
+Mobile responsive, accessible (WCAG AA), and matches existing site design.
+
+Constraints
+Do not modify unrelated pages, components, or global styles beyond what is required.
+Reuse existing UI primitives (buttons, cards, typography) — do not introduce a new design system.
+If the existing stack uses a CMS or content collection, integrate with it rather than hardcoding posts.
+Commit in logical chunks with clear messages.
+Start By
+Inspecting the repo and reporting: framework, routing convention, styling system, content source, and existing footer component path.
+Asking me for: site name and target cities list (post count is fixed at 12).
+Proposing the URL structure and one sample post (full output object) for my approval before generating the rest.

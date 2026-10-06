@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Villages Golf Cart Services</title>
+  <link href="https://villagesgolfcartservices.com"/>
+  <link rel="self" href="https://villagesgolfcartservices.com/atom.xml"/>
+  <id>https://villagesgolfcartservices.com/</id>
+  <updated>2026-06-25T16:09:20.917Z</updated>
+  <subtitle>Nationwide golf cart service, repair, and maintenance.</subtitle>
+  <entry>
+    <title>Annual Inspection</title>
+    <link href="https://villagesgolfcartservices.com/services/annual-inspection"/>
+    <id>https://villagesgolfcartservices.com/services/annual-inspection</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Comprehensive yearly check-up to ensure your golf cart is running safely and efficiently. Price range: $99–$289.</summary>
+    <category term="Inspections &amp; Diagnostics"/>
+  </entry>
+  <entry>
+    <title>Basic Tune-Up</title>
+    <link href="https://villagesgolfcartservices.com/services/basic-tune-up"/>
+    <id>https://villagesgolfcartservices.com/services/basic-tune-up</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Essential maintenance to keep your cart running smoothly with basic adjustments and checks. Price range: $100–$300.</summary>
+    <category term="Maintenance &amp; Tune-Ups"/>
+  </entry>
+  <entry>
+    <title>Full Tune-Up Package</title>
+    <link href="https://villagesgolfcartservices.com/services/full-tune-up-package"/>
+    <id>https://villagesgolfcartservices.com/services/full-tune-up-package</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Complete tune-up service including all components inspection, adjustment, and optimization. Price range: $180–$450.</summary>
+    <category term="Maintenance &amp; Tune-Ups"/>
+  </entry>
+  <entry>
+    <title>Preventative Maintenance Service</title>
+    <link href="https://villagesgolfcartservices.com/services/preventative-maintenance-service"/>
+    <id>https://villagesgolfcartservices.com/services/preventative-maintenance-service</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Proactive care to prevent future breakdowns and extend your cart&apos;s lifespan. Price range: $150–$400.</summary>
+    <category term="Maintenance &amp; Tune-Ups"/>
+  </entry>
+  <entry>
+    <title>Oil Change (Gas Golf Cart)</title>
+    <link href="https://villagesgolfcartservices.com/services/oil-change-gas-golf-cart"/>
+    <id>https://villagesgolfcartservices.com/services/oil-change-gas-golf-cart</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Fresh oil change for gas-powered golf carts to maintain engine health. Price range: $50–$200.</summary>
+    <category term="Maintenance &amp; Tune-Ups"/>
+  </entry>
+  <entry>
+    <title>Air Filter Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/air-filter-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/air-filter-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Replace clogged air filters for better engine performance and fuel efficiency. Price range: $20–$150.</summary>
+    <category term="Maintenance &amp; Tune-Ups"/>
+  </entry>
+  <entry>
+    <title>Spark Plug Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/spark-plug-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/spark-plug-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>New spark plugs for improved ignition and engine performance. Price range: $20–$160.</summary>
+    <category term="Maintenance &amp; Tune-Ups"/>
+  </entry>
+  <entry>
+    <title>Battery Load Test</title>
+    <link href="https://villagesgolfcartservices.com/services/battery-load-test"/>
+    <id>https://villagesgolfcartservices.com/services/battery-load-test</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Test battery capacity and health to ensure reliable power. Price range: $30–$160.</summary>
+    <category term="Battery Services"/>
+  </entry>
+  <entry>
+    <title>Battery Terminal Cleaning</title>
+    <link href="https://villagesgolfcartservices.com/services/battery-terminal-cleaning"/>
+    <id>https://villagesgolfcartservices.com/services/battery-terminal-cleaning</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Clean corrosion and buildup from battery terminals for better connection. Price range: $20–$150.</summary>
+    <category term="Battery Services"/>
+  </entry>
+  <entry>
+    <title>Lead-Acid Battery Replacement (Set)</title>
+    <link href="https://villagesgolfcartservices.com/services/lead-acid-battery-replacement-set"/>
+    <id>https://villagesgolfcartservices.com/services/lead-acid-battery-replacement-set</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Complete replacement of lead-acid battery pack for restored range and power. Price range: $700–$1,300.</summary>
+    <category term="Battery Services"/>
+  </entry>
+  <entry>
+    <title>Lithium Battery Replacement (Set)</title>
+    <link href="https://villagesgolfcartservices.com/services/lithium-battery-replacement-set"/>
+    <id>https://villagesgolfcartservices.com/services/lithium-battery-replacement-set</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Upgrade or replace with high-performance lithium battery system. Price range: $1,800–$3,600.</summary>
+    <category term="Battery Services"/>
+  </entry>
+  <entry>
+    <title>Battery Installation Labor</title>
+    <link href="https://villagesgolfcartservices.com/services/battery-installation-labor"/>
+    <id>https://villagesgolfcartservices.com/services/battery-installation-labor</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Professional installation of new batteries with proper connections. Price range: $100–$500.</summary>
+    <category term="Battery Services"/>
+  </entry>
+  <entry>
+    <title>Charger Inspection or Repair</title>
+    <link href="https://villagesgolfcartservices.com/services/charger-inspection-or-repair"/>
+    <id>https://villagesgolfcartservices.com/services/charger-inspection-or-repair</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Diagnose and fix charger issues to ensure proper battery charging. Price range: $50–$250.</summary>
+    <category term="Battery Services"/>
+  </entry>
+  <entry>
+    <title>Tire Rotation</title>
+    <link href="https://villagesgolfcartservices.com/services/tire-rotation"/>
+    <id>https://villagesgolfcartservices.com/services/tire-rotation</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Rotate tires for even wear and extended tire life. Price range: $20–$150.</summary>
+    <category term="Tires &amp; Wheels"/>
+  </entry>
+  <entry>
+    <title>Tire Replacement (Per Tire)</title>
+    <link href="https://villagesgolfcartservices.com/services/tire-replacement-per-tire"/>
+    <id>https://villagesgolfcartservices.com/services/tire-replacement-per-tire</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Replace worn or damaged tires with quality replacements. Price range: $50–$200.</summary>
+    <category term="Tires &amp; Wheels"/>
+  </entry>
+  <entry>
+    <title>Wheel Alignment</title>
+    <link href="https://villagesgolfcartservices.com/services/wheel-alignment"/>
+    <id>https://villagesgolfcartservices.com/services/wheel-alignment</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Precision alignment for better handling and reduced tire wear. Price range: $75–$300.</summary>
+    <category term="Tires &amp; Wheels"/>
+  </entry>
+  <entry>
+    <title>Brake Inspection</title>
+    <link href="https://villagesgolfcartservices.com/services/brake-inspection"/>
+    <id>https://villagesgolfcartservices.com/services/brake-inspection</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Thorough inspection of brake system components and performance. Price range: $30–$175.</summary>
+    <category term="Brakes &amp; Suspension"/>
+  </entry>
+  <entry>
+    <title>Brake Pad Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/brake-pad-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/brake-pad-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Replace worn brake pads for safe stopping power. Price range: $75–$300.</summary>
+    <category term="Brakes &amp; Suspension"/>
+  </entry>
+  <entry>
+    <title>Brake Drum Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/brake-drum-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/brake-drum-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>New brake drums for reliable braking performance. Price range: $75–$300.</summary>
+    <category term="Brakes &amp; Suspension"/>
+  </entry>
+  <entry>
+    <title>Steering Adjustment</title>
+    <link href="https://villagesgolfcartservices.com/services/steering-adjustment"/>
+    <id>https://villagesgolfcartservices.com/services/steering-adjustment</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Fine-tune steering for precise control and comfortable handling. Price range: $50–$220.</summary>
+    <category term="Brakes &amp; Suspension"/>
+  </entry>
+  <entry>
+    <title>Suspension Lubrication</title>
+    <link href="https://villagesgolfcartservices.com/services/suspension-lubrication"/>
+    <id>https://villagesgolfcartservices.com/services/suspension-lubrication</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Lubricate suspension components for smooth ride quality. Price range: $40–$180.</summary>
+    <category term="Brakes &amp; Suspension"/>
+  </entry>
+  <entry>
+    <title>Shock Absorber Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/shock-absorber-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/shock-absorber-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Replace worn shocks for improved ride comfort and handling. Price range: $150–$500.</summary>
+    <category term="Brakes &amp; Suspension"/>
+  </entry>
+  <entry>
+    <title>Front End Service</title>
+    <link href="https://villagesgolfcartservices.com/services/front-end-service"/>
+    <id>https://villagesgolfcartservices.com/services/front-end-service</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Complete front end inspection and service for optimal performance. Price range: $80–$300.</summary>
+    <category term="Brakes &amp; Suspension"/>
+  </entry>
+  <entry>
+    <title>Steering and Alignment Diagnostic</title>
+    <link href="https://villagesgolfcartservices.com/services/steering-and-alignment-diagnostic"/>
+    <id>https://villagesgolfcartservices.com/services/steering-and-alignment-diagnostic</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Comprehensive diagnosis of steering and alignment issues. Price range: $50–$250.</summary>
+    <category term="Inspections &amp; Diagnostics"/>
+  </entry>
+  <entry>
+    <title>Electrical Diagnostic Service</title>
+    <link href="https://villagesgolfcartservices.com/services/electrical-diagnostic-service"/>
+    <id>https://villagesgolfcartservices.com/services/electrical-diagnostic-service</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Expert diagnosis of electrical problems and system faults. Price range: $75–$250.</summary>
+    <category term="Electrical &amp; Motor"/>
+  </entry>
+  <entry>
+    <title>Wiring Harness Repair</title>
+    <link href="https://villagesgolfcartservices.com/services/wiring-harness-repair"/>
+    <id>https://villagesgolfcartservices.com/services/wiring-harness-repair</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Repair or replace damaged wiring for reliable electrical function. Price range: $100–$450.</summary>
+    <category term="Electrical &amp; Motor"/>
+  </entry>
+  <entry>
+    <title>Controller Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/controller-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/controller-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Replace faulty motor controller for proper speed and power control. Price range: $300–$1,000.</summary>
+    <category term="Electrical &amp; Motor"/>
+  </entry>
+  <entry>
+    <title>Motor Repair or Rebuild</title>
+    <link href="https://villagesgolfcartservices.com/services/motor-repair-or-rebuild"/>
+    <id>https://villagesgolfcartservices.com/services/motor-repair-or-rebuild</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Expert motor repair or complete rebuild for restored performance. Price range: $400–$1,000.</summary>
+    <category term="Electrical &amp; Motor"/>
+  </entry>
+  <entry>
+    <title>Electric Motor Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/electric-motor-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/electric-motor-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Full motor replacement with quality OEM or aftermarket motor. Price range: $500–$1,600.</summary>
+    <category term="Electrical &amp; Motor"/>
+  </entry>
+  <entry>
+    <title>Solenoid Replacement</title>
+    <link href="https://villagesgolfcartservices.com/services/solenoid-replacement"/>
+    <id>https://villagesgolfcartservices.com/services/solenoid-replacement</id>
+    <updated>2026-06-25T16:09:20.917Z</updated>
+    <summary>Replace worn solenoid for reliable starting and operation. Price range: $80–$300.</summary>
+    <category term="Electrical &amp; Motor"/>
+  </entry>
+</feed>

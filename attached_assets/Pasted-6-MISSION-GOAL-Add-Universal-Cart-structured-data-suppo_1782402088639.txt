@@ -1,0 +1,91 @@
+6. MISSION
+GOAL: Add Universal Cart / structured-data support to this codebase as PURELY 
+ADDITIVE new layers. Create any of the three pipelines below that do not already 
+exist. DO NOT modify, refactor, rename, or "improve" any existing code, routes, 
+components, SEO meta injection, DMS proxy logic, caching, or styling. If something 
+already exists, leave it exactly as-is and only add alongside it.
+
+STACK (do not change any of this):
+- Frontend: React + TypeScript, Vite, Tailwind + shadcn/ui, wouter, TanStack Query
+- Backend: Express.js, in-memory cache, server-side meta-tag injection for SEO
+- DB: PostgreSQL + Drizzle ORM (drizzle-zod)
+- External: Tigon DMS API (inventory/models/colors), AWS S3 (images/PDFs)
+- Hosted on Replit -> tigongolfcarts.com
+
+ABSOLUTE CONSTRAINTS — READ FIRST:
+1. Additive only. Do NOT edit existing files except to insert clearly-marked new 
+   blocks. If you must touch an existing file, add ONLY a new, isolated, commented 
+   block — never alter, reorder, or delete existing lines.
+2. Do NOT touch: existing JSON-LD/meta injection logic, DMS proxy, caching, 
+   inventory refresh job, Drizzle schema migrations, routing, theme, or any 
+   component behavior.
+3. Wrap every new block in comments: // === UNIVERSAL CART LAYER (added) ===
+4. Before writing, print a short plan listing exactly which files you will create 
+   and which (if any) existing files you will append to, and WHY. Wait for nothing 
+   else — but make no changes outside that list.
+5. Do not run destructive commands, do not reformat files, do not bump dependencies.
+
+DETECT-THEN-CREATE (only build what is missing):
+
+PIPELINE 1 — Product JSON-LD (organic rich results; this is the priority):
+- Check whether product/model pages already emit a schema.org Product JSON-LD 
+  <script type="application/ld+json"> via the existing server-side SEO injection.
+- If MISSING: add a NEW server-side helper (e.g. server/seo/productJsonLd.ts) that 
+  builds the full Product JSON-LD from existing DMS product data already available 
+  in the request/cache. Map: name<-model name, sku<-DMS sku, mpn<-model number, 
+  brand<-manufacturer, image<-S3 image URLs (1x1/4x3/16x9 if available, else the 
+  images you have), offers.price/priceCurrency(USD), availability, itemCondition, 
+  url<-canonical. Include hasMerchantReturnPolicy and shippingDetails with values 
+  pulled from a NEW config constant (do NOT hardcode guesses into logic) so I can 
+  edit dealer terms in one place. Inject this as an ADDITIONAL <script> tag in the 
+  same HTML response the existing meta injector already produces — append, never 
+  replace the existing injected tags. Reuse existing data; do not add new DMS calls.
+
+PIPELINE 2 — native_commerce feed flag (Gate 1 for Universal Cart Buy button):
+- This is a Merchant Center product-feed attribute, NOT page markup. Do NOT try to 
+  put native_commerce in JSON-LD.
+- Check for an existing product feed export route (e.g. /feed, /merchant-feed).
+- If MISSING: add a NEW, separate Express route (e.g. routes/merchantFeed.ts) that 
+  generates a product feed from existing DMS data and includes the native_commerce 
+  attribute on each item. Mount it on a NEW path only. Add a code comment stating 
+  this feed must be submitted/registered in Google Merchant Center separately and 
+  that native_commerce is the actual Buy-button eligibility gate.
+- If a feed already exists, do NOT rewrite it — add a separate adjacent route or a 
+  clearly-commented additive field, and tell me in the plan.
+
+PIPELINE 3 — /.well-known/ucp profile + capability server (Gate 2):
+- Check whether /.well-known/ucp is served.
+- If MISSING: add a NEW Express route serving /.well-known/ucp with 
+  Content-Type: application/json, scaffolded with v1 structure and PLACEHOLDER/TODO 
+  values (real endpoints, Google Pay handler config, and JWK signing keys are NOT 
+  to be invented — mark them TODO). Ensure /.well-known/ is not blocked by existing 
+  static/catch-all routing; if a catch-all would intercept it, add the new route 
+  BEFORE the catch-all without modifying the catch-all itself. Include exactly these 
+  four capability namespaces:
+    dev.ucp.shopping.checkout
+    dev.ucp.shopping.fulfillment
+    dev.ucp.shopping.discount
+    dev.ucp.shopping.order
+  Profile shape:
+  {
+    "ucp_version": "1",
+    "service": { "type": "rest", "endpoint": "https://TODO/ucp" },
+    "capabilities": [
+      "dev.ucp.shopping.checkout",
+      "dev.ucp.shopping.fulfillment",
+      "dev.ucp.shopping.discount",
+      "dev.ucp.shopping.order"
+    ],
+    "google_pay": { "TODO": "Google Pay handler configuration" },
+    "signing_keys": { "jwks": "TODO - JWK signing keys" }
+  }
+- Do NOT build live checkout/fulfillment/discount/order endpoints. Scaffold the 
+  profile only and leave a TODO comment that the capability server is separate work.
+
+AFTER:
+- List every file created and every existing file appended to.
+- Confirm in writing that no existing logic, routes, schema, styling, or behavior 
+  was modified.
+- Do NOT deploy. I will review the diff first.
+
+
