@@ -37,15 +37,17 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Type check
-        run: npm run fetch-data && npm run check
-
       - name: Build site
         # Dummy endpoint: the test intercepts it, so no real lead is ever sent
         # and the real webhook key is never needed here.
         env:
           TIGON_LEAD_ENDPOINT: https://tigoniot.com/hooks/REGRESSION_TEST
-        run: npm run build:site
+        run: npm run fetch-data && npm run build:site
+
+      # After the build: tsc needs the generated client/src/data/*.json files,
+      # including image-manifest.json from optimize-assets.
+      - name: Type check
+        run: npm run check
 
       - name: Test lead forms
         run: npm run test:leads
