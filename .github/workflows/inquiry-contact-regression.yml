@@ -1,0 +1,51 @@
+name: Inquiry and Contact regression
+
+# Required status check on main. The job name below must stay exactly
+# "Inquiry and Contact regression" or the branch rule keeps waiting for it.
+# No path filters: a required check that skips leaves PRs unmergeable.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: inquiry-contact-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  regression:
+    name: Inquiry and Contact regression
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Type check
+        run: npm run fetch-data && npm run check
+
+      - name: Build site
+        # Dummy endpoint: the test intercepts it, so no real lead is ever sent
+        # and the real webhook key is never needed here.
+        env:
+          TIGON_LEAD_ENDPOINT: https://tigoniot.com/hooks/REGRESSION_TEST
+        run: npm run build:site
+
+      - name: Test lead forms
+        run: npm run test:leads

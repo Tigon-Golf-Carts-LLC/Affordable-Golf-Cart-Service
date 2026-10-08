@@ -20,7 +20,8 @@
     "build": "npm run clean && npm run fetch-data && npm run generate-seo && npm run optimize-assets && npm run vite:build && npm run prerender && npm run verify",
     "build:site": "npm run clean && npm run generate-seo && npm run optimize-assets && npm run vite:build && npm run prerender && npm run verify",
     "preview": "tsx script/serve-dist.ts",
-    "check": "tsc"
+    "check": "tsc",
+    "test:leads": "tsx script/test-lead-forms.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.4",
@@ -46,6 +47,7 @@
     "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.4.20",
     "html-minifier-terser": "^7.2.0",
+    "playwright": "1.56.1",
     "postcss": "^8.4.47",
     "sharp": "^0.34.4",
     "svgo": "^3.3.2",
