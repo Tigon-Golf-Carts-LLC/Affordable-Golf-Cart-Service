@@ -15,6 +15,7 @@ import {
   Truck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { PHONE_NUMBER, PHONE_HREF, SITE_URL } from "@/lib/site";
 import { STATIC_PAGE_SEO } from "@shared/seo";
@@ -361,12 +362,15 @@ export default function About() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Contact us today to schedule your golf cart service appointment. Our friendly team of mechanics is ready to help!
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-about-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-about-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-0" />
+          </div>
         </div>
       </section>
     </div>

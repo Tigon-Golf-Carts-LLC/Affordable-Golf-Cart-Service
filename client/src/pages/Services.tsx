@@ -1,6 +1,7 @@
 import { useLocation, useRoute, Link } from "wouter";
 import { Phone, ArrowLeft, ArrowRight, Search, Clock, Wrench, Battery, Disc, Cpu, Zap, Plug, Tag, ShieldCheck, CheckCircle2, Truck, MapPin, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -206,7 +207,7 @@ const serviceFaqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We provide affordable golf cart services across all 50 states through our network of 14 service locations. Visit our locations or state pages to find the nearest service center to you.",
+      "We provide affordable golf cart services across all 50 states through our network of 16 service locations. Visit our locations or state pages to find the nearest service center to you.",
   },
   {
     question: "Do your services come with a warranty?",
@@ -517,12 +518,15 @@ function ServiceDetail({ serviceId }: { serviceId: string }) {
                 <CardContent className="text-center">
                   <Phone className="h-12 w-12 text-primary mx-auto mb-4" />
                   <p className="text-2xl font-bold text-primary mb-4">{PHONE_NUMBER}</p>
-                  <Button size="lg" className="w-full" asChild data-testid={`button-service-detail-call-${service.id}`}>
-                    <a href={PHONE_HREF}>
-                      <Phone className="h-5 w-5 mr-2" />
-                      Call Now to Schedule Today!
-                    </a>
-                  </Button>
+                  <div className="flex flex-col gap-3">
+                    <Button size="lg" className="w-full" asChild data-testid={`button-service-detail-call-${service.id}`}>
+                      <a href={PHONE_HREF}>
+                        <Phone className="h-5 w-5 mr-2" />
+                        Call Now to Schedule Today!
+                      </a>
+                    </Button>
+                    <RequestServiceButton size="lg" className="w-full" service={service.name} data-testid={`button-service-detail-request-${service.id}`} />
+                  </div>
                 </CardContent>
                 <CardFooter className="text-center text-sm text-muted-foreground">
                   Available Mon-Sat, 8AM-6PM
@@ -710,12 +714,15 @@ function ServicesList() {
                 Fast Turnaround
               </div>
             </div>
-            <Button size="lg" asChild data-testid="button-services-header-call">
-              <a href={PHONE_HREF} className="gap-2">
-                <Phone className="h-5 w-5" />
-                Call Now: {PHONE_NUMBER}
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild data-testid="button-services-header-call">
+                <a href={PHONE_HREF} className="gap-2">
+                  <Phone className="h-5 w-5" />
+                  Call Now: {PHONE_NUMBER}
+                </a>
+              </Button>
+              <RequestServiceButton size="lg" data-testid="button-request-service-1" />
+            </div>
           </div>
         </div>
       </section>
@@ -1497,12 +1504,15 @@ function ServicesList() {
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             We offer many more services not listed here. Call us to discuss your specific golf cart needs!
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-services-footer-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-services-footer-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-2" />
+          </div>
         </div>
       </section>
     </div>

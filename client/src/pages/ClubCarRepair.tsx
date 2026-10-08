@@ -12,6 +12,7 @@ import {
   Settings,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
@@ -238,6 +239,7 @@ export default function ClubCarRepair() {
                   Call Now: {PHONE_NUMBER}
                 </a>
               </Button>
+              <RequestServiceButton size="lg" defaults={{ brand: "Club Car" }} service="Club Car Repair" data-testid="button-request-service-0" />
               <Button size="lg" variant="outline" asChild data-testid="button-clubcar-hero-services">
                 <Link href="/services">
                   View All Services
@@ -395,12 +397,15 @@ export default function ClubCarRepair() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Don't let a Club Car problem keep you parked. Call now for certified Club Car repair on DS, Precedent, Onward, and utility models at a fair price.
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-clubcar-cta-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-clubcar-cta-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" defaults={{ brand: "Club Car" }} service="Club Car Repair" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-1" />
+          </div>
         </div>
       </section>
     </div>

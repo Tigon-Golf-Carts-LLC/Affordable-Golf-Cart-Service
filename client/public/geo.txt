@@ -17,7 +17,7 @@ Coverage: United States - Nationwide
 
 ---
 
-## SERVICE LOCATIONS (14 Physical Locations)
+## SERVICE LOCATIONS (16 Physical Locations)
 
 ### Delaware
 1. **Dover, DE**
@@ -51,7 +51,7 @@ Coverage: United States - Nationwide
    - Phone: 570-234-4444
    - Service Area: Monroe County, Pocono region
 
-### New Jersey (3 Locations)
+### New Jersey (4 Locations)
 6. **Ocean View, NJ**
    - Address: 15 Railroad Ave, Ocean View, NJ 08230
    - Coordinates: 39.1923, -74.7163
@@ -69,6 +69,12 @@ Coverage: United States - Nationwide
    - Coordinates: 39.7915, -74.1941
    - Phone: 609-339-4444
    - Service Area: Ocean County, Burlington County
+
+15. **Rio Grande, NJ**
+   - Address: 1304 NJ-47 b, Rio Grande, NJ 08242
+   - Coordinates: 39.0187, -74.8763
+   - Phone: 609-551-0234
+   - Service Area: Cape May County
 
 ### North Carolina
 9. **Raleigh, NC**
@@ -112,13 +118,20 @@ Coverage: United States - Nationwide
     - Phone: 419-260-4444
     - Service Area: Fulton County, Lucas County, Henry County
 
+### Texas
+16. **Wichita Falls, TX**
+    - Address: 3904 Sheppard Access Rd, Wichita Falls, TX 76306
+    - Coordinates: 33.9596, -98.5019
+    - Phone: 940-716-3334
+    - Service Area: Wichita County, Archer County, Clay County
+
 ---
 
 ## STATE COVERAGE
 
 ### Primary Service States (with Physical Locations)
 - Pennsylvania (PA) - 5 locations
-- New Jersey (NJ) - 3 locations
+- New Jersey (NJ) - 4 locations
 - Delaware (DE) - 1 location
 - North Carolina (NC) - 1 location
 - South Carolina (SC) - 1 location
@@ -126,6 +139,7 @@ Coverage: United States - Nationwide
 - Virginia (VA) - 1 location
 - Indiana (IN) - 1 location
 - Ohio (OH) - 1 location
+- Texas (TX) - 1 location
 
 ### Nationwide Coverage
 We serve all 50 US states through our network of service professionals.

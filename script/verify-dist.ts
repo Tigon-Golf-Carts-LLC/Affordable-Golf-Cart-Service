@@ -10,6 +10,7 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadEnv } from "vite";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
@@ -98,6 +99,12 @@ async function main() {
     }
   }
   if (hits.length) problems.push(...hits);
+
+  /* --------------------------------------------------- lead form wiring */
+  // Without an endpoint the forms still render but tell visitors to call.
+  if (!(process.env.TIGON_LEAD_ENDPOINT || loadEnv("", ROOT, "").TIGON_LEAD_ENDPOINT || "").trim()) {
+    warnings.push("TIGON_LEAD_ENDPOINT is not set — lead forms will ask visitors to call instead of submitting");
+  }
 
   /* -------------------------------------------------- image format check */
   const home = await readFile(path.join(DIST, "index.html"), "utf8");

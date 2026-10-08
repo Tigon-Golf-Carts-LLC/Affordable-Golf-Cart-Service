@@ -209,6 +209,34 @@ export const serviceLocations: ServiceLocation[] = [
     lat: 41.053988,
     lng: -75.534146,
     googleMapsUrl: "https://www.google.com/maps?cid=11714838830522733253"
+  },
+  {
+    id: "rio-grande-nj",
+    slug: "rio-grande-nj",
+    name: "Rio Grande, NJ",
+    address: "1304 NJ-47 b",
+    city: "Rio Grande",
+    state: "New Jersey",
+    stateAbbr: "NJ",
+    zip: "08242",
+    phone: "609-551-0234",
+    lat: 39.0187,
+    lng: -74.8763,
+    googleMapsUrl: "https://www.google.com/maps?cid=17469351422439742131"
+  },
+  {
+    id: "wichita-falls-tx",
+    slug: "wichita-falls-tx",
+    name: "Wichita Falls, TX",
+    address: "3904 Sheppard Access Rd",
+    city: "Wichita Falls",
+    state: "Texas",
+    stateAbbr: "TX",
+    zip: "76306",
+    phone: "940-716-3334",
+    lat: 33.9596,
+    lng: -98.5019,
+    googleMapsUrl: "https://www.google.com/maps?cid=2130717932581096026"
   }
 ];
 

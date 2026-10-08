@@ -66,9 +66,55 @@ domain and a sub-path are mutually exclusive.
 
 Repository setting to flip once: **Settings → Pages → Source: GitHub Actions**.
 
+## Lead forms (TIGON IOT)
+
+Every lead form posts to TIGON IOT → Webhook Flows, using the field names TIGON
+expects (`first_name`, `last_name`, `email`, `phone1`, `phone2`, `address`,
+`zip_code`, `brand`, `model`, `vin_number`, `sku_number`, `comments`,
+`image_1`–`image_3`), plus `form_name` (always `Contact form`), the tracking
+fields (`url`, `referrer`, `utm_*`, `gclid`, `fbclid`, `ga_client_id`) and the
+empty `website` spam trap. Two extra fields say where the lead came from:
+`form_location` (`Contact page` / `Request Service popup`) and
+`service_requested` (the service or location page it was opened from).
+
+| Where | What |
+| --- | --- |
+| `client/src/lib/leads.ts` | Tracking (30-day first-touch UTMs), validation, sending. |
+| `client/src/components/LeadForm.tsx` | The form itself. |
+| `client/src/components/LeadFormDialog.tsx` | The site-wide "Request Service" popup and its button. |
+| `client/src/pages/Contact.tsx` | The inline form on `/contact`. |
+| `worker/tigon-lead-relay.js` | Optional Cloudflare Worker that signs leads with the webhook secret. |
+
+**Where the forms send.** The URL comes from the `TIGON_LEAD_ENDPOINT`
+repository secret (Settings → Secrets and variables → Actions) and is baked in
+at build time. It is never committed: this repository is public and the
+webhook key in the URL works like a password. For local work put it in
+`.env.local` (git-ignored). If it is unset, the forms tell visitors to call,
+and `verify-dist` prints a warning.
+
+**Signing (recommended).** GitHub Pages cannot keep a secret, so signing
+happens in `worker/tigon-lead-relay.js`:
+
+1. TIGON IOT → Webhook Flows → Webhooks → this webhook → Setup packet →
+   Developers → **Create secret**. Copy it (it is shown once).
+2. Cloudflare → Workers & Pages → Create → Worker; paste the relay's code;
+   Deploy. Under Settings → Variables and Secrets add two *Secrets*:
+   `TIGON_WEBHOOK_URL` (the webhook URL) and `TIGON_WEBHOOK_SECRET`.
+3. Set the `TIGON_LEAD_ENDPOINT` GitHub secret to the Worker's URL and re-run
+   the deploy workflow.
+4. Submit a test lead; once it arrives, turn on **Require signature** for the
+   webhook in TIGON IOT.
+
+Without the Worker, set `TIGON_LEAD_ENDPOINT` to the webhook URL itself and the
+browser posts unsigned (only allowed while signatures are optional).
+
+**Testing.** TIGON only accepts browser posts from
+`https://affordablegolfcartservice.com`, so test on the live site, not on
+`localhost`.
+
 ## No backend, by design
 
-- **Contact**: `tel:` and `mailto:` links. There is no form to submit.
+- **Contact**: the lead forms above post to TIGON IOT; `tel:` and `mailto:` links remain.
 - **Location search**: matches the bundled snapshot first; only falls back to
   the third-party Nominatim geocoder when a query matches nothing locally.
 - **Secrets**: `DATA_API_URL` / `DATA_API_KEY` are read by `fetch-data` in CI
