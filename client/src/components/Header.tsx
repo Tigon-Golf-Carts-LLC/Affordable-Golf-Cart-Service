@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Phone, Menu, X, ChevronDown, ChevronRight, MapPin, Navigation } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { ThemeToggle } from "./ThemeToggle";
 import { Img } from "./Img";
 import { PHONE_HREF, PHONE_NUMBER, BUSINESS_NAME } from "@/lib/site";
@@ -193,6 +194,7 @@ export function Header() {
                 Call Now
               </a>
             </Button>
+            <RequestServiceButton label="Request Service" size="default" className="hidden xl:flex" data-testid="button-request-service-header" />
             <ThemeToggle />
             <Button
               variant="ghost"
@@ -358,6 +360,12 @@ export function Header() {
                 Call Now to Schedule Today!
               </a>
             </Button>
+            <RequestServiceButton
+              label="Request Service Online"
+              className="w-full mt-2"
+              onClickCapture={() => setMobileMenuOpen(false)}
+              data-testid="mobile-button-request-service"
+            />
           </nav>
         </div>
       )}

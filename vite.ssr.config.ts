@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { BASE_PATH, SITE_ORIGIN, alias } from "./vite.config";
+import { BASE_PATH, SITE_ORIGIN, TIGON_LEAD_ENDPOINT, alias } from "./vite.config";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 
@@ -17,6 +17,7 @@ export default defineConfig({
   resolve: { alias },
   define: {
     "import.meta.env.VITE_SITE_ORIGIN": JSON.stringify(SITE_ORIGIN),
+    "import.meta.env.VITE_TIGON_LEAD_ENDPOINT": JSON.stringify(TIGON_LEAD_ENDPOINT),
   },
   build: {
     outDir: path.resolve(ROOT, ".ssr"),

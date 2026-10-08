@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Phone, ArrowRight, CheckCircle2, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Accordion,
@@ -300,6 +301,7 @@ export default function RepairCostGuide() {
                 Call Now: {PHONE_NUMBER}
               </a>
             </Button>
+            <RequestServiceButton size="lg" service="Repair Quote" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-0" />
             <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10" asChild data-testid="button-guide-cta-services">
               <Link href="/services" className="gap-2">
                 View Services & Pricing

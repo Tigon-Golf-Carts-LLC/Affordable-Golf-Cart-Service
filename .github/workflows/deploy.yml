@@ -50,6 +50,11 @@ jobs:
         run: npm run fetch-data
 
       - name: Build static site
+        # Where the lead forms POST: the TIGON IOT webhook URL, or the signing
+        # relay in worker/. Kept in a repository secret because the webhook key
+        # works like a password and this repository is public.
+        env:
+          TIGON_LEAD_ENDPOINT: ${{ secrets.TIGON_LEAD_ENDPOINT }}
         run: npm run build:site
 
       # configure-pages, upload-pages-artifact and deploy-pages still declare the

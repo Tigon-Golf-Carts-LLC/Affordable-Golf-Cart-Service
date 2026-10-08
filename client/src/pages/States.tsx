@@ -1,6 +1,7 @@
 import { useRoute, Link } from "wouter";
 import { Phone, ArrowLeft, ArrowRight, MapPin, Shield, Clock, Award, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -77,6 +78,7 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
                 Call Now: {PHONE_NUMBER}
               </a>
             </Button>
+            <RequestServiceButton size="lg" service={`Golf cart service — ${state.name}`} data-testid="button-request-service-0" />
             <Button size="lg" variant="outline" asChild>
               <Link href="/services">
                 View All Services
@@ -257,12 +259,15 @@ function StateDetail({ stateSlug }: { stateSlug: string }) {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Call now to schedule your appointment with our {state.name} golf cart service experts!
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid={`button-cta-call-${state.slug}`}>
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid={`button-cta-call-${state.slug}`}>
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" className="bg-transparent text-primary-foreground border-primary-foreground/60" service={`Golf cart service — ${state.name}`} data-testid="button-request-service-1" />
+          </div>
         </div>
       </section>
     </div>
@@ -291,12 +296,15 @@ function StatesLanding() {
             <p className="text-lg text-muted-foreground mb-6">
               Find affordable golf cart service, repair, and maintenance in your state. We serve customers across all 50 US states with professional golf cart services.
             </p>
-            <Button size="lg" asChild data-testid="button-states-header-call">
-              <a href={PHONE_HREF} className="gap-2">
-                <Phone className="h-5 w-5" />
-                Call Now: {PHONE_NUMBER}
-              </a>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild data-testid="button-states-header-call">
+                <a href={PHONE_HREF} className="gap-2">
+                  <Phone className="h-5 w-5" />
+                  Call Now: {PHONE_NUMBER}
+                </a>
+              </Button>
+              <RequestServiceButton size="lg" data-testid="button-request-service-2" />
+            </div>
           </div>
         </div>
       </section>
@@ -329,12 +337,15 @@ function StatesLanding() {
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             No matter where you are in the United States, our network of golf cart service professionals is ready to help!
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-states-footer-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-states-footer-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-3" />
+          </div>
         </div>
       </section>
     </div>

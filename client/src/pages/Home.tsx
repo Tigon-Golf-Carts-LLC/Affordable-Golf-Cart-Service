@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Phone, Shield, Clock, Award, Wrench, ArrowRight, MapPin, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -119,6 +120,7 @@ export default function Home() {
                 Call Now: {PHONE_NUMBER}
               </a>
             </Button>
+            <RequestServiceButton size="lg" data-testid="button-request-service-0" />
             <Button size="lg" variant="outline" asChild data-testid="button-hero-services">
               <Link href="/services">
                 View All Services
@@ -342,12 +344,15 @@ export default function Home() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Our expert technicians are ready to help. Call now to schedule your appointment and get your golf cart running like new!
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-cta-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-cta-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-1" />
+          </div>
         </div>
       </section>
     </div>

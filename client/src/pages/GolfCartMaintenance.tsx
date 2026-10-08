@@ -12,6 +12,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -358,12 +359,15 @@ export default function GolfCartMaintenance() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Schedule professional golf cart maintenance and tune-up service with our certified technicians today.
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-maintenance-cta-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-maintenance-cta-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" service="Golf Cart Tune-Up / Maintenance" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-0" />
+          </div>
         </div>
       </section>
     </div>

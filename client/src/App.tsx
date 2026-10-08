@@ -3,6 +3,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { LeadDialogProvider } from "@/components/LeadFormDialog";
 import { Page, type PageName } from "@/pages/registry";
 import { ROUTER_BASE } from "@/lib/site";
 
@@ -65,13 +66,15 @@ export default function App({ ssrPath }: { ssrPath?: string } = {}) {
   return (
     <Router base={ROUTER_BASE} ssrPath={ssrPath}>
       <TooltipProvider>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-1">
-            <Routes />
-          </main>
-          <Footer />
-        </div>
+        <LeadDialogProvider>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-1">
+              <Routes />
+            </main>
+            <Footer />
+          </div>
+        </LeadDialogProvider>
         <Toaster />
       </TooltipProvider>
     </Router>

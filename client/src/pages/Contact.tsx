@@ -1,7 +1,8 @@
 import { Phone, Mail, MapPin, Clock, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
-import { PHONE_NUMBER, PHONE_HREF, EMAIL_ADDRESS, EMAIL_HREF } from "@/lib/site";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { LeadForm } from "@/components/LeadForm";
+import { PHONE_NUMBER, PHONE_HREF } from "@/lib/site";
 import { STATIC_PAGE_SEO } from "@shared/seo";
 import { usePageSeo } from "@/lib/usePageSeo";
 
@@ -114,67 +115,20 @@ export default function Contact() {
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <MessageSquare className="h-6 w-6 text-primary" />
-                    <h2 className="text-2xl font-bold text-foreground">Talk to a Technician</h2>
+                    <h2 className="text-2xl font-bold text-foreground">Send Us a Message</h2>
                   </div>
                   <p className="text-muted-foreground">
-                    This site is served as static files, so there is no contact form to submit.
-                    Calling reaches a technician directly and is the fastest way to book service.
+                    Tell us about your cart and what it needs, and our team will get back to you shortly.
+                    For immediate help, call{" "}
+                    <a href={PHONE_HREF} className="text-primary font-semibold whitespace-nowrap">
+                      {PHONE_NUMBER}
+                    </a>
+                    .
                   </p>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <a
-                    href={PHONE_HREF}
-                    className="flex items-start gap-4 rounded-lg border p-4 hover-elevate transition-colors"
-                    data-testid="link-contact-call-card"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <Phone className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Call for immediate service</h3>
-                      <p className="text-sm text-muted-foreground mb-1">
-                        Same-day and mobile appointments, free estimates over the phone.
-                      </p>
-                      <span className="text-primary font-semibold">{PHONE_NUMBER}</span>
-                    </div>
-                  </a>
-
-                  <a
-                    href={EMAIL_HREF + "?subject=" + encodeURIComponent("Golf cart service request")}
-                    className="flex items-start gap-4 rounded-lg border p-4 hover-elevate transition-colors"
-                    data-testid="link-contact-email-card"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <Mail className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email us your details</h3>
-                      <p className="text-sm text-muted-foreground mb-1">
-                        Include your cart make, model, and the symptoms you are seeing.
-                      </p>
-                      <span className="text-primary font-semibold break-all">{EMAIL_ADDRESS}</span>
-                    </div>
-                  </a>
-
-                  <ul className="text-sm text-muted-foreground space-y-2 pt-2">
-                    <li className="flex items-start gap-2">
-                      <Clock className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Phone lines are staffed 7 days a week.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                      <span>Mobile service comes to you — ask about coverage in your area.</span>
-                    </li>
-                  </ul>
+                <CardContent>
+                  <LeadForm formLocation="Contact page" submitLabel="Send Message" />
                 </CardContent>
-                <CardFooter>
-                  <Button size="lg" className="w-full" asChild data-testid="button-contact-call">
-                    <a href={PHONE_HREF}>
-                      <Phone className="h-5 w-5 mr-2" />
-                      Call Now: {PHONE_NUMBER}
-                    </a>
-                  </Button>
-                </CardFooter>
               </Card>
             </div>
           </div>

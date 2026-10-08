@@ -14,6 +14,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -331,12 +332,15 @@ export default function MobileService() {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Book mobile golf cart service today and let our technicians handle the repair right at your door.
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-mobile-cta-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-mobile-cta-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" service="Mobile Golf Cart Service" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-0" />
+          </div>
         </div>
       </section>
     </div>

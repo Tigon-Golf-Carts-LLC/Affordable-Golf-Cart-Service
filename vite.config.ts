@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -21,6 +21,14 @@ export const SITE_ORIGIN = (process.env.SITE_DOMAIN || "https://affordablegolfca
   "",
 );
 
+/**
+ * Where lead forms POST (client/src/lib/leads.ts). Set from the
+ * TIGON_LEAD_ENDPOINT GitHub Actions secret, or from .env.local for local work.
+ * Either the TIGON webhook URL itself or the signing relay in worker/.
+ * Never commit the value: the webhook key in it works like a password.
+ */
+export const TIGON_LEAD_ENDPOINT = (process.env.TIGON_LEAD_ENDPOINT || loadEnv("", ROOT, "").TIGON_LEAD_ENDPOINT || "").trim();
+
 export const alias = {
   "@": path.resolve(ROOT, "client", "src"),
   "@shared": path.resolve(ROOT, "shared"),
@@ -33,6 +41,7 @@ export default defineConfig({
   resolve: { alias },
   define: {
     "import.meta.env.VITE_SITE_ORIGIN": JSON.stringify(SITE_ORIGIN),
+    "import.meta.env.VITE_TIGON_LEAD_ENDPOINT": JSON.stringify(TIGON_LEAD_ENDPOINT),
   },
   build: {
     outDir: path.resolve(ROOT, "dist"),

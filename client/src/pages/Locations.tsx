@@ -2,6 +2,7 @@ import { useRoute, Link } from "wouter";
 import { useEffect } from "react";
 import { Phone, MapPin, Navigation, Clock, ArrowLeft, ArrowRight, Wrench, Shield, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { RequestServiceButton } from "@/components/LeadFormDialog";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LocationSearch } from "@/components/LocationSearch";
@@ -76,6 +77,7 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
                   Call Now: {location.phone}
                 </a>
               </Button>
+              <RequestServiceButton size="lg" service={`Golf cart service — ${location.city}, ${location.state}`} data-testid="button-request-service-0" />
               <Button size="lg" variant="outline" asChild data-testid={`button-directions-${location.slug}`}>
                 <a href={getDirectionsUrl(location)} target="_blank" rel="noopener noreferrer" className="gap-2">
                   <Navigation className="h-5 w-5" />
@@ -296,12 +298,15 @@ function LocationDetail({ locationSlug }: { locationSlug: string }) {
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
             Call now to schedule your golf cart service appointment at our {location.city} location!
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid={`button-cta-${location.slug}`}>
-            <a href={`tel:${location.phone.replace(/-/g, '')}`} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {location.phone}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid={`button-cta-${location.slug}`}>
+              <a href={`tel:${location.phone.replace(/-/g, '')}`} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {location.phone}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" className="bg-transparent text-primary-foreground border-primary-foreground/60" service={`Golf cart service — ${location.city}, ${location.state}`} data-testid="button-request-service-1" />
+          </div>
         </div>
       </section>
     </div>
@@ -399,12 +404,15 @@ function LocationsLanding() {
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
             Call our main line and we'll help you find service in your area!
           </p>
-          <Button size="lg" variant="secondary" asChild data-testid="button-locations-footer-call">
-            <a href={PHONE_HREF} className="gap-2">
-              <Phone className="h-5 w-5" />
-              Call Now: {PHONE_NUMBER}
-            </a>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild data-testid="button-locations-footer-call">
+              <a href={PHONE_HREF} className="gap-2">
+                <Phone className="h-5 w-5" />
+                Call Now: {PHONE_NUMBER}
+              </a>
+            </Button>
+            <RequestServiceButton size="lg" className="bg-transparent text-primary-foreground border-primary-foreground/60" data-testid="button-request-service-2" />
+          </div>
         </div>
       </section>
     </div>
