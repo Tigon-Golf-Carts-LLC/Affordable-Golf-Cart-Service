@@ -73,6 +73,8 @@ Service Locations:
 12. Swanton, OH
 13. Lecanto, FL
 14. Long Pond, PA
+15. Rio Grande, NJ
+16. Wichita Falls, TX
 
 ### Service Categories for Claude
 

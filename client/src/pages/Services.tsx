@@ -207,7 +207,7 @@ const serviceFaqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We provide affordable golf cart services across all 50 states through our network of 14 service locations. Visit our locations or state pages to find the nearest service center to you.",
+      "We provide affordable golf cart services across all 50 states through our network of 16 service locations. Visit our locations or state pages to find the nearest service center to you.",
   },
   {
     question: "Do your services come with a warranty?",
